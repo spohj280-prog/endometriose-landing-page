@@ -255,10 +255,18 @@
       linear-gradient(160deg, var(--azul-profundo) 0%, var(--petroleo) 45%, #3c5163 75%, var(--areia) 130%);
   }
 
+  .hero__figura{
+    position:absolute;
+    inset:0;
+    background-image:url('https://raw.githubusercontent.com/spohj280-prog/endometriose-landing-page/main/Imagens/Designer.png');
+    background-size:cover;
+    background-position:center 32%;
+  }
+
   /* =========================================================
      COMPOSIÇÃO "VISTO / NÃO VISTO" — vidro embaçado sobre a figura
      ========================================================= */
-     background-image:url('https://raw.githubusercontent.com/spohj280-prog/endometriose-landing-page/main/Imagens/Designer.png');
+  .hero__figura::after{
     content:"";
     position:absolute;
     inset:0;
