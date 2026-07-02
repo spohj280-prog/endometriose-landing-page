@@ -9,22 +9,15 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
 <style>
   :root{
-    --azul-profundo:#0d1b2a;
-    --azul-secao:#101f30;
-    --petroleo:#1b3a4b;
-    --laranja:#e8833a;
-    --laranja-claro:#f0a563;
-    --branco-quente:#fbf7f1;
-    --texto-claro:#f7f1ea;
-    --texto-escuro:#1d2733;
-    --texto-suave:#5a6c7a;
-    --card-bg:#EEF0F4;
-    --card-borda:#D6DBE5;
+    --azul-profundo:#0d1b2a;--azul-secao:#101f30;--petroleo:#1b3a4b;
+    --laranja:#e8833a;--laranja-claro:#f0a563;
+    --branco-quente:#fbf7f1;--texto-claro:#f7f1ea;
+    --texto-escuro:#1d2733;--texto-suave:#5a6c7a;
+    --card-bg:#EEF0F4;--card-borda:#D6DBE5;
     --amarelo:#F59E0B;
     --fonte:"DM Sans","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
     --transicao:800ms cubic-bezier(.16,1,.3,1);
   }
-
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{font-family:var(--fonte);color:var(--texto-escuro);background:var(--branco-quente);line-height:1.6;letter-spacing:0.012em;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
@@ -33,7 +26,6 @@
   img,svg{display:block;max-width:100%;}
 
   .grain-overlay{position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:0.045;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
-
   .skip-link{position:absolute;left:-999px;top:0;background:var(--petroleo);color:var(--texto-claro);padding:0.75rem 1.25rem;z-index:10000;border-radius:0 0 8px 0;}
   .skip-link:focus{left:0;}
 
@@ -47,11 +39,7 @@
 
   .surgir{opacity:0;transform:translateY(26px);filter:blur(5px);transition:opacity var(--transicao),transform var(--transicao),filter var(--transicao);}
   .surgir.visivel{opacity:1;transform:translateY(0);filter:blur(0);}
-  @media(prefers-reduced-motion:reduce){
-    html{scroll-behavior:auto;}
-    .surgir{opacity:1;transform:none;filter:none;transition:none;}
-    *{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}
-  }
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}.surgir{opacity:1;transform:none;filter:none;transition:none;}*{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}}
 
   /* NAV */
   .nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 2rem;transition:background 0.4s ease;}
@@ -64,11 +52,7 @@
   .nav__links a:hover{opacity:1;}
   .nav__links a.destaque{color:#fff;opacity:1;font-weight:700;text-transform:none;font-size:0.96rem;letter-spacing:0.01em;}
   .nav__toggle{display:none;background:none;border:none;color:var(--texto-claro);font-size:1.4rem;cursor:pointer;}
-  @media(max-width:820px){
-    .nav__links{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:1rem;padding:1.4rem 2rem;background:rgba(13,27,42,0.94);backdrop-filter:blur(14px);display:none;align-items:flex-start;}
-    .nav__links.aberto{display:flex;}
-    .nav__toggle{display:block;}
-  }
+  @media(max-width:820px){.nav__links{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:1rem;padding:1.4rem 2rem;background:rgba(13,27,42,0.94);backdrop-filter:blur(14px);display:none;align-items:flex-start;}.nav__links.aberto{display:flex;}.nav__toggle{display:block;}}
 
   /* HERO */
   .hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--azul-profundo);}
@@ -82,7 +66,6 @@
   .hero__scroll svg{width:16px;animation:flutuar 2.4s ease-in-out infinite;}
   @keyframes flutuar{0%,100%{transform:translateY(0);}50%{transform:translateY(7px);}}
 
-  /* SEÇÃO 1 */
   .split{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;}
   @media(max-width:860px){.split{grid-template-columns:1fr;gap:2.5rem;}}
   .cards-empilhados{display:flex;flex-direction:column;gap:0.8rem;margin-top:1.5rem;}
@@ -102,7 +85,6 @@
   .grade-imgs__item--b{background-position:right 45%;}
   .grade-imgs__item--b::after{background:linear-gradient(60deg,rgba(43,74,110,0.45),rgba(232,131,58,0.15));}
 
-  /* SEÇÃO 2 — SINTOMAS */
   .secao--escura{background:var(--azul-secao);color:var(--texto-claro);overflow:visible;}
   .secao--escura .titulo-secao{color:var(--texto-claro);}
   .secao--escura .texto-intro{color:rgba(247,241,234,0.7);}
@@ -122,7 +104,6 @@
   .feedback-sintomas p{margin:0;flex:1;min-width:200px;font-size:0.9rem;}
   .aviso{font-size:0.8rem;color:rgba(247,241,234,0.5);margin-top:1.2rem;max-width:640px;}
 
-  /* SEÇÃO 3 */
   .grade-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;}
   @media(max-width:820px){.grade-3{grid-template-columns:1fr;}}
   .card-tema{padding:1.7rem;border-radius:16px;background:var(--card-bg);border:1px solid var(--card-borda);transition:transform 0.45s ease,box-shadow 0.45s ease;}
@@ -132,7 +113,6 @@
   .card-tema h3{font-size:1.02rem;color:var(--petroleo);margin-bottom:0.5rem;}
   .card-tema p{font-size:0.88rem;color:var(--texto-suave);line-height:1.55;}
 
-  /* SEÇÃO 4 — MITOS */
   .grade-mitos{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:2rem;}
   @media(max-width:880px){.grade-mitos{grid-template-columns:1fr 1fr;}}
   @media(max-width:520px){.grade-mitos{grid-template-columns:1fr;}}
@@ -154,7 +134,6 @@
   .voce-sabia p{font-size:0.92rem;color:rgba(247,241,234,0.78);line-height:1.55;}
   .fonte{font-size:0.74rem;color:rgba(247,241,234,0.4);margin-top:1.2rem;text-align:center;}
 
-  /* SEÇÃO 5 — DEPOIMENTOS */
   .secao--depoimentos{background:#fff;}
   .secao--depoimentos .titulo-secao,.secao--depoimentos .texto-intro{text-align:center;margin-left:auto;margin-right:auto;}
   .secao--depoimentos .titulo-secao{max-width:none;}
@@ -182,19 +161,17 @@
   .form-rodape{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:1.2rem;}
   .nota-form{font-size:0.74rem;color:var(--texto-suave);max-width:380px;}
 
-  /* BOTÃO PRINCIPAL */
   .botao{display:inline-flex;align-items:center;gap:0.55rem;padding:0.85rem 1.7rem;border-radius:8px;border:none;background:var(--amarelo);color:#fff;font-size:0.9rem;font-weight:700;text-decoration:none;cursor:pointer;transition:transform 0.35s ease,background 0.35s ease;font-family:inherit;}
   .botao:hover{background:#D6850A;transform:translateY(-2px);}
   .botao svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
 
-  /* SEÇÃO 6 — ENTRE + RECURSOS */
   .secao--entre-recursos{background:linear-gradient(125deg,var(--azul-profundo) 0%,#142136 28%,#2b2a2e 55%,#5a3f24 78%,#8a5a1f 100%);color:var(--texto-claro);}
   .secao--entre{padding:6.5rem 0 4rem;}
   .entre-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:3rem;align-items:center;}
   @media(max-width:860px){.entre-grid{grid-template-columns:1fr;gap:2rem;}}
   .entre-info h2{font-size:clamp(2.2rem,5vw,3.2rem);color:var(--branco-quente);margin-bottom:1.1rem;}
   .entre-info p{font-size:1rem;color:rgba(247,241,234,0.78);margin-bottom:1.2rem;max-width:420px;}
-  .entre-link-cta{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.85rem;font-weight:600;color:#fff;background:var(--amarelo);border-radius:8px;padding:0.6rem 1.1rem;text-decoration:none;transition:background 0.3s ease,transform 0.3s ease;}
+  .entre-link-cta{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.85rem;font-weight:600;color:#fff;background:var(--amarelo);border-radius:8px;padding:0.6rem 1.1rem;text-decoration:none;cursor:pointer;border:none;font-family:inherit;transition:background 0.3s ease,transform 0.3s ease;}
   .entre-link-cta:hover{background:#D6850A;transform:translateY(-2px);}
   .entre-link-cta svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
   .chat-box{border-radius:20px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);backdrop-filter:blur(14px);padding:1.6rem;}
@@ -212,8 +189,6 @@
   .anexar:hover{color:var(--texto-claro);}
   .anexar svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
   .entre-aviso{font-size:0.8rem;color:rgba(247,241,234,0.45);margin-top:1.2rem;}
-
-  /* RECURSOS */
   .secao--recursos{padding:3.2rem 0 4.5rem;position:relative;}
   .secao--recursos::before{content:"";position:absolute;top:0;left:160px;right:160px;height:1px;background:rgba(255,255,255,0.15);}
   .grade-recursos{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;}
@@ -222,6 +197,62 @@
   .recurso__icone svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
   .recurso h4{font-size:1.05rem;color:var(--branco-quente);margin-bottom:0.5rem;}
   .recurso p{font-size:0.87rem;color:rgba(247,241,234,0.65);line-height:1.55;}
+
+  /* ========================
+     FORMULÁRIO MANUAL OVERLAY
+     ======================== */
+  .fm-overlay{position:fixed;inset:0;z-index:2000;background:linear-gradient(125deg,var(--azul-profundo) 0%,#142136 28%,#2b2a2e 55%,#5a3f24 78%,#8a5a1f 100%);color:var(--texto-claro);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;padding:2rem;opacity:0;pointer-events:none;transition:opacity 0.4s ease;overflow-y:auto;}
+  .fm-overlay.ativo{opacity:1;pointer-events:auto;}
+  .fm-layout{display:grid;grid-template-columns:0.8fr 1.2fr;gap:3rem;align-items:flex-start;width:100%;max-width:1100px;}
+  @media(max-width:860px){.fm-layout{grid-template-columns:1fr;}}
+  .fm-etiqueta{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.2em;color:var(--amarelo);margin-bottom:1rem;font-weight:700;}
+  .fm-titulo{font-size:clamp(2rem,4vw,3rem);font-weight:800;color:var(--branco-quente);margin-bottom:1rem;line-height:1.1;}
+  .fm-desc{font-size:0.95rem;color:rgba(247,241,234,0.7);line-height:1.6;}
+  .fm-card{background:rgba(15,18,24,0.85);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:2rem 2.2rem;}
+  .fm-prog-row{display:flex;justify-content:space-between;margin-bottom:0.6rem;}
+  .fm-prog-label{font-size:0.75rem;font-weight:700;color:var(--amarelo);text-transform:uppercase;letter-spacing:0.1em;}
+  .fm-prog-pct{font-size:0.75rem;color:rgba(247,241,234,0.5);}
+  .fm-prog-bar{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-bottom:1.8rem;}
+  .fm-prog-fill{height:100%;background:var(--amarelo);border-radius:2px;transition:width 0.4s ease;}
+  .fm-group{margin-bottom:1.4rem;}
+  .fm-group-label{display:block;font-size:0.95rem;font-weight:600;color:var(--branco-quente);margin-bottom:0.8rem;}
+  .fm-pills{display:flex;flex-wrap:wrap;gap:0.5rem;}
+  .fm-pill{padding:0.5rem 1rem;border-radius:50px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.04);color:rgba(247,241,234,0.75);font-size:0.85rem;cursor:pointer;transition:all 0.2s ease;user-select:none;}
+  .fm-pill:hover{border-color:rgba(255,255,255,0.4);color:#fff;}
+  .fm-pill.sel{background:rgba(245,158,11,0.15);border-color:var(--amarelo);color:var(--amarelo);}
+  .fm-escala{display:flex;gap:0.4rem;flex-wrap:wrap;margin-bottom:0.4rem;}
+  .fm-escala-n{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.04);color:rgba(247,241,234,0.75);font-size:0.85rem;font-weight:600;cursor:pointer;transition:all 0.2s ease;display:flex;align-items:center;justify-content:center;font-family:inherit;}
+  .fm-escala-n.sel{background:var(--amarelo);border-color:var(--amarelo);color:#fff;}
+  .fm-escala-labels{display:flex;justify-content:space-between;}
+  .fm-escala-labels span{font-size:0.72rem;color:rgba(247,241,234,0.4);}
+  .fm-input{width:100%;padding:0.9rem 1.1rem;border-radius:10px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.05);color:var(--texto-claro);font-family:inherit;font-size:0.9rem;margin-bottom:0.6rem;}
+  .fm-input::placeholder{color:rgba(247,241,234,0.35);}
+  .fm-add{display:flex;align-items:center;gap:0.4rem;background:none;border:none;color:var(--amarelo);font-size:0.85rem;font-weight:600;cursor:pointer;font-family:inherit;margin-bottom:1rem;}
+  .fm-rodape{display:flex;align-items:center;justify-content:space-between;margin-top:1.6rem;}
+  .fm-back{background:none;border:none;color:rgba(247,241,234,0.55);font-size:0.88rem;cursor:pointer;font-family:inherit;text-decoration:underline;}
+  .fm-back:hover{color:#fff;}
+  .fm-intro-steps{list-style:none;margin-bottom:1.6rem;display:flex;flex-direction:column;gap:1rem;}
+  .fm-intro-step{display:flex;align-items:flex-start;gap:1rem;}
+  .fm-step-num{width:32px;height:32px;border-radius:50%;border:2px solid var(--amarelo);color:var(--amarelo);font-size:0.85rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .fm-intro-step h4{font-size:0.95rem;color:var(--branco-quente);margin-bottom:0.2rem;}
+  .fm-intro-step p{font-size:0.82rem;color:rgba(247,241,234,0.55);}
+  .fm-intro-btns{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-bottom:1rem;}
+  .fm-btn-cancel{padding:0.85rem;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:none;color:var(--texto-claro);font-size:0.9rem;font-weight:600;cursor:pointer;font-family:inherit;transition:background 0.2s;}
+  .fm-btn-cancel:hover{background:rgba(255,255,255,0.05);}
+  .fm-ia-link{text-align:center;font-size:0.82rem;}
+  .fm-ia-link button{color:rgba(247,241,234,0.5);background:none;border:none;cursor:pointer;font-family:inherit;font-size:0.82rem;text-decoration:underline;}
+  .fm-ia-link button:hover{color:#fff;}
+  .fm-resumo-item{display:flex;align-items:flex-start;justify-content:space-between;padding:0.9rem 1.1rem;border-radius:10px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);margin-bottom:0.6rem;gap:0.8rem;}
+  .fm-res-label{font-size:0.68rem;text-transform:uppercase;letter-spacing:0.12em;color:rgba(247,241,234,0.45);flex-shrink:0;min-width:90px;}
+  .fm-res-val{font-size:0.88rem;color:rgba(247,241,234,0.85);flex:1;display:flex;flex-wrap:wrap;gap:0.4rem;align-items:center;}
+  .fm-res-tag{background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);color:var(--amarelo);padding:0.2rem 0.6rem;border-radius:20px;font-size:0.78rem;}
+  .fm-res-edit{font-size:0.78rem;color:var(--amarelo);background:none;border:none;cursor:pointer;font-family:inherit;flex-shrink:0;}
+  .fm-autorizo{display:flex;align-items:center;gap:0.75rem;font-size:0.88rem;color:rgba(247,241,234,0.8);margin:1rem 0;cursor:pointer;}
+  .fm-autorizo input{width:18px;height:18px;accent-color:var(--amarelo);cursor:pointer;}
+  .fm-submit-btns{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;}
+  .fm-btn-draft{padding:0.85rem;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:none;color:var(--texto-claro);font-size:0.9rem;font-weight:600;cursor:pointer;font-family:inherit;}
+  .fm-cripto{display:flex;align-items:center;justify-content:center;gap:0.4rem;margin-top:0.8rem;font-size:0.74rem;color:rgba(247,241,234,0.35);}
+  .fm-aviso{font-size:0.8rem;color:rgba(247,241,234,0.35);text-align:left;max-width:1100px;width:100%;}
 
   footer{padding:2.5rem 0;text-align:center;background:#091420;color:rgba(247,241,234,0.45);font-size:0.8rem;}
   @media(max-width:680px){.secao{padding:4.5rem 0;}}
@@ -243,8 +274,6 @@
   </nav>
 
   <main id="conteudo">
-
-    <!-- HERO -->
     <header class="hero">
       <div class="hero__img" aria-hidden="true"></div>
       <div class="hero__wrap">
@@ -259,7 +288,6 @@
       </a>
     </header>
 
-    <!-- SEÇÃO 1 — O QUE É -->
     <section class="secao secao--branca" id="informacao">
       <div class="container split">
         <div>
@@ -267,18 +295,9 @@
           <h2 class="titulo-secao surgir">Uma condição crônica, não uma frescura</h2>
           <p class="texto-intro surgir" style="margin-bottom:0">Endometriose é uma condição em que tecido semelhante ao endométrio cresce fora do útero, causando inflamação, dor crônica e impacto profundo na qualidade de vida, independentemente da identidade de gênero.</p>
           <div class="cards-empilhados">
-            <div class="card-linha surgir">
-              <div class="card-linha__icone"><svg viewBox="0 0 24 24"><path d="M4 4c4 4 12-4 16 0M4 20c4-4 12 4 16 0M6.5 8c2.2 1 9.8 1 11 0M6.5 16c2.2-1 9.8-1 11 0"/></svg></div>
-              <div><h3>Tecido fora de lugar</h3><p>Células similares ao endométrio crescem fora do útero: ovários, trompas, bexiga, intestino e outras regiões do corpo.</p></div>
-            </div>
-            <div class="card-linha surgir">
-              <div class="card-linha__icone"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3.5V9h-5.5"/></svg></div>
-              <div><h3>Inflamação cíclica</h3><p>O tecido reage ao ciclo hormonal, causando inflamação, sangramento interno e aderências progressivas.</p></div>
-            </div>
-            <div class="card-linha surgir">
-              <div class="card-linha__icone"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5l3.2 2.5"/></svg></div>
-              <div><h3>Diagnóstico tardio</h3><p>Em média 7 a 10 anos separam os primeiros sintomas do diagnóstico. A normalização da dor é a principal causa desse atraso.</p></div>
-            </div>
+            <div class="card-linha surgir"><div class="card-linha__icone"><svg viewBox="0 0 24 24"><path d="M4 4c4 4 12-4 16 0M4 20c4-4 12 4 16 0M6.5 8c2.2 1 9.8 1 11 0M6.5 16c2.2-1 9.8-1 11 0"/></svg></div><div><h3>Tecido fora de lugar</h3><p>Células similares ao endométrio crescem fora do útero: ovários, trompas, bexiga, intestino e outras regiões do corpo.</p></div></div>
+            <div class="card-linha surgir"><div class="card-linha__icone"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3.5V9h-5.5"/></svg></div><div><h3>Inflamação cíclica</h3><p>O tecido reage ao ciclo hormonal, causando inflamação, sangramento interno e aderências progressivas.</p></div></div>
+            <div class="card-linha surgir"><div class="card-linha__icone"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5l3.2 2.5"/></svg></div><div><h3>Diagnóstico tardio</h3><p>Em média 7 a 10 anos separam os primeiros sintomas do diagnóstico. A normalização da dor é a principal causa desse atraso.</p></div></div>
           </div>
         </div>
         <div class="grade-imgs surgir" aria-hidden="true">
@@ -289,7 +308,6 @@
       </div>
     </section>
 
-    <!-- SEÇÃO 2 — SINTOMAS -->
     <section class="secao secao--escura secao--sintomas" id="sintomas">
       <div class="container">
         <p class="etiqueta surgir">Reconhecer o que o corpo diz</p>
@@ -315,96 +333,49 @@
       </div>
     </section>
 
-    <!-- SEÇÃO 3 — NÃO BINÁRIA -->
     <section class="secao secao--branca">
       <div class="container">
         <p class="etiqueta surgir">Quem também pode ter endometriose</p>
-        <h2 class="titulo-secao surgir" style="max-width:20ch">E se eu for uma pessoa <em>não binária</em>?</h2>
+        <h2 class="titulo-secao surgir" style="max-width:20ch">E se eu for uma pessoa<br><em>não binária</em>?</h2>
         <p class="texto-intro surgir">Ter útero não define identidade de gênero. Pessoas não binárias e transmasculinas também podem desenvolver endometriose, e merecem encontrar cuidado sem precisar justificar quem são.</p>
         <div class="grade-3">
-          <div class="card-tema surgir">
-            <div class="card-tema__icone"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20.5c1.3-3.8 4.3-5.8 7.5-5.8s6.2 2 7.5 5.8"/></svg></div>
-            <h3>Invisibilidade clínica</h3>
-            <p>Homens trans e pessoas transmasculinas podem ter endometriose mesmo em terapia hormonal. Os sintomas podem ser mascarados ou mal interpretados por profissionais despreparados.</p>
-          </div>
-          <div class="card-tema surgir">
-            <div class="card-tema__icone"><svg viewBox="0 0 24 24"><path d="M12 20.2s-6.5-4-8.6-8C2 9 2.8 5.8 5.7 5.3c1.8-.3 3.2.9 4.1 2 .9-1.1 2.3-2.3 4.1-2 2.9.5 3.7 3.7 2.3 6.9-2.1 4-8.2 8-8.2 8z"/></svg></div>
-            <h3>Cuidado afirmativo</h3>
-            <p>Pessoas não binárias merecem cuidado sem precisar explicar ou justificar sua identidade para acessar tratamento adequado e humanizado.</p>
-          </div>
-          <div class="card-tema surgir">
-            <div class="card-tema__icone"><svg viewBox="0 0 24 24"><rect x="5.5" y="3" width="13" height="18" rx="2"/><path d="M9 3v3h6V3M8.5 10h7M8.5 13.5h7M8.5 17h4.5"/></svg></div>
-            <h3>Acesso ao sistema</h3>
-            <p>Formulários binários, linguagem excludente e despreparo de profissionais criam obstáculos adicionais no caminho até o diagnóstico.</p>
-          </div>
+          <div class="card-tema surgir"><div class="card-tema__icone"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20.5c1.3-3.8 4.3-5.8 7.5-5.8s6.2 2 7.5 5.8"/></svg></div><h3>Invisibilidade clínica</h3><p>Homens trans e pessoas transmasculinas podem ter endometriose mesmo em terapia hormonal. Os sintomas podem ser mascarados ou mal interpretados por profissionais despreparados.</p></div>
+          <div class="card-tema surgir"><div class="card-tema__icone"><svg viewBox="0 0 24 24"><path d="M12 20.2s-6.5-4-8.6-8C2 9 2.8 5.8 5.7 5.3c1.8-.3 3.2.9 4.1 2 .9-1.1 2.3-2.3 4.1-2 2.9.5 3.7 3.7 2.3 6.9-2.1 4-8.2 8-8.2 8z"/></svg></div><h3>Cuidado afirmativo</h3><p>Pessoas não binárias merecem cuidado sem precisar explicar ou justificar sua identidade para acessar tratamento adequado e humanizado.</p></div>
+          <div class="card-tema surgir"><div class="card-tema__icone"><svg viewBox="0 0 24 24"><rect x="5.5" y="3" width="13" height="18" rx="2"/><path d="M9 3v3h6V3M8.5 10h7M8.5 13.5h7M8.5 17h4.5"/></svg></div><h3>Acesso ao sistema</h3><p>Formulários binários, linguagem excludente e despreparo de profissionais criam obstáculos adicionais no caminho até o diagnóstico.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- SEÇÃO 4 — MITOS -->
     <section class="secao secao--escura" id="mitos">
       <div class="container">
         <p class="etiqueta surgir">Desfazer o que não é verdade</p>
         <h2 class="titulo-secao surgir">Mitos e verdades</h2>
         <p class="texto-intro surgir">Toque em cada card para revelar a verdade.</p>
         <div class="grade-mitos surgir">
-          <div class="carta-mito" role="button" tabindex="0" aria-pressed="false">
-            <div class="carta-mito__inner">
-              <div class="carta-mito__face carta-mito__frente"><span class="carta-mito__rotulo">Mito</span><p class="carta-mito__texto">É normal sentir cólicas menstruais intensas.</p><span class="carta-mito__dica">Toque para ver a verdade →</span></div>
-              <div class="carta-mito__face carta-mito__verso"><span class="carta-mito__rotulo">Verdade</span><p class="carta-mito__texto">Dor incapacitante não é normal e merece investigação.</p></div>
-            </div>
-          </div>
-          <div class="carta-mito" role="button" tabindex="0" aria-pressed="false">
-            <div class="carta-mito__inner">
-              <div class="carta-mito__face carta-mito__frente"><span class="carta-mito__rotulo">Mito</span><p class="carta-mito__texto">A endometriose sempre causa infertilidade.</p><span class="carta-mito__dica">Toque para ver a verdade →</span></div>
-              <div class="carta-mito__face carta-mito__verso"><span class="carta-mito__rotulo">Verdade</span><p class="carta-mito__texto">Muitas pessoas com endometriose engravidam. Cada caso é único.</p></div>
-            </div>
-          </div>
-          <div class="carta-mito" role="button" tabindex="0" aria-pressed="false">
-            <div class="carta-mito__inner">
-              <div class="carta-mito__face carta-mito__frente"><span class="carta-mito__rotulo">Mito</span><p class="carta-mito__texto">Somente mulheres mais velhas têm a doença.</p><span class="carta-mito__dica">Toque para ver a verdade →</span></div>
-              <div class="carta-mito__face carta-mito__verso"><span class="carta-mito__rotulo">Verdade</span><p class="carta-mito__texto">Pode surgir na adolescência e em pessoas de diferentes identidades de gênero.</p></div>
-            </div>
-          </div>
-          <div class="carta-mito" role="button" tabindex="0" aria-pressed="false">
-            <div class="carta-mito__inner">
-              <div class="carta-mito__face carta-mito__frente"><span class="carta-mito__rotulo">Mito</span><p class="carta-mito__texto">A gravidez cura a endometriose.</p><span class="carta-mito__dica">Toque para ver a verdade →</span></div>
-              <div class="carta-mito__face carta-mito__verso"><span class="carta-mito__rotulo">Verdade</span><p class="carta-mito__texto">A gestação pode aliviar sintomas temporariamente, mas não é tratamento.</p></div>
-            </div>
-          </div>
+          <div class="carta-mito" role="button" tabindex="0" aria-pressed="false"><div class="carta-mito__inner"><div class="carta-mito__face carta-mito__frente"><span class="carta-mito__rotulo">Mito</span><p class="carta-mito__texto">É normal sentir cólicas menstruais intensas.</p><span class="carta-mito__dica">Toque para ver a verdade →</span></div><div class="carta-mito__face carta-mito__verso"><span class="carta-mito__rotulo">Verdade</span><p class="carta-mito__texto">Dor incapacitante não é normal e merece investigação.</p></div></div></div>
+          <div class="carta-mito" role="button" tabindex="0" aria-pressed="false"><div class="carta-mito__inner"><div class="carta-mito__face carta-mito__frente"><span class="carta-mito__rotulo">Mito</span><p class="carta-mito__texto">A endometriose sempre causa infertilidade.</p><span class="carta-mito__dica">Toque para ver a verdade →</span></div><div class="carta-mito__face carta-mito__verso"><span class="carta-mito__rotulo">Verdade</span><p class="carta-mito__texto">Muitas pessoas com endometriose engravidam. Cada caso é único.</p></div></div></div>
+          <div class="carta-mito" role="button" tabindex="0" aria-pressed="false"><div class="carta-mito__inner"><div class="carta-mito__face carta-mito__frente"><span class="carta-mito__rotulo">Mito</span><p class="carta-mito__texto">Somente mulheres mais velhas têm a doença.</p><span class="carta-mito__dica">Toque para ver a verdade →</span></div><div class="carta-mito__face carta-mito__verso"><span class="carta-mito__rotulo">Verdade</span><p class="carta-mito__texto">Pode surgir na adolescência e em pessoas de diferentes identidades de gênero.</p></div></div></div>
+          <div class="carta-mito" role="button" tabindex="0" aria-pressed="false"><div class="carta-mito__inner"><div class="carta-mito__face carta-mito__frente"><span class="carta-mito__rotulo">Mito</span><p class="carta-mito__texto">A gravidez cura a endometriose.</p><span class="carta-mito__dica">Toque para ver a verdade →</span></div><div class="carta-mito__face carta-mito__verso"><span class="carta-mito__rotulo">Verdade</span><p class="carta-mito__texto">A gestação pode aliviar sintomas temporariamente, mas não é tratamento.</p></div></div></div>
         </div>
         <div class="voce-sabia-wrap">
           <div class="voce-sabia surgir">
             <div class="voce-sabia__icone"><svg viewBox="0 0 24 24"><path d="M9 18.5h6M10 22h4M12 2.5a6 6 0 0 0-3.1 11.1c.5.4.8 1 .8 1.6V16h4.6v-.8c0-.6.3-1.2.8-1.6A6 6 0 0 0 12 2.5z"/></svg></div>
-            <div>
-              <h4>Você sabia?</h4>
-              <p>Em média, leva 7 anos para alguém receber um diagnóstico de endometriose. Tempo suficiente para terminar uma graduação, mudar de cidade duas vezes e ouvir "é normal ter cólica" mais vezes do que consegue contar.</p>
-            </div>
+            <div><h4>Você sabia?</h4><p>Em média, leva 7 anos para alguém receber um diagnóstico de endometriose. Tempo suficiente para terminar uma graduação, mudar de cidade duas vezes e ouvir "é normal ter cólica" mais vezes do que consegue contar.</p></div>
           </div>
         </div>
         <p class="fonte surgir">Fonte: Protocolos Clínicos e Diretrizes Terapêuticas (Brasil, 2023)</p>
       </div>
     </section>
 
-    <!-- SEÇÃO 5 — DEPOIMENTOS -->
     <section class="secao secao--depoimentos" id="relatos">
       <div class="container">
         <p class="etiqueta surgir">Histórias compartilhadas</p>
         <h2 class="titulo-secao surgir">Quem já passou por isso</h2>
         <p class="texto-intro surgir">Relatos fictícios criados para representar experiências comuns.</p>
         <div class="grade-depoimentos">
-          <article class="depoimento surgir">
-            <div class="depoimento__corpo"><span class="depoimento__aspas">&ldquo;</span><p class="depoimento__quote">Demorei sete anos para ouvir a palavra endometriose. Antes disso, era só "cólica forte" e remédio para dor.</p></div>
-            <div class="depoimento__rodape"><div class="depoimento__autor">Theo, 29 anos</div><span class="depoimento__tag depoimento__tag--diagnostico">Com diagnóstico</span></div>
-          </article>
-          <article class="depoimento surgir">
-            <div class="depoimento__corpo"><span class="depoimento__aspas">&ldquo;</span><p class="depoimento__quote">Como homem trans, precisei explicar minha identidade antes de conseguir falar sobre meus sintomas. Encontrar um profissional afirmativo não deveria ser tão difícil.</p></div>
-            <div class="depoimento__rodape"><div class="depoimento__autor">Bruno (nome social)</div><span class="depoimento__tag depoimento__tag--acompanhamento">Em acompanhamento</span></div>
-          </article>
-          <article class="depoimento surgir">
-            <div class="depoimento__corpo"><span class="depoimento__aspas">&ldquo;</span><p class="depoimento__quote">O diagnóstico veio recentemente. Ainda estou processando, mas agora tenho linguagem para o que sinto. Isso já é muito.</p></div>
-            <div class="depoimento__rodape"><div class="depoimento__autor">Relato anônimo</div><span class="depoimento__tag depoimento__tag--recente">Diagnóstico recente</span></div>
-          </article>
+          <article class="depoimento surgir"><div class="depoimento__corpo"><span class="depoimento__aspas">&ldquo;</span><p class="depoimento__quote">Demorei sete anos para ouvir a palavra endometriose. Antes disso, era só "cólica forte" e remédio para dor.</p></div><div class="depoimento__rodape"><div class="depoimento__autor">Theo, 29 anos</div><span class="depoimento__tag depoimento__tag--diagnostico">Com diagnóstico</span></div></article>
+          <article class="depoimento surgir"><div class="depoimento__corpo"><span class="depoimento__aspas">&ldquo;</span><p class="depoimento__quote">Como homem trans, precisei explicar minha identidade antes de conseguir falar sobre meus sintomas. Encontrar um profissional afirmativo não deveria ser tão difícil.</p></div><div class="depoimento__rodape"><div class="depoimento__autor">Bruno (nome social)</div><span class="depoimento__tag depoimento__tag--acompanhamento">Em acompanhamento</span></div></article>
+          <article class="depoimento surgir"><div class="depoimento__corpo"><span class="depoimento__aspas">&ldquo;</span><p class="depoimento__quote">O diagnóstico veio recentemente. Ainda estou processando, mas agora tenho linguagem para o que sinto. Isso já é muito.</p></div><div class="depoimento__rodape"><div class="depoimento__autor">Relato anônimo</div><span class="depoimento__tag depoimento__tag--recente">Diagnóstico recente</span></div></article>
         </div>
         <div class="form-relato surgir">
           <h3>Deixe seu relato</h3>
@@ -422,7 +393,6 @@
       </div>
     </section>
 
-    <!-- SEÇÃO 6 — ENTRE + RECURSOS -->
     <div class="secao--entre-recursos">
       <section class="secao--entre" id="entre">
         <div class="container entre-grid">
@@ -430,10 +400,10 @@
             <p class="etiqueta">Assistente de pré-consulta</p>
             <h2>Entre</h2>
             <p>Um assistente para organizar seus sintomas, dúvidas e histórico antes de entrar no consultório. Chegue preparado, saia com respostas.</p>
-            <a href="#informacao" class="entre-link-cta">
+            <button class="entre-link-cta" id="abrirFormManual">
               Prefiro preencher sem IA.
               <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-            </a>
+            </button>
           </div>
           <div class="chat-box surgir">
             <p class="chat-box__prompt">Para começar, descreva o que você está sentindo, do seu jeito. Pode ser uma frase, pode ser um parágrafo.</p>
@@ -445,10 +415,7 @@
                   <svg viewBox="0 0 24 24"><path d="M21.4 11.05 12.25 20.2a6 6 0 0 1-8.49-8.49l9.2-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
                   Anexar exames anteriores
                 </button>
-                <button class="botao" id="chatEnviar">
-                  Enviar
-                  <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-                </button>
+                <button class="botao" id="chatEnviar">Enviar<svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
               </div>
             </div>
           </div>
@@ -460,172 +427,375 @@
 
       <section class="secao--recursos">
         <div class="container grade-recursos">
-          <div class="recurso surgir">
-            <div class="recurso__icone"><svg viewBox="0 0 24 24"><path d="M6 3v5.5a4 4 0 0 0 8 0V3"/><path d="M10 13.5v1.8a5.2 5.2 0 0 0 5.2 5.2 5.2 5.2 0 0 0 5.2-5.2v-1.3"/><circle cx="20.4" cy="12.5" r="2.1"/></svg></div>
-            <h4>Triagem prévia</h4>
-            <p>As perguntas certas para você não esquecer nenhum detalhe importante antes da consulta.</p>
-          </div>
-          <div class="recurso surgir">
-            <div class="recurso__icone"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
-            <h4>Privacidade médica</h4>
-            <p>Seus dados são protegidos. Você decide o que compartilhar com o profissional.</p>
-          </div>
-          <div class="recurso surgir">
-            <div class="recurso__icone"><svg viewBox="0 0 24 24"><path d="M7.5 3h6.5l4 4v13.2a.8.8 0 0 1-.8.8H7.5a.8.8 0 0 1-.8-.8V3.8a.8.8 0 0 1 .8-.8z"/><path d="M14 3v4h4M8.3 12.5h7.4M8.3 16h5.5"/></svg></div>
-            <h4>Relatórios claros</h4>
-            <p>Transformamos seus relatos em um resumo estruturado para o médico ler de forma mais rápida.</p>
-          </div>
+          <div class="recurso surgir"><div class="recurso__icone"><svg viewBox="0 0 24 24"><path d="M6 3v5.5a4 4 0 0 0 8 0V3"/><path d="M10 13.5v1.8a5.2 5.2 0 0 0 5.2 5.2 5.2 5.2 0 0 0 5.2-5.2v-1.3"/><circle cx="20.4" cy="12.5" r="2.1"/></svg></div><h4>Triagem prévia</h4><p>As perguntas certas para você não esquecer nenhum detalhe importante antes da consulta.</p></div>
+          <div class="recurso surgir"><div class="recurso__icone"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div><h4>Privacidade médica</h4><p>Seus dados são protegidos. Você decide o que compartilhar com o profissional.</p></div>
+          <div class="recurso surgir"><div class="recurso__icone"><svg viewBox="0 0 24 24"><path d="M7.5 3h6.5l4 4v13.2a.8.8 0 0 1-.8.8H7.5a.8.8 0 0 1-.8-.8V3.8a.8.8 0 0 1 .8-.8z"/><path d="M14 3v4h4M8.3 12.5h7.4M8.3 16h5.5"/></svg></div><h4>Relatórios claros</h4><p>Transformamos seus relatos em um resumo estruturado para o médico ler de forma mais rápida.</p></div>
         </div>
       </section>
     </div>
-
   </main>
 
-  <footer>
-    <div class="container">
-      <p>Conteúdo informativo e educativo. Não substitui avaliação médica profissional.</p>
+  <!-- FORMULÁRIO MANUAL OVERLAY -->
+  <div class="fm-overlay" id="formManual" aria-hidden="true" role="dialog">
+    <div class="fm-layout">
+      <div id="fmContexto">
+        <p class="fm-etiqueta" id="fmEtiqueta">Formulário manual</p>
+        <h2 class="fm-titulo" id="fmTitulo">Você está no<br>controle.</h2>
+        <p class="fm-desc" id="fmDesc">Preencha 4 etapas simples no seu ritmo. O resultado será um resumo organizado para o seu médico ler antes da consulta.</p>
+      </div>
+
+      <div class="fm-card">
+        <!-- PASSO 0: INTRO -->
+        <div id="fmStep0">
+          <ul class="fm-intro-steps">
+            <li class="fm-intro-step"><div class="fm-step-num">1</div><div><h4>Sintomas principais</h4><p>Selecione o que você está sentindo agora.</p></div></li>
+            <li class="fm-intro-step"><div class="fm-step-num">2</div><div><h4>Histórico e frequência</h4><p>Duração, intensidade e padrões dos sintomas.</p></div></li>
+            <li class="fm-intro-step"><div class="fm-step-num">3</div><div><h4>Medicamentos e exames</h4><p>Tratamentos atuais e diagnósticos prévios.</p></div></li>
+            <li class="fm-intro-step"><div class="fm-step-num">4</div><div><h4>Revisão do relato</h4><p>Confira tudo antes de enviar ao profissional.</p></div></li>
+          </ul>
+          <div class="fm-intro-btns">
+            <button class="fm-btn-cancel" id="fmBtnCancelar">Cancelar</button>
+            <button class="botao" id="fmBtnComecar" style="justify-content:center;">Começar</button>
+          </div>
+          <p class="fm-ia-link"><button id="fmVoltarIA">Voltar para o assistente IA →</button></p>
+        </div>
+
+        <!-- PASSO 1: SINTOMAS -->
+        <div id="fmStep1" style="display:none;">
+          <div class="fm-prog-row"><span class="fm-prog-label">Passo 1 de 4</span><span class="fm-prog-pct">25% concluído</span></div>
+          <div class="fm-prog-bar"><div class="fm-prog-fill" style="width:25%"></div></div>
+          <div class="fm-group">
+            <span class="fm-group-label">Sintomas principais</span>
+            <div class="fm-pills" id="fmSintomas">
+              <span class="fm-pill" data-val="Cólicas intensas">Cólicas intensas</span>
+              <span class="fm-pill" data-val="Dor pélvica">Dor pélvica</span>
+              <span class="fm-pill" data-val="Dor ao urinar ou evacuar">Dor ao urinar ou evacuar</span>
+              <span class="fm-pill" data-val="Fadiga persistente">Fadiga persistente</span>
+              <span class="fm-pill" data-val="Dor durante relações sexuais">Dor durante relações sexuais</span>
+              <span class="fm-pill" data-val="Infertilidade sem causa aparente">Infertilidade sem causa aparente</span>
+              <span class="fm-pill" data-val="Sangramento irregular">Sangramento irregular</span>
+              <span class="fm-pill" data-val="Dor nas costas e pernas">Dor nas costas e pernas</span>
+              <span class="fm-pill" data-val="Problemas gastrointestinais">Problemas gastrointestinais</span>
+              <span class="fm-pill" data-val="Piora com o ciclo">Piora com o ciclo</span>
+            </div>
+          </div>
+          <div class="fm-rodape"><span></span><button class="botao" id="fmP1Next">Próximo</button></div>
+        </div>
+
+        <!-- PASSO 2: HISTÓRICO -->
+        <div id="fmStep2" style="display:none;">
+          <div class="fm-prog-row"><span class="fm-prog-label">Passo 2 de 4</span><span class="fm-prog-pct">50% concluído</span></div>
+          <div class="fm-prog-bar"><div class="fm-prog-fill" style="width:50%"></div></div>
+          <div class="fm-group">
+            <span class="fm-group-label">Há quanto tempo?</span>
+            <div class="fm-pills" id="fmTempo" data-single="true">
+              <span class="fm-pill" data-val="Menos de 6 meses">Menos de 6 meses</span>
+              <span class="fm-pill" data-val="6m a 2 anos">6m a 2 anos</span>
+              <span class="fm-pill" data-val="2 a 5 anos">2 a 5 anos</span>
+              <span class="fm-pill" data-val="Mais de 5 anos">Mais de 5 anos</span>
+            </div>
+          </div>
+          <div class="fm-group">
+            <span class="fm-group-label">Com que frequência?</span>
+            <div class="fm-pills" id="fmFrequencia" data-single="true">
+              <span class="fm-pill" data-val="Diariamente">Diariamente</span>
+              <span class="fm-pill" data-val="Semanalmente">Semanalmente</span>
+              <span class="fm-pill" data-val="Só no ciclo">Só no ciclo</span>
+              <span class="fm-pill" data-val="Variável">Variável</span>
+            </div>
+          </div>
+          <div class="fm-group">
+            <span class="fm-group-label">Intensidade média da dor</span>
+            <div class="fm-escala" id="fmEscala">
+              <button class="fm-escala-n" data-val="1">1</button>
+              <button class="fm-escala-n" data-val="2">2</button>
+              <button class="fm-escala-n" data-val="3">3</button>
+              <button class="fm-escala-n" data-val="4">4</button>
+              <button class="fm-escala-n" data-val="5">5</button>
+              <button class="fm-escala-n" data-val="6">6</button>
+              <button class="fm-escala-n" data-val="7">7</button>
+              <button class="fm-escala-n" data-val="8">8</button>
+              <button class="fm-escala-n" data-val="9">9</button>
+              <button class="fm-escala-n" data-val="10">10</button>
+            </div>
+            <div class="fm-escala-labels"><span>Leve</span><span>Insuportável</span></div>
+          </div>
+          <div class="fm-group">
+            <span class="fm-group-label">O que piora os sintomas?</span>
+            <div class="fm-pills" id="fmPiora">
+              <span class="fm-pill" data-val="Menstruação/ciclo">Menstruação/ciclo</span>
+              <span class="fm-pill" data-val="Relações sexuais">Relações sexuais</span>
+              <span class="fm-pill" data-val="Atividade física">Atividade física</span>
+              <span class="fm-pill" data-val="Estresse">Estresse</span>
+              <span class="fm-pill" data-val="Sem padrão definido">Sem padrão definido</span>
+            </div>
+          </div>
+          <div class="fm-rodape"><button class="fm-back" id="fmP2Back">Voltar</button><button class="botao" id="fmP2Next">Próximo</button></div>
+        </div>
+
+        <!-- PASSO 3: MEDICAMENTOS -->
+        <div id="fmStep3" style="display:none;">
+          <div class="fm-prog-row"><span class="fm-prog-label">Passo 3 de 4</span><span class="fm-prog-pct">75% concluído</span></div>
+          <div class="fm-prog-bar"><div class="fm-prog-fill" style="width:75%"></div></div>
+          <div class="fm-group">
+            <span class="fm-group-label">Medicamentos em uso</span>
+            <div id="fmMedsList"><input class="fm-input" type="text" placeholder="Nome do medicamento..."></div>
+            <button class="fm-add" id="fmAddMed">+ Adicionar medicamento</button>
+          </div>
+          <div class="fm-group">
+            <span class="fm-group-label">Diagnósticos anteriores</span>
+            <input class="fm-input" type="text" id="fmDiagnostico" placeholder="Ex: Suspeita de endometriose, SOP...">
+          </div>
+          <div class="fm-group">
+            <span class="fm-group-label">Exames realizados</span>
+            <div class="fm-pills" id="fmExames">
+              <span class="fm-pill" data-val="Ultrassom pélvico">Ultrassom pélvico</span>
+              <span class="fm-pill" data-val="Laparoscopia">Laparoscopia</span>
+              <span class="fm-pill" data-val="Ressonância">Ressonância</span>
+              <span class="fm-pill" data-val="Exames de sangue">Exames de sangue</span>
+              <span class="fm-pill" data-val="Nenhum">Nenhum</span>
+            </div>
+          </div>
+          <div class="fm-rodape"><button class="fm-back" id="fmP3Back">Voltar</button><button class="botao" id="fmP3Next">Revisar relato</button></div>
+        </div>
+
+        <!-- PASSO 4: REVISÃO -->
+        <div id="fmStep4" style="display:none;">
+          <div class="fm-prog-row"><span class="fm-prog-label">Passo 4 de 4</span><span class="fm-prog-pct">100% concluído</span></div>
+          <div class="fm-prog-bar"><div class="fm-prog-fill" style="width:100%"></div></div>
+          <h3 style="color:var(--branco-quente);margin-bottom:1rem;font-size:1.1rem;">Seu relato organizado</h3>
+          <div class="fm-resumo-item"><span class="fm-res-label">Sintomas</span><div class="fm-res-val" id="fmResSintomas"></div><button class="fm-res-edit" data-step="1">Editar</button></div>
+          <div class="fm-resumo-item"><span class="fm-res-label">Histórico</span><div class="fm-res-val" id="fmResHistorico"></div><button class="fm-res-edit" data-step="2">Editar</button></div>
+          <div class="fm-resumo-item"><span class="fm-res-label">Medicamentos</span><div class="fm-res-val" id="fmResMeds"></div><button class="fm-res-edit" data-step="3">Editar</button></div>
+          <div class="fm-resumo-item"><span class="fm-res-label">Exames</span><div class="fm-res-val" id="fmResExames"></div><button class="fm-res-edit" data-step="3">Editar</button></div>
+          <label class="fm-autorizo"><input type="checkbox" id="fmAutorizo"> Autorizo o compartilhamento com meu profissional de saúde</label>
+          <div class="fm-submit-btns">
+            <button class="fm-btn-draft" id="fmBtnRascunho">Salvar rascunho</button>
+            <button class="botao" id="fmBtnEnviar" style="justify-content:center;">Enviar ao médico</button>
+          </div>
+          <p class="fm-cripto">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            Dados protegidos por criptografia de ponta a ponta
+          </p>
+        </div>
+      </div>
     </div>
+    <p class="fm-aviso">O Entre, assistente virtual, não diagnostica nem substitui atendimento médico.</p>
+  </div>
+
+  <footer>
+    <div class="container"><p>Conteúdo informativo e educativo. Não substitui avaliação médica profissional.</p></div>
   </footer>
 
   <script>
-    const reduzirMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
+    // NAV
     document.getElementById('voltarTopo').addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
-
     const botaoMenu = document.getElementById('botaoMenu');
     const menuNav = document.getElementById('menuNav');
     botaoMenu.addEventListener('click', () => {
-      const aberto = menuNav.classList.toggle('aberto');
-      botaoMenu.setAttribute('aria-expanded', aberto);
+      const ab = menuNav.classList.toggle('aberto');
+      botaoMenu.setAttribute('aria-expanded', ab);
     });
     menuNav.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
       menuNav.classList.remove('aberto');
       botaoMenu.setAttribute('aria-expanded','false');
     }));
-
     window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('solido', window.scrollY > 60));
 
+    // SURGIR
+    const reduzirMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (!reduzirMovimento) {
-      const obs = new IntersectionObserver(entradas => {
-        entradas.forEach(e => { if (e.isIntersecting){ e.target.classList.add('visivel'); obs.unobserve(e.target); } });
-      }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+      const obs = new IntersectionObserver(es => {
+        es.forEach(e => { if(e.isIntersecting){e.target.classList.add('visivel');obs.unobserve(e.target);} });
+      },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
       document.querySelectorAll('.surgir').forEach(el => obs.observe(el));
     } else {
       document.querySelectorAll('.surgir').forEach(el => el.classList.add('visivel'));
     }
 
+    // SINTOMAS CHECKLIST
     const feedback = document.getElementById('feedbackSintomas');
     const feedbackTexto = document.getElementById('feedbackTexto');
-    const textosFeedback = [
-      '','',
-      'Você marcou vários sinais que podem estar relacionados. Vale conversar com um profissional especializado em dor pélvica. Para isso, considere usar nosso Assistente de Pré-consulta Entre. Clique para saber mais.',
-      'Com esses sintomas, um ginecologista especializado em endometriose pode ser um bom ponto de partida. Para isso, considere usar nosso Assistente de Pré-consulta Entre. Clique para saber mais.',
-      'Esses sinais merecem atenção. Considere buscar um especialista em dor pélvica crônica ou endometriose. Para isso, considere usar nosso Assistente de Pré-consulta Entre. Clique para saber mais.',
-      'Vários sintomas marcados. Um ginecologista especializado em endometriose pode fazer uma avaliação mais detalhada. Para isso, considere usar nosso Assistente de Pré-consulta Entre. Clique para saber mais.',
-      'Com tantos sintomas relatados, uma equipe multidisciplinar faz diferença. Para isso, considere usar nosso Assistente de Pré-consulta Entre. Clique para saber mais.',
+    const textosFeedback = ['','',
+      'Você marcou vários sinais que podem estar relacionados. Vale conversar com um profissional especializado em dor pélvica. Para isso, considere usar nosso Assistente de Pré-consulta Entre.',
+      'Com esses sintomas, um ginecologista especializado em endometriose pode ser um bom ponto de partida. Para isso, considere usar nosso Assistente de Pré-consulta Entre.',
+      'Esses sinais merecem atenção. Considere buscar um especialista em dor pélvica crônica ou endometriose. Para isso, considere usar nosso Assistente de Pré-consulta Entre.',
+      'Vários sintomas marcados. Um ginecologista especializado pode fazer uma avaliação mais detalhada. Para isso, considere usar nosso Assistente de Pré-consulta Entre.',
+      'Com tantos sintomas relatados, uma equipe multidisciplinar faz diferença. Para isso, considere usar nosso Assistente de Pré-consulta Entre.',
     ];
     document.querySelectorAll('#listaSintomas input').forEach(cb => {
       cb.addEventListener('change', () => {
         cb.closest('.item-sintoma').classList.toggle('marcado', cb.checked);
         const total = document.querySelectorAll('#listaSintomas input:checked').length;
-        const idx = Math.min(total, textosFeedback.length - 1);
-        if (total >= 3) { feedbackTexto.textContent = textosFeedback[idx]; feedback.classList.add('ativo'); }
-        else { feedback.classList.remove('ativo'); }
+        const idx = Math.min(total, textosFeedback.length-1);
+        if(total >= 3){feedbackTexto.textContent=textosFeedback[idx];feedback.classList.add('ativo');}
+        else{feedback.classList.remove('ativo');}
       });
     });
 
+    // FLIP CARDS
     document.querySelectorAll('.carta-mito').forEach(carta => {
-      const alt = () => { const a = carta.classList.toggle('aberta'); carta.setAttribute('aria-pressed', a); };
+      const alt = () => { const a = carta.classList.toggle('aberta'); carta.setAttribute('aria-pressed',a); };
       carta.addEventListener('click', alt);
-      carta.addEventListener('keydown', e => { if (e.key==='Enter'||e.key===' '){ e.preventDefault(); alt(); } });
+      carta.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' '){e.preventDefault();alt();} });
     });
 
+    // FORM RELATOS
     document.getElementById('botaoRelato').addEventListener('click', async () => {
       const nome = document.getElementById('nomeRelato').value.trim();
       const pronomes = document.getElementById('pronomesRelato').value.trim();
       const txt = document.getElementById('textoRelato').value.trim();
       const btn = document.getElementById('botaoRelato');
-      if (!txt){ document.getElementById('textoRelato').focus(); return; }
-
+      if(!txt){document.getElementById('textoRelato').focus();return;}
       const formId = '1FAIpQLSe0EnT-Kn5kpNke6tJnqPXTYFO7oqosVRkD9K2Xq_vDux7GOA';
-      const url = `https://docs.google.com/forms/d/e/${formId}/formResponse`;
       const body = new FormData();
       body.append('entry.92831491', nome);
       body.append('entry.1337417479', pronomes);
       body.append('entry.1773196441', txt);
-
-      btn.textContent = 'Enviando...';
-      btn.disabled = true;
-
-      try {
-        await fetch(url, { method:'POST', body, mode:'no-cors' });
-      } catch(e){ /* no-cors sempre dispara catch, ignora */ }
-
-      btn.textContent = 'Relato recebido';
-      btn.style.background = '#3f8a5a';
-      document.getElementById('textoRelato').value = '';
-      document.getElementById('nomeRelato').value = '';
-      document.getElementById('pronomesRelato').value = '';
-      setTimeout(() => { btn.textContent = 'Enviar relato'; btn.style.background = ''; btn.disabled = false; }, 3500);
+      btn.textContent='Enviando...';btn.disabled=true;
+      try{await fetch(`https://docs.google.com/forms/d/e/${formId}/formResponse`,{method:'POST',body,mode:'no-cors'});}catch(e){}
+      btn.textContent='Relato recebido';btn.style.background='#3f8a5a';
+      document.getElementById('textoRelato').value='';
+      document.getElementById('nomeRelato').value='';
+      document.getElementById('pronomesRelato').value='';
+      setTimeout(()=>{btn.textContent='Enviar relato';btn.style.background='';btn.disabled=false;},3500);
     });
 
+    // CHAT IA
+    const historico = [];
+    const systemPrompt = `Você é o Entre, um assistente virtual de pré-consulta do projeto "Dor não deveria ser normal". Seu papel é ajudar a pessoa a organizar seus sintomas, dúvidas e histórico antes de uma consulta médica sobre endometriose ou dor pélvica crônica.
+Regras: Nunca faça diagnósticos. Use linguagem inclusiva e neutra em termos de gênero. Seja acolhedor e direto. Faça perguntas curtas, uma por vez. Após 6-8 trocas, ofereça um resumo organizado. Responda sempre em português brasileiro.`;
     const chatMensagens = document.getElementById('chatMensagens');
     const chatInput = document.getElementById('chatInput');
-
-    const historico = [];
-
-    const systemPrompt = `Você é o Entre, um assistente virtual de pré-consulta do projeto "Dor não deveria ser normal". Seu papel é ajudar a pessoa a organizar seus sintomas, dúvidas e histórico antes de uma consulta médica sobre endometriose ou dor pélvica crônica.
-
-Regras que você deve seguir sempre:
-- Nunca faça diagnósticos. Nunca sugira que a pessoa tem ou não tem endometriose.
-- Nunca substitua orientação médica profissional.
-- Use linguagem inclusiva e neutra em termos de gênero. Evite "mulher", "menstruação", "útero" como marcadores de identidade — prefira "ciclo", "período", "dor pélvica", "corpo".
-- Seja acolhedor, direto e humano. Sem jargão clínico desnecessário.
-- Faça perguntas curtas, uma por vez, para ajudar a pessoa a detalhar: quando a dor aparece, com que frequência, intensidade, o que melhora ou piora, há quanto tempo convive com isso, quais médicos já consultou.
-- Ao final da conversa (quando a pessoa sinalizar que terminou ou após 6-8 trocas), ofereça um resumo organizado dos sintomas relatados, em formato de lista simples, para a pessoa levar à consulta.
-- Se a pessoa demonstrar sofrimento emocional intenso, acolha com empatia e sugira apoio psicológico além do médico.
-- Responda sempre em português brasileiro.`;
-
     async function enviarChat(){
       const val = chatInput.value.trim();
-      if (!val) return;
-
-      const u = document.createElement('div');
-      u.className = 'msg msg--user';
-      u.textContent = val;
-      chatMensagens.appendChild(u);
-      chatInput.value = '';
-      chatMensagens.scrollTop = chatMensagens.scrollHeight;
-
-      historico.push({ role: 'user', content: val });
-
-      const typing = document.createElement('div');
-      typing.className = 'msg msg--bot';
-      typing.textContent = '...';
-      chatMensagens.appendChild(typing);
-      chatMensagens.scrollTop = chatMensagens.scrollHeight;
-
-      try {
-        const res = await fetch('/.netlify/functions/entre', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ messages: historico })
-        });
-
+      if(!val) return;
+      const u = document.createElement('div'); u.className='msg msg--user'; u.textContent=val;
+      chatMensagens.appendChild(u); chatInput.value='';
+      chatMensagens.scrollTop=chatMensagens.scrollHeight;
+      historico.push({role:'user',content:val});
+      const typing = document.createElement('div'); typing.className='msg msg--bot'; typing.textContent='...';
+      chatMensagens.appendChild(typing); chatMensagens.scrollTop=chatMensagens.scrollHeight;
+      try{
+        const res = await fetch('/.netlify/functions/entre',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:historico})});
         const data = await res.json();
-        const resposta = data.text || 'Desculpe, não consegui processar sua mensagem.';
-        historico.push({ role: 'assistant', content: resposta });
-        typing.textContent = resposta;
-      } catch(e) {
-        typing.textContent = 'Não consegui me conectar agora. Tente novamente em instantes.';
-      }
+        const resp = data.text || 'Desculpe, não consegui processar sua mensagem.';
+        historico.push({role:'assistant',content:resp});
+        typing.textContent=resp;
+      }catch(e){typing.textContent='Não consegui me conectar agora. Tente novamente em instantes.';}
+      chatMensagens.scrollTop=chatMensagens.scrollHeight;
+    }
+    document.getElementById('chatEnviar').addEventListener('click', enviarChat);
+    chatInput.addEventListener('keydown', e => { if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();enviarChat();} });
 
-      chatMensagens.scrollTop = chatMensagens.scrollHeight;
+    // ========================
+    // FORMULÁRIO MANUAL
+    // ========================
+    const fmContextos = {
+      0:{etiqueta:'Formulário manual',titulo:'Você está no<br>controle.',desc:'Preencha 4 etapas simples no seu ritmo. O resultado será um resumo organizado para o seu médico ler antes da consulta.'},
+      1:{etiqueta:'Passo 1',titulo:'Sintomas<br>principais.',desc:'Selecione tudo o que você está sentindo. Você pode marcar quantos quiser.'},
+      2:{etiqueta:'Passo 2',titulo:'Histórico e<br>frequência.',desc:'Entender a jornada dos seus sintomas ajuda a mapear possíveis causas.'},
+      3:{etiqueta:'Passo 3',titulo:'Medicamentos e<br>histórico.',desc:'Essas informações evitam interações medicamentosas e ajudam no diagnóstico.'},
+      4:{etiqueta:'Etapa final',titulo:'Quase lá.',desc:'Revise e confirme. Seu médico receberá este resumo organizado antes da consulta.'}
+    };
+
+    function fmIrStep(n){
+      const ctx = fmContextos[n];
+      document.getElementById('fmEtiqueta').textContent = ctx.etiqueta;
+      document.getElementById('fmTitulo').innerHTML = ctx.titulo;
+      document.getElementById('fmDesc').textContent = ctx.desc;
+      [0,1,2,3,4].forEach(i => document.getElementById(`fmStep${i}`).style.display = i===n?'block':'none');
+      if(n===4) fmBuildResumo();
     }
 
-    document.getElementById('chatEnviar').addEventListener('click', enviarChat);
-    chatInput.addEventListener('keydown', e => {
-      if (e.key === 'Enter' && !e.shiftKey){ e.preventDefault(); enviarChat(); }
+    function fmGetPills(id){
+      return [...document.querySelectorAll(`#${id} .fm-pill.sel`)].map(p=>p.dataset.val);
+    }
+
+    function fmBuildResumo(){
+      const sints = fmGetPills('fmSintomas');
+      const rs = document.getElementById('fmResSintomas');
+      rs.innerHTML = sints.length ? sints.map(s=>`<span class="fm-res-tag">${s}</span>`).join('') : '<span style="opacity:.5">Nenhum selecionado</span>';
+      const tempo = document.querySelector('#fmTempo .fm-pill.sel')?.dataset.val||'—';
+      const freq = document.querySelector('#fmFrequencia .fm-pill.sel')?.dataset.val||'—';
+      const intens = document.querySelector('#fmEscala .fm-escala-n.sel')?.dataset.val||'—';
+      const piora = fmGetPills('fmPiora');
+      document.getElementById('fmResHistorico').textContent = `${tempo} · ${freq} · Dor ${intens}/10${piora.length?' · '+piora.join(', '):''}`;
+      const meds = [...document.querySelectorAll('#fmMedsList .fm-input')].map(i=>i.value.trim()).filter(Boolean);
+      document.getElementById('fmResMeds').textContent = meds.length?meds.join(', '):'—';
+      const exames = fmGetPills('fmExames');
+      document.getElementById('fmResExames').textContent = exames.length?exames.join(', '):'—';
+    }
+
+    function abrirFormManual(){
+      document.getElementById('formManual').classList.add('ativo');
+      document.getElementById('formManual').setAttribute('aria-hidden','false');
+      document.body.style.overflow='hidden';
+      fmIrStep(0);
+    }
+    function fecharFormManual(){
+      document.getElementById('formManual').classList.remove('ativo');
+      document.getElementById('formManual').setAttribute('aria-hidden','true');
+      document.body.style.overflow='';
+    }
+
+    document.getElementById('abrirFormManual').addEventListener('click', abrirFormManual);
+    document.getElementById('fmBtnCancelar').addEventListener('click', fecharFormManual);
+    document.getElementById('fmVoltarIA').addEventListener('click', fecharFormManual);
+    document.getElementById('fmBtnComecar').addEventListener('click', ()=>fmIrStep(1));
+    document.getElementById('fmP1Next').addEventListener('click', ()=>fmIrStep(2));
+    document.getElementById('fmP2Back').addEventListener('click', ()=>fmIrStep(1));
+    document.getElementById('fmP2Next').addEventListener('click', ()=>fmIrStep(3));
+    document.getElementById('fmP3Back').addEventListener('click', ()=>fmIrStep(2));
+    document.getElementById('fmP3Next').addEventListener('click', ()=>fmIrStep(4));
+
+    // Pills toggle
+    document.querySelectorAll('.fm-pills').forEach(container => {
+      container.addEventListener('click', e => {
+        const pill = e.target.closest('.fm-pill');
+        if(!pill) return;
+        const single = container.dataset.single === 'true';
+        if(single){container.querySelectorAll('.fm-pill').forEach(p=>p.classList.remove('sel'));}
+        pill.classList.toggle('sel');
+      });
+    });
+
+    // Escala
+    document.getElementById('fmEscala').addEventListener('click', e => {
+      const btn = e.target.closest('.fm-escala-n');
+      if(!btn) return;
+      document.querySelectorAll('.fm-escala-n').forEach(b=>b.classList.remove('sel'));
+      btn.classList.add('sel');
+    });
+
+    // Adicionar medicamento
+    document.getElementById('fmAddMed').addEventListener('click', ()=>{
+      const inp = document.createElement('input');
+      inp.className='fm-input';inp.type='text';inp.placeholder='Nome do medicamento...';
+      document.getElementById('fmMedsList').appendChild(inp);
+    });
+
+    // Editar de volta
+    document.querySelectorAll('.fm-res-edit').forEach(btn=>{
+      btn.addEventListener('click', ()=>fmIrStep(parseInt(btn.dataset.step)));
+    });
+
+    // Rascunho
+    document.getElementById('fmBtnRascunho').addEventListener('click', ()=>{
+      const btn = document.getElementById('fmBtnRascunho');
+      btn.textContent='Rascunho salvo!';
+      setTimeout(()=>btn.textContent='Salvar rascunho',2500);
+    });
+
+    // Enviar ao médico — placeholder até integrar o segundo Google Forms
+    document.getElementById('fmBtnEnviar').addEventListener('click', async ()=>{
+      if(!document.getElementById('fmAutorizo').checked){
+        alert('Por favor, autorize o compartilhamento antes de enviar.');return;
+      }
+      const btn = document.getElementById('fmBtnEnviar');
+      btn.textContent='Enviando...';btn.disabled=true;
+      // TODO: integrar entry IDs do segundo Google Forms aqui
+      setTimeout(()=>{btn.textContent='Enviado!';btn.style.background='#3f8a5a';},800);
     });
   </script>
 </body>
