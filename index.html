@@ -22,117 +22,115 @@
   html{scroll-behavior:smooth;}
   body{font-family:var(--fonte);color:var(--texto-escuro);background:var(--branco-quente);line-height:1.6;letter-spacing:0.012em;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
   h1,h2,h3,h4{font-family:var(--fonte);font-weight:700;letter-spacing:-0.01em;line-height:1.14;}
-  a{color:inherit;}
-  img,svg{display:block;max-width:100%;}
+  a{color:inherit;}img,svg{display:block;max-width:100%;}
 
   .grain-overlay{position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:0.045;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
-  .skip-link{position:absolute;left:-999px;top:0;background:var(--petroleo);color:var(--texto-claro);padding:0.75rem 1.25rem;z-index:10000;border-radius:0 0 8px 0;}
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--petroleo);color:var(--texto-claro);padding:.75rem 1.25rem;z-index:10000;border-radius:0 0 8px 0;}
   .skip-link:focus{left:0;}
 
   .container{max-width:1180px;margin:0 auto;padding:0 2rem;}
   .secao{position:relative;padding:6.5rem 0;overflow:visible;}
   .secao--branca{background:#fff;}
-  .etiqueta{display:inline-block;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.2em;color:var(--laranja);margin-bottom:1.1rem;font-weight:700;}
+  .etiqueta{display:inline-block;font-size:.72rem;text-transform:uppercase;letter-spacing:.2em;color:var(--laranja);margin-bottom:1.1rem;font-weight:700;}
   .titulo-secao{font-size:clamp(1.9rem,4vw,2.9rem);margin-bottom:1.2rem;color:var(--azul-profundo);max-width:16ch;}
   .titulo-secao em{font-style:normal;color:var(--laranja);}
   .texto-intro{max-width:620px;font-size:1.02rem;color:var(--texto-suave);margin-bottom:3rem;}
-
   .surgir{opacity:0;transform:translateY(26px);filter:blur(5px);transition:opacity var(--transicao),transform var(--transicao),filter var(--transicao);}
   .surgir.visivel{opacity:1;transform:translateY(0);filter:blur(0);}
-  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}.surgir{opacity:1;transform:none;filter:none;transition:none;}*{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}.surgir{opacity:1;transform:none;filter:none;transition:none;}*{animation-duration:.01ms!important;transition-duration:.01ms!important;}}
 
   /* NAV */
-  .nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 2rem;transition:background 0.4s ease;}
-  .nav::before{content:"";position:absolute;left:0;right:0;top:0;height:56px;background:#000;opacity:0.35;z-index:-1;}
-  .nav.solido{background:rgba(13,27,42,0.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);}
+  .nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 2rem;transition:background .4s ease;}
+  .nav::before{content:"";position:absolute;left:0;right:0;top:0;height:56px;background:#000;opacity:.35;z-index:-1;}
+  .nav.solido{background:rgba(13,27,42,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);}
   .nav.solido::before{display:none;}
-  .nav__logo{font-size:0.85rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--texto-claro);font-weight:700;background:none;border:none;cursor:pointer;font-family:inherit;padding:0;}
+  .nav__logo{font-size:.85rem;text-transform:uppercase;letter-spacing:.12em;color:var(--texto-claro);font-weight:700;background:none;border:none;cursor:pointer;font-family:inherit;padding:0;}
   .nav__links{display:flex;gap:1.8rem;list-style:none;align-items:center;}
-  .nav__links a{text-decoration:none;font-size:0.85rem;text-transform:uppercase;color:var(--texto-claro);opacity:0.82;font-weight:400;transition:opacity 0.3s ease;}
+  .nav__links a{text-decoration:none;font-size:.85rem;text-transform:uppercase;color:var(--texto-claro);opacity:.82;font-weight:400;transition:opacity .3s ease;}
   .nav__links a:hover{opacity:1;}
-  .nav__links a.destaque{color:#fff;opacity:1;font-weight:700;text-transform:none;font-size:0.96rem;letter-spacing:0.01em;}
+  .nav__links a.destaque{color:#fff;opacity:1;font-weight:700;text-transform:none;font-size:.96rem;letter-spacing:.01em;}
   .nav__toggle{display:none;background:none;border:none;color:var(--texto-claro);font-size:1.4rem;cursor:pointer;}
-  @media(max-width:820px){.nav__links{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:1rem;padding:1.4rem 2rem;background:rgba(13,27,42,0.94);backdrop-filter:blur(14px);display:none;align-items:flex-start;}.nav__links.aberto{display:flex;}.nav__toggle{display:block;}}
+  @media(max-width:820px){.nav__links{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:1rem;padding:1.4rem 2rem;background:rgba(13,27,42,.94);backdrop-filter:blur(14px);display:none;align-items:flex-start;}.nav__links.aberto{display:flex;}.nav__toggle{display:block;}}
 
   /* HERO */
   .hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--azul-profundo);}
   .hero__img{position:absolute;inset:0;background-image:url('https://raw.githubusercontent.com/spohj280-prog/endometriose-landing-page/main/Header.png');background-size:cover;background-position:center 28%;}
-  .hero__img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,27,42,0.55) 0%,rgba(13,27,42,0.12) 38%,transparent 65%),linear-gradient(0deg,rgba(13,27,42,0.45) 0%,transparent 30%);}
+  .hero__img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,27,42,.55) 0%,rgba(13,27,42,.12) 38%,transparent 65%),linear-gradient(0deg,rgba(13,27,42,.45) 0%,transparent 30%);}
   .hero__wrap{position:relative;z-index:2;width:100%;padding:0 2rem 6rem;}
   .hero__conteudo{max-width:760px;color:var(--texto-claro);}
-  .hero__intro{font-size:0.98rem;color:rgba(247,241,234,0.85);max-width:460px;margin-bottom:1.8rem;border-left:2px solid #fff;padding-left:1rem;}
-  .hero__titulo{font-weight:700;font-size:clamp(3rem,9vw,6rem);color:var(--branco-quente);letter-spacing:-0.02em;line-height:1.0;max-width:10ch;}
-  .hero__scroll{position:absolute;bottom:2.2rem;left:50%;transform:translateX(-50%);z-index:2;color:var(--texto-claro);display:flex;flex-direction:column;align-items:center;gap:0.5rem;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;opacity:0.75;text-decoration:none;}
+  .hero__intro{font-size:.98rem;color:rgba(247,241,234,.85);max-width:460px;margin-bottom:1.8rem;border-left:2px solid #fff;padding-left:1rem;}
+  .hero__titulo{font-weight:700;font-size:clamp(3rem,9vw,6rem);color:var(--branco-quente);letter-spacing:-.02em;line-height:1.0;max-width:10ch;}
+  .hero__scroll{position:absolute;bottom:2.2rem;left:50%;transform:translateX(-50%);z-index:2;color:var(--texto-claro);display:flex;flex-direction:column;align-items:center;gap:.5rem;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;opacity:.75;text-decoration:none;}
   .hero__scroll svg{width:16px;animation:flutuar 2.4s ease-in-out infinite;}
   @keyframes flutuar{0%,100%{transform:translateY(0);}50%{transform:translateY(7px);}}
 
   .split{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;}
   @media(max-width:860px){.split{grid-template-columns:1fr;gap:2.5rem;}}
-  .cards-empilhados{display:flex;flex-direction:column;gap:0.8rem;margin-top:1.5rem;}
-  .card-linha{display:flex;gap:1rem;padding:1.1rem 1.2rem;border-radius:14px;background:var(--card-bg);border:1px solid var(--card-borda);transition:transform 0.4s ease,background 0.4s ease;}
+  .cards-empilhados{display:flex;flex-direction:column;gap:.8rem;margin-top:1.5rem;}
+  .card-linha{display:flex;gap:1rem;padding:1.1rem 1.2rem;border-radius:14px;background:var(--card-bg);border:1px solid var(--card-borda);transition:transform .4s ease,background .4s ease;}
   .card-linha:hover{transform:translateX(5px);background:#E4E8EF;}
   .card-linha__icone{min-width:34px;display:flex;align-items:flex-start;justify-content:center;padding-top:2px;color:var(--petroleo);}
   .card-linha__icone svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
-  .card-linha h3{font-size:0.98rem;color:var(--petroleo);margin-bottom:0.25rem;}
-  .card-linha p{font-size:0.86rem;color:var(--texto-suave);line-height:1.5;}
-  .grade-imgs{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;}
+  .card-linha h3{font-size:.98rem;color:var(--petroleo);margin-bottom:.25rem;}
+  .card-linha p{font-size:.86rem;color:var(--texto-suave);line-height:1.5;}
+  .grade-imgs{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;}
   .grade-imgs__item{border-radius:16px;overflow:hidden;min-height:150px;position:relative;background-size:cover;}
   .grade-imgs__item::after{content:"";position:absolute;inset:0;mix-blend-mode:overlay;}
   .grade-imgs__item--grande{grid-column:1/3;min-height:200px;background-position:center 22%;}
-  .grade-imgs__item--grande::after{background:linear-gradient(100deg,rgba(43,74,110,0.35),rgba(232,131,58,0.2));}
+  .grade-imgs__item--grande::after{background:linear-gradient(100deg,rgba(43,74,110,.35),rgba(232,131,58,.2));}
   .grade-imgs__item--a{background-position:left 60%;}
-  .grade-imgs__item--a::after{background:linear-gradient(120deg,rgba(207,148,131,0.4),transparent);}
+  .grade-imgs__item--a::after{background:linear-gradient(120deg,rgba(207,148,131,.4),transparent);}
   .grade-imgs__item--b{background-position:right 45%;}
-  .grade-imgs__item--b::after{background:linear-gradient(60deg,rgba(43,74,110,0.45),rgba(232,131,58,0.15));}
+  .grade-imgs__item--b::after{background:linear-gradient(60deg,rgba(43,74,110,.45),rgba(232,131,58,.15));}
 
   .secao--escura{background:var(--azul-secao);color:var(--texto-claro);overflow:visible;}
   .secao--escura .titulo-secao{color:var(--texto-claro);}
-  .secao--escura .texto-intro{color:rgba(247,241,234,0.7);}
+  .secao--escura .texto-intro{color:rgba(247,241,234,.7);}
   .secao--sintomas{background:linear-gradient(135deg,#121A26 0%,#0F1733 52%,#0F1214 100%);}
-  .lista-sintomas{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem;list-style:none;margin-bottom:1.8rem;}
+  .lista-sintomas{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;list-style:none;margin-bottom:1.8rem;}
   @media(max-width:680px){.lista-sintomas{grid-template-columns:1fr;}}
-  .item-sintoma{display:flex;align-items:center;gap:0.9rem;padding:0.95rem 1.2rem;border-radius:11px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);cursor:pointer;transition:background 0.3s ease,transform 0.3s ease;}
-  .item-sintoma:hover{background:rgba(255,255,255,0.07);transform:translateX(3px);}
-  .item-sintoma label{display:flex;align-items:center;gap:0.9rem;width:100%;cursor:pointer;}
-  .item-sintoma input{appearance:none;width:20px;height:20px;min-width:20px;border:2px solid rgba(247,241,234,0.45);border-radius:50%;position:relative;cursor:pointer;transition:background 0.3s,border-color 0.3s;}
+  .item-sintoma{display:flex;align-items:center;gap:.9rem;padding:.95rem 1.2rem;border-radius:11px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);cursor:pointer;transition:background .3s ease,transform .3s ease;}
+  .item-sintoma:hover{background:rgba(255,255,255,.07);transform:translateX(3px);}
+  .item-sintoma label{display:flex;align-items:center;gap:.9rem;width:100%;cursor:pointer;}
+  .item-sintoma input{appearance:none;width:20px;height:20px;min-width:20px;border:2px solid rgba(247,241,234,.45);border-radius:50%;position:relative;cursor:pointer;transition:background .3s,border-color .3s;}
   .item-sintoma input:checked{background:var(--laranja);border-color:var(--laranja);}
   .item-sintoma input:checked::after{content:"";position:absolute;inset:4px;background:#0F1214;border-radius:50%;}
-  .item-sintoma span{font-size:0.92rem;color:var(--texto-claro);}
-  .item-sintoma.marcado{background:rgba(232,131,58,0.12);border-color:rgba(232,131,58,0.3);}
-  .feedback-sintomas{padding:1.3rem 1.6rem;border-radius:0 12px 12px 0;border-left:3px solid var(--laranja);background:rgba(232,131,58,0.1);color:var(--texto-claro);font-size:0.95rem;max-width:680px;opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity 0.5s ease,transform 0.5s ease;display:flex;align-items:center;justify-content:space-between;gap:1.2rem;flex-wrap:wrap;}
+  .item-sintoma span{font-size:.92rem;color:var(--texto-claro);}
+  .item-sintoma.marcado{background:rgba(232,131,58,.12);border-color:rgba(232,131,58,.3);}
+  .feedback-sintomas{padding:1.3rem 1.6rem;border-radius:0 12px 12px 0;border-left:3px solid var(--laranja);background:rgba(232,131,58,.1);color:var(--texto-claro);font-size:.95rem;max-width:680px;opacity:0;transform:translateY(8px);pointer-events:none;transition:opacity .5s ease,transform .5s ease;display:flex;align-items:center;justify-content:space-between;gap:1.2rem;flex-wrap:wrap;}
   .feedback-sintomas.ativo{opacity:1;transform:translateY(0);pointer-events:auto;}
-  .feedback-sintomas p{margin:0;flex:1;min-width:200px;font-size:0.9rem;}
-  .aviso{font-size:0.8rem;color:rgba(247,241,234,0.5);margin-top:1.2rem;max-width:640px;}
+  .feedback-sintomas p{margin:0;flex:1;min-width:200px;font-size:.9rem;}
+  .aviso{font-size:.8rem;color:rgba(247,241,234,.5);margin-top:1.2rem;max-width:640px;}
 
   .grade-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;}
   @media(max-width:820px){.grade-3{grid-template-columns:1fr;}}
-  .card-tema{padding:1.7rem;border-radius:16px;background:var(--card-bg);border:1px solid var(--card-borda);transition:transform 0.45s ease,box-shadow 0.45s ease;}
-  .card-tema:hover{transform:translateY(-5px);box-shadow:0 16px 36px -22px rgba(27,58,75,0.3);}
-  .card-tema__icone{margin-bottom:0.9rem;color:var(--petroleo);}
+  .card-tema{padding:1.7rem;border-radius:16px;background:var(--card-bg);border:1px solid var(--card-borda);transition:transform .45s ease,box-shadow .45s ease;}
+  .card-tema:hover{transform:translateY(-5px);box-shadow:0 16px 36px -22px rgba(27,58,75,.3);}
+  .card-tema__icone{margin-bottom:.9rem;color:var(--petroleo);}
   .card-tema__icone svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
-  .card-tema h3{font-size:1.02rem;color:var(--petroleo);margin-bottom:0.5rem;}
-  .card-tema p{font-size:0.88rem;color:var(--texto-suave);line-height:1.55;}
+  .card-tema h3{font-size:1.02rem;color:var(--petroleo);margin-bottom:.5rem;}
+  .card-tema p{font-size:.88rem;color:var(--texto-suave);line-height:1.55;}
 
   .grade-mitos{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:2rem;}
   @media(max-width:880px){.grade-mitos{grid-template-columns:1fr 1fr;}}
   @media(max-width:520px){.grade-mitos{grid-template-columns:1fr;}}
   .carta-mito{position:relative;height:185px;cursor:pointer;border-radius:16px;perspective:1000px;}
-  .carta-mito__inner{position:absolute;inset:0;transform-style:preserve-3d;transition:transform 0.7s cubic-bezier(.2,.8,.2,1);border-radius:16px;}
+  .carta-mito__inner{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.2,.8,.2,1);border-radius:16px;}
   .carta-mito.aberta .carta-mito__inner{transform:rotateY(180deg);}
   .carta-mito__face{position:absolute;inset:0;border-radius:16px;padding:1.3rem;display:flex;flex-direction:column;-webkit-backface-visibility:hidden;backface-visibility:hidden;}
-  .carta-mito__frente{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);}
-  .carta-mito__verso{background:linear-gradient(150deg,rgba(232,131,58,0.18),rgba(207,148,131,0.12));border:1px solid rgba(232,131,58,0.3);transform:rotateY(180deg);-webkit-backface-visibility:hidden;backface-visibility:hidden;}
-  .carta-mito__rotulo{font-size:0.66rem;text-transform:uppercase;letter-spacing:0.16em;color:rgba(247,241,234,0.55);margin-bottom:0.7rem;font-weight:700;}
+  .carta-mito__frente{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);}
+  .carta-mito__verso{background:linear-gradient(150deg,rgba(232,131,58,.18),rgba(207,148,131,.12));border:1px solid rgba(232,131,58,.3);transform:rotateY(180deg);-webkit-backface-visibility:hidden;backface-visibility:hidden;}
+  .carta-mito__rotulo{font-size:.66rem;text-transform:uppercase;letter-spacing:.16em;color:rgba(247,241,234,.55);margin-bottom:.7rem;font-weight:700;}
   .carta-mito__verso .carta-mito__rotulo{color:var(--laranja-claro);}
-  .carta-mito__texto{font-size:0.96rem;color:var(--texto-claro);line-height:1.35;font-weight:500;}
-  .carta-mito__dica{margin-top:auto;font-size:0.78rem;color:var(--laranja-claro);font-weight:600;letter-spacing:0.04em;display:flex;align-items:center;gap:0.3rem;}
+  .carta-mito__texto{font-size:.96rem;color:var(--texto-claro);line-height:1.35;font-weight:500;}
+  .carta-mito__dica{margin-top:auto;font-size:.78rem;color:var(--laranja-claro);font-weight:600;letter-spacing:.04em;display:flex;align-items:center;gap:.3rem;}
   .voce-sabia-wrap{text-align:center;}
-  .voce-sabia{display:inline-flex;flex-direction:row;align-items:center;gap:1.4rem;text-align:left;padding:1.6rem 2rem;border-radius:16px;background:linear-gradient(150deg,rgba(232,131,58,0.18),rgba(207,148,131,0.12));border:1px solid rgba(232,131,58,0.3);max-width:680px;}
+  .voce-sabia{display:inline-flex;flex-direction:row;align-items:center;gap:1.4rem;text-align:left;padding:1.6rem 2rem;border-radius:16px;background:linear-gradient(150deg,rgba(232,131,58,.18),rgba(207,148,131,.12));border:1px solid rgba(232,131,58,.3);max-width:680px;}
   .voce-sabia__icone{flex-shrink:0;color:var(--laranja-claro);}
   .voce-sabia__icone svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
-  .voce-sabia h4{font-size:0.92rem;color:var(--laranja-claro);margin-bottom:0.4rem;}
-  .voce-sabia p{font-size:0.92rem;color:rgba(247,241,234,0.78);line-height:1.55;}
-  .fonte{font-size:0.74rem;color:rgba(247,241,234,0.4);margin-top:1.2rem;text-align:center;}
+  .voce-sabia h4{font-size:.92rem;color:var(--laranja-claro);margin-bottom:.4rem;}
+  .voce-sabia p{font-size:.92rem;color:rgba(247,241,234,.78);line-height:1.55;}
+  .fonte{font-size:.74rem;color:rgba(247,241,234,.4);margin-top:1.2rem;text-align:center;}
 
   .secao--depoimentos{background:#fff;}
   .secao--depoimentos .titulo-secao,.secao--depoimentos .texto-intro{text-align:center;margin-left:auto;margin-right:auto;}
@@ -142,122 +140,205 @@
   @media(max-width:820px){.grade-depoimentos{grid-template-columns:1fr;}}
   .depoimento{border-radius:16px;background:var(--card-bg);border:1px solid var(--card-borda);display:flex;flex-direction:column;overflow:hidden;}
   .depoimento__corpo{padding:2.1rem 1.7rem 0;flex:1;}
-  .depoimento__aspas{font-family:Georgia,"Times New Roman",serif;font-size:3.6rem;line-height:0.4;color:var(--laranja);opacity:0.45;margin-bottom:18px;font-weight:700;font-style:normal;display:block;}
-  .depoimento__quote{font-size:0.98rem;color:var(--texto-escuro);line-height:1.5;}
+  .depoimento__aspas{font-family:Georgia,"Times New Roman",serif;font-size:3.6rem;line-height:.4;color:var(--laranja);opacity:.45;margin-bottom:18px;font-weight:700;font-style:normal;display:block;}
+  .depoimento__quote{font-size:.98rem;color:var(--texto-escuro);line-height:1.5;}
   .depoimento__rodape{padding:0 1.7rem 24px;margin-top:24px;}
-  .depoimento__autor{font-size:0.92rem;font-weight:600;color:var(--petroleo);margin-bottom:6px;}
-  .depoimento__tag{display:inline-block;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:#fff;padding:0.3rem 0.75rem;border-radius:20px;white-space:nowrap;}
+  .depoimento__autor{font-size:.92rem;font-weight:600;color:var(--petroleo);margin-bottom:6px;}
+  .depoimento__tag{display:inline-block;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:#fff;padding:.3rem .75rem;border-radius:20px;white-space:nowrap;}
   .depoimento__tag--diagnostico{background:#9E5E4D;}
   .depoimento__tag--acompanhamento{background:#6D5E8C;}
   .depoimento__tag--recente{background:#4D6343;}
-  .form-relato{max-width:720px;margin:0 auto;padding:2.2rem;border-radius:20px;background:var(--card-bg);border:1px solid var(--card-borda);box-shadow:0 24px 60px -34px rgba(27,58,75,0.4);}
-  .form-relato h3{font-size:1.3rem;color:var(--azul-profundo);margin-bottom:0.5rem;}
-  .form-relato__intro{font-size:0.9rem;color:var(--texto-suave);margin-bottom:1.6rem;}
+  .form-relato{max-width:720px;margin:0 auto;padding:2.2rem;border-radius:20px;background:var(--card-bg);border:1px solid var(--card-borda);box-shadow:0 24px 60px -34px rgba(27,58,75,.4);}
+  .form-relato h3{font-size:1.3rem;color:var(--azul-profundo);margin-bottom:.5rem;}
+  .form-relato__intro{font-size:.9rem;color:var(--texto-suave);margin-bottom:1.6rem;}
   .form-linha{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;}
   @media(max-width:560px){.form-linha{grid-template-columns:1fr;}}
-  .campo label{display:block;font-size:0.78rem;color:var(--petroleo);margin-bottom:0.4rem;font-weight:600;}
-  .campo input,.campo textarea{width:100%;padding:0.8rem 1rem;border-radius:10px;border:1px solid var(--card-borda);background:#fff;font-family:inherit;font-size:0.92rem;color:var(--texto-escuro);resize:vertical;}
+  .campo label{display:block;font-size:.78rem;color:var(--petroleo);margin-bottom:.4rem;font-weight:600;}
+  .campo input,.campo textarea{width:100%;padding:.8rem 1rem;border-radius:10px;border:1px solid var(--card-borda);background:#fff;font-family:inherit;font-size:.92rem;color:var(--texto-escuro);resize:vertical;}
   .campo textarea{min-height:110px;}
   .form-rodape{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:1.2rem;}
-  .nota-form{font-size:0.74rem;color:var(--texto-suave);max-width:380px;}
-
-  .botao{display:inline-flex;align-items:center;gap:0.55rem;padding:0.85rem 1.7rem;border-radius:8px;border:none;background:var(--amarelo);color:#fff;font-size:0.9rem;font-weight:700;text-decoration:none;cursor:pointer;transition:transform 0.35s ease,background 0.35s ease;font-family:inherit;}
+  .nota-form{font-size:.74rem;color:var(--texto-suave);max-width:380px;}
+  .botao{display:inline-flex;align-items:center;gap:.55rem;padding:.85rem 1.7rem;border-radius:8px;border:none;background:var(--amarelo);color:#fff;font-size:.9rem;font-weight:700;text-decoration:none;cursor:pointer;transition:transform .35s ease,background .35s ease;font-family:inherit;}
   .botao:hover{background:#D6850A;transform:translateY(-2px);}
   .botao svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
 
   .secao--entre-recursos{background:linear-gradient(125deg,var(--azul-profundo) 0%,#142136 28%,#2b2a2e 55%,#5a3f24 78%,#8a5a1f 100%);color:var(--texto-claro);}
   .secao--entre{padding:6.5rem 0 4rem;}
-  .entre-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:3rem;align-items:center;}
+  .entre-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:center;}
   @media(max-width:860px){.entre-grid{grid-template-columns:1fr;gap:2rem;}}
   .entre-info h2{font-size:clamp(2.2rem,5vw,3.2rem);color:var(--branco-quente);margin-bottom:1.1rem;}
-  .entre-info p{font-size:1rem;color:rgba(247,241,234,0.78);margin-bottom:1.2rem;max-width:420px;}
-  .entre-link-cta{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.85rem;font-weight:600;color:#fff;background:var(--amarelo);border-radius:8px;padding:0.6rem 1.1rem;text-decoration:none;cursor:pointer;border:none;font-family:inherit;transition:background 0.3s ease,transform 0.3s ease;}
+  .entre-info p{font-size:1rem;color:rgba(247,241,234,.78);margin-bottom:1.2rem;max-width:420px;}
+  .entre-link-cta{display:inline-flex;align-items:center;gap:.5rem;font-size:.85rem;font-weight:600;color:#fff;background:var(--amarelo);border-radius:8px;padding:.6rem 1.1rem;text-decoration:none;cursor:pointer;border:none;font-family:inherit;transition:background .3s ease,transform .3s ease;}
   .entre-link-cta:hover{background:#D6850A;transform:translateY(-2px);}
   .entre-link-cta svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
-  .chat-box{border-radius:20px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);backdrop-filter:blur(14px);padding:1.6rem;}
-  .chat-box__prompt{background:rgba(255,255,255,0.08);border-radius:14px;padding:1.1rem 1.4rem;font-size:0.95rem;color:rgba(247,241,234,0.85);margin-bottom:0.9rem;line-height:1.5;}
-  .chat-mensagens{display:flex;flex-direction:column;gap:0.8rem;margin-bottom:0.9rem;max-height:240px;overflow-y:auto;}
+  .chat-box{border-radius:20px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(14px);padding:1.6rem;}
+  .chat-box__prompt{background:rgba(255,255,255,.08);border-radius:14px;padding:1.1rem 1.4rem;font-size:.95rem;color:rgba(247,241,234,.85);margin-bottom:.9rem;line-height:1.5;}
+  .chat-mensagens{display:flex;flex-direction:column;gap:.8rem;margin-bottom:.9rem;max-height:240px;overflow-y:auto;}
   .chat-mensagens:empty{display:none;margin:0;}
-  .msg{padding:0.8rem 1.1rem;border-radius:14px;font-size:0.9rem;line-height:1.5;max-width:85%;}
+  .msg{padding:.8rem 1.1rem;border-radius:14px;font-size:.9rem;line-height:1.5;max-width:85%;}
   .msg--user{align-self:flex-end;background:var(--laranja);color:#fff;border-bottom-right-radius:4px;}
-  .msg--bot{align-self:flex-start;background:rgba(255,255,255,0.08);color:var(--texto-claro);border-bottom-left-radius:4px;}
-  .chat-input-area{display:flex;flex-direction:column;gap:0.9rem;}
-  .chat-input-area textarea{width:100%;padding:1.1rem 1.4rem;border-radius:14px;resize:none;min-height:50px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:var(--texto-claro);font-family:inherit;font-size:0.92rem;}
-  .chat-input-area textarea::placeholder{color:rgba(247,241,234,0.4);}
+  .msg--bot{align-self:flex-start;background:rgba(255,255,255,.08);color:var(--texto-claro);border-bottom-left-radius:4px;}
+  .chat-input-area{display:flex;flex-direction:column;gap:.9rem;}
+  .chat-input-area textarea{width:100%;padding:1.1rem 1.4rem;border-radius:14px;resize:none;min-height:50px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:var(--texto-claro);font-family:inherit;font-size:.92rem;}
+  .chat-input-area textarea::placeholder{color:rgba(247,241,234,.4);}
   .chat-acoes{display:flex;align-items:center;justify-content:space-between;gap:1rem;}
-  .anexar{display:flex;align-items:center;gap:0.5rem;font-size:0.8rem;color:rgba(247,241,234,0.6);background:none;border:none;cursor:pointer;font-family:inherit;}
+  .anexar{display:flex;align-items:center;gap:.5rem;font-size:.8rem;color:rgba(247,241,234,.6);background:none;border:none;cursor:pointer;font-family:inherit;}
   .anexar:hover{color:var(--texto-claro);}
   .anexar svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
-  .entre-aviso{font-size:0.8rem;color:rgba(247,241,234,0.45);margin-top:1.2rem;}
+  .entre-aviso{font-size:.8rem;color:rgba(247,241,234,.45);margin-top:1.2rem;}
   .secao--recursos{padding:3.2rem 0 4.5rem;position:relative;}
-  .secao--recursos::before{content:"";position:absolute;top:0;left:160px;right:160px;height:1px;background:rgba(255,255,255,0.15);}
+  .secao--recursos::before{content:"";position:absolute;top:0;left:160px;right:160px;height:1px;background:rgba(255,255,255,.15);}
   .grade-recursos{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;}
   @media(max-width:780px){.grade-recursos{grid-template-columns:1fr;gap:2rem;}}
-  .recurso__icone{width:60px;height:60px;border-radius:14px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem;color:var(--branco-quente);}
+  .recurso__icone{width:60px;height:60px;border-radius:14px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;margin-bottom:1.2rem;color:var(--branco-quente);}
   .recurso__icone svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;}
-  .recurso h4{font-size:1.05rem;color:var(--branco-quente);margin-bottom:0.5rem;}
-  .recurso p{font-size:0.87rem;color:rgba(247,241,234,0.65);line-height:1.55;}
+  .recurso h4{font-size:1.05rem;color:var(--branco-quente);margin-bottom:.5rem;}
+  .recurso p{font-size:.87rem;color:rgba(247,241,234,.65);line-height:1.55;}
 
-  /* ========================
+  /* ===========================
      FORMULÁRIO MANUAL OVERLAY
-     ======================== */
-  .fm-overlay{position:fixed;inset:0;z-index:2000;background:linear-gradient(125deg,var(--azul-profundo) 0%,#142136 28%,#2b2a2e 55%,#5a3f24 78%,#8a5a1f 100%);color:var(--texto-claro);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:1.5rem;padding:2rem;opacity:0;pointer-events:none;transition:opacity 0.4s ease;overflow-y:auto;}
+     =========================== */
+  .fm-overlay{
+    position:fixed;inset:0;z-index:2000;
+    background:linear-gradient(125deg,var(--azul-profundo) 0%,#142136 28%,#2b2a2e 55%,#5a3f24 78%,#8a5a1f 100%);
+    color:var(--texto-claro);
+    display:flex;flex-direction:column;
+    align-items:center;justify-content:center;
+    padding:60px 2rem;
+    opacity:0;pointer-events:none;
+    transition:opacity .4s ease;
+    overflow-y:auto;
+  }
   .fm-overlay.ativo{opacity:1;pointer-events:auto;}
-  .fm-layout{display:grid;grid-template-columns:0.8fr 1.2fr;gap:3rem;align-items:flex-start;width:100%;max-width:1100px;margin:auto;}
-  @media(max-width:860px){.fm-layout{grid-template-columns:1fr;}}
-  .fm-etiqueta{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.2em;color:var(--amarelo);margin-bottom:1rem;font-weight:700;}
-  .fm-titulo{font-size:clamp(2rem,4vw,3rem);font-weight:800;color:var(--branco-quente);margin-bottom:1rem;line-height:1.1;}
-  .fm-desc{font-size:0.95rem;color:rgba(247,241,234,0.7);line-height:1.6;}
-  .fm-card{background:rgba(15,18,24,0.85);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:2rem 2.2rem;}
-  .fm-prog-row{display:flex;justify-content:space-between;margin-bottom:0.6rem;}
-  .fm-prog-label{font-size:0.75rem;font-weight:700;color:var(--amarelo);text-transform:uppercase;letter-spacing:0.1em;}
-  .fm-prog-pct{font-size:0.75rem;color:rgba(247,241,234,0.5);}
-  .fm-prog-bar{height:3px;background:rgba(255,255,255,0.1);border-radius:2px;margin-bottom:1.8rem;}
-  .fm-prog-fill{height:100%;background:var(--amarelo);border-radius:2px;transition:width 0.4s ease;}
-  .fm-group{margin-bottom:1.4rem;}
-  .fm-group-label{display:block;font-size:0.95rem;font-weight:600;color:var(--branco-quente);margin-bottom:0.8rem;}
-  .fm-pills{display:flex;flex-wrap:wrap;gap:0.5rem;}
-  .fm-pill{padding:0.5rem 1rem;border-radius:50px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.04);color:rgba(247,241,234,0.75);font-size:0.85rem;cursor:pointer;transition:all 0.2s ease;user-select:none;}
-  .fm-pill:hover{border-color:rgba(255,255,255,0.4);color:#fff;}
-  .fm-pill.sel{background:rgba(245,158,11,0.15);border-color:var(--amarelo);color:var(--amarelo);}
-  .fm-escala{display:flex;gap:0;justify-content:space-between;width:100%;margin-bottom:0.4rem;}
-  .fm-escala-n{flex:1;height:40px;border-radius:0;border:1px solid rgba(255,255,255,0.12);border-right:none;background:rgba(255,255,255,0.04);color:rgba(247,241,234,0.75);font-size:0.85rem;font-weight:600;cursor:pointer;transition:all 0.2s ease;display:flex;align-items:center;justify-content:center;font-family:inherit;}
-  .fm-escala-n:first-child{border-radius:8px 0 0 8px;}
-  .fm-escala-n:last-child{border-radius:0 8px 8px 0;border-right:1px solid rgba(255,255,255,0.12);}
-  .fm-escala-n:hover{background:rgba(255,255,255,0.1);color:#fff;}
+
+  .fm-close{
+    position:fixed;top:1.4rem;right:1.8rem;
+    background:none;border:none;color:rgba(247,241,234,.6);
+    font-size:1.3rem;cursor:pointer;z-index:2100;
+    width:36px;height:36px;display:flex;align-items:center;justify-content:center;
+    border-radius:50%;transition:background .2s,color .2s;
+  }
+  .fm-close:hover{background:rgba(255,255,255,.1);color:#fff;}
+
+  .fm-layout{
+    display:grid;
+    grid-template-columns:.75fr 1.25fr;
+    gap:3rem;
+    align-items:center;
+    width:100%;max-width:1100px;
+    min-height:min(640px, 70vh);
+  }
+  @media(max-width:860px){.fm-layout{grid-template-columns:1fr;gap:1.5rem;min-height:auto;}}
+
+  /* coluna esquerda — 259px de altura, conteúdo alinhado ao topo */
+  .fm-layout > div:first-child{
+    height:259px;
+    align-self:center;
+    display:flex;flex-direction:column;
+    justify-content:flex-start;
+    overflow:hidden;
+  }
+
+  /* coluna esquerda */
+  .fm-etiqueta{font-size:.72rem;text-transform:uppercase;letter-spacing:.2em;color:var(--amarelo);margin-bottom:.9rem;font-weight:700;}
+  .fm-titulo{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:var(--branco-quente);margin-bottom:.9rem;line-height:1.1;}
+  .fm-desc{font-size:.92rem;color:rgba(247,241,234,.65);line-height:1.6;}
+
+  /* card direito */
+  .fm-card{background:rgba(15,18,24,.88);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:1.8rem 2rem;}
+
+  /* progress */
+  .fm-prog-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:.55rem;}
+  .fm-prog-label{font-size:.72rem;font-weight:700;color:var(--amarelo);text-transform:uppercase;letter-spacing:.1em;}
+  .fm-prog-pct{font-size:.72rem;color:rgba(247,241,234,.45);}
+  .fm-prog-bar{height:3px;background:rgba(255,255,255,.1);border-radius:2px;margin-bottom:1.6rem;}
+  .fm-prog-fill{height:100%;background:var(--amarelo);border-radius:2px;transition:width .4s ease;}
+
+  /* card title */
+  .fm-card-title{font-size:1.1rem;font-weight:700;color:var(--branco-quente);margin-bottom:1.2rem;}
+
+  /* grupos */
+  .fm-group{margin-bottom:1.3rem;}
+  .fm-group-label{display:block;font-size:.9rem;font-weight:600;color:var(--branco-quente);margin-bottom:.7rem;}
+
+  /* pills */
+  .fm-pills{display:flex;flex-wrap:wrap;gap:.5rem;}
+  .fm-pill{
+    display:inline-flex;align-items:center;gap:.35rem;
+    padding:.45rem .9rem;border-radius:50px;
+    border:1px solid rgba(255,255,255,.18);
+    background:rgba(255,255,255,.04);
+    color:rgba(247,241,234,.7);font-size:.82rem;
+    cursor:pointer;transition:all .2s ease;user-select:none;
+  }
+  .fm-pill:hover{border-color:rgba(255,255,255,.35);color:#fff;}
+  .fm-pill.sel{background:rgba(245,158,11,.15);border-color:var(--amarelo);color:var(--amarelo);}
+  .fm-pill.sel .fm-check{display:inline;}
+  .fm-check{display:none;font-size:.8rem;}
+
+  /* pills wide (single select options) */
+  .fm-pills-wide .fm-pill{flex:1;min-width:120px;justify-content:center;border-radius:10px;}
+
+  /* escala */
+  .fm-escala{display:flex;justify-content:space-between;width:100%;margin-bottom:.4rem;gap:.3rem;}
+  .fm-escala-n{
+    flex:1;height:38px;border-radius:50%;
+    border:1px solid rgba(255,255,255,.18);
+    background:rgba(255,255,255,.04);
+    color:rgba(247,241,234,.7);font-size:.82rem;font-weight:600;
+    cursor:pointer;transition:all .2s ease;
+    display:flex;align-items:center;justify-content:center;font-family:inherit;
+  }
+  .fm-escala-n:hover{background:rgba(255,255,255,.1);color:#fff;}
   .fm-escala-n.sel{background:var(--amarelo);border-color:var(--amarelo);color:#fff;}
   .fm-escala-labels{display:flex;justify-content:space-between;}
-  .fm-escala-labels span{font-size:0.72rem;color:rgba(247,241,234,0.4);}
-  .fm-input{width:100%;padding:0.9rem 1.1rem;border-radius:10px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.05);color:var(--texto-claro);font-family:inherit;font-size:0.9rem;margin-bottom:0.6rem;}
-  .fm-input::placeholder{color:rgba(247,241,234,0.35);}
-  .fm-add{display:flex;align-items:center;gap:0.4rem;background:none;border:none;color:var(--amarelo);font-size:0.85rem;font-weight:600;cursor:pointer;font-family:inherit;margin-bottom:1rem;}
-  .fm-rodape{display:flex;align-items:center;justify-content:space-between;margin-top:1.6rem;}
-  .fm-back{background:none;border:none;color:rgba(247,241,234,0.55);font-size:0.88rem;cursor:pointer;font-family:inherit;text-decoration:underline;}
-  .fm-back:hover{color:#fff;}
-  .fm-intro-steps{list-style:none;margin-bottom:1.6rem;display:flex;flex-direction:column;gap:1rem;}
-  .fm-intro-step{display:flex;align-items:flex-start;gap:1rem;}
-  .fm-step-num{width:32px;height:32px;border-radius:50%;border:2px solid var(--amarelo);color:var(--amarelo);font-size:0.85rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-  .fm-intro-step h4{font-size:0.95rem;color:var(--branco-quente);margin-bottom:0.2rem;}
-  .fm-intro-step p{font-size:0.82rem;color:rgba(247,241,234,0.55);}
-  .fm-intro-btns{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-bottom:1rem;}
-  .fm-btn-cancel{padding:0.85rem;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:none;color:var(--texto-claro);font-size:0.9rem;font-weight:600;cursor:pointer;font-family:inherit;transition:background 0.2s;}
-  .fm-btn-cancel:hover{background:rgba(255,255,255,0.05);}
-  .fm-ia-link{text-align:center;font-size:0.82rem;}
-  .fm-ia-link button{color:rgba(247,241,234,0.5);background:none;border:none;cursor:pointer;font-family:inherit;font-size:0.82rem;text-decoration:underline;}
-  .fm-ia-link button:hover{color:#fff;}
-  .fm-resumo-item{display:flex;align-items:flex-start;justify-content:space-between;padding:0.9rem 1.1rem;border-radius:10px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);margin-bottom:0.6rem;gap:0.8rem;}
-  .fm-res-label{font-size:0.68rem;text-transform:uppercase;letter-spacing:0.12em;color:rgba(247,241,234,0.45);flex-shrink:0;min-width:90px;}
-  .fm-res-val{font-size:0.88rem;color:rgba(247,241,234,0.85);flex:1;display:flex;flex-wrap:wrap;gap:0.4rem;align-items:center;}
-  .fm-res-tag{background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);color:var(--amarelo);padding:0.2rem 0.6rem;border-radius:20px;font-size:0.78rem;}
-  .fm-res-edit{font-size:0.78rem;color:var(--amarelo);background:none;border:none;cursor:pointer;font-family:inherit;flex-shrink:0;}
-  .fm-autorizo{display:flex;align-items:center;gap:0.75rem;font-size:0.88rem;color:rgba(247,241,234,0.8);margin:1rem 0;cursor:pointer;}
-  .fm-autorizo input{width:18px;height:18px;accent-color:var(--amarelo);cursor:pointer;}
-  .fm-submit-btns{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;}
-  .fm-btn-draft{padding:0.85rem;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:none;color:var(--texto-claro);font-size:0.9rem;font-weight:600;cursor:pointer;font-family:inherit;}
-  .fm-cripto{display:flex;align-items:center;justify-content:center;gap:0.4rem;margin-top:0.8rem;font-size:0.74rem;color:rgba(247,241,234,0.35);}
-  .fm-aviso{font-size:0.8rem;color:rgba(247,241,234,0.35);text-align:left;max-width:1100px;width:100%;}
+  .fm-escala-labels span{font-size:.7rem;color:rgba(247,241,234,.35);}
 
-  footer{padding:2.5rem 0;text-align:center;background:#091420;color:rgba(247,241,234,0.45);font-size:0.8rem;}
+  /* inputs */
+  .fm-input{width:100%;padding:.85rem 1rem;border-radius:10px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);color:var(--texto-claro);font-family:inherit;font-size:.88rem;}
+  .fm-input::placeholder{color:rgba(247,241,234,.3);}
+  .fm-textarea{width:100%;padding:.85rem 1rem;border-radius:10px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);color:var(--texto-claro);font-family:inherit;font-size:.88rem;resize:vertical;min-height:80px;}
+  .fm-textarea::placeholder{color:rgba(247,241,234,.3);}
+
+  /* med row */
+  .fm-med-row{display:flex;align-items:center;gap:.5rem;margin-bottom:.5rem;}
+  .fm-med-row .fm-input{margin-bottom:0;}
+  .fm-med-x{background:none;border:1px solid rgba(255,255,255,.15);border-radius:50%;width:30px;height:30px;min-width:30px;color:rgba(247,241,234,.5);cursor:pointer;font-size:.9rem;display:flex;align-items:center;justify-content:center;transition:all .2s;}
+  .fm-med-x:hover{background:rgba(255,0,0,.15);border-color:rgba(255,0,0,.3);color:#fff;}
+
+  .fm-add{display:flex;align-items:center;gap:.4rem;background:none;border:none;color:var(--amarelo);font-size:.83rem;font-weight:600;cursor:pointer;font-family:inherit;margin-top:.2rem;margin-bottom:1rem;}
+
+  /* file area */
+  .fm-file-area{display:flex;align-items:center;gap:.6rem;padding:.85rem 1rem;border-radius:10px;border:1px dashed rgba(255,255,255,.15);background:rgba(255,255,255,.03);cursor:pointer;color:rgba(247,241,234,.45);font-size:.83rem;transition:border-color .2s;}
+  .fm-file-area:hover{border-color:rgba(255,255,255,.3);color:rgba(247,241,234,.7);}
+  .fm-file-area svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}
+
+  /* botões de navegação */
+  .fm-btns{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1.6rem;}
+  .fm-btn-sec{padding:.85rem;border-radius:8px;border:1px solid rgba(255,255,255,.2);background:none;color:var(--texto-claro);font-size:.9rem;font-weight:600;cursor:pointer;font-family:inherit;transition:background .2s;width:100%;}
+  .fm-btn-sec:hover{background:rgba(255,255,255,.06);}
+  .fm-btn-pri{padding:.85rem;border-radius:8px;border:none;background:var(--amarelo);color:#fff;font-size:.9rem;font-weight:700;cursor:pointer;font-family:inherit;transition:background .2s;width:100%;}
+  .fm-btn-pri:hover{background:#D6850A;}
+
+  /* intro steps */
+  .fm-intro-steps{list-style:none;margin-bottom:1.6rem;display:flex;flex-direction:column;gap:1rem;}
+  .fm-intro-step{display:flex;align-items:flex-start;gap:.9rem;}
+  .fm-step-num{width:32px;height:32px;border-radius:50%;border:2px solid var(--amarelo);color:var(--amarelo);font-size:.82rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .fm-intro-step h4{font-size:.93rem;color:var(--branco-quente);margin-bottom:.15rem;font-weight:600;}
+  .fm-intro-step p{font-size:.8rem;color:rgba(247,241,234,.5);line-height:1.4;}
+
+  /* resumo */
+  .fm-resumo-item{display:flex;align-items:flex-start;justify-content:space-between;padding:.9rem 1rem;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);margin-bottom:.5rem;gap:.8rem;}
+  .fm-res-label{font-size:.65rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(247,241,234,.4);flex-shrink:0;min-width:90px;padding-top:2px;}
+  .fm-res-val{font-size:.86rem;color:rgba(247,241,234,.82);flex:1;display:flex;flex-wrap:wrap;gap:.35rem;align-items:center;}
+  .fm-res-tag{background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:var(--amarelo);padding:.15rem .55rem;border-radius:20px;font-size:.75rem;}
+  .fm-res-edit{font-size:.75rem;color:var(--amarelo);background:none;border:none;cursor:pointer;font-family:inherit;flex-shrink:0;font-weight:600;}
+
+  .fm-cripto{display:flex;align-items:center;justify-content:center;gap:.4rem;margin-top:.9rem;font-size:.72rem;color:rgba(247,241,234,.3);}
+  .fm-cripto svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2;}
+  .fm-aviso{font-size:.78rem;color:rgba(247,241,234,.3);text-align:left;max-width:1100px;width:100%;position:fixed;bottom:1.4rem;left:2rem;right:2rem;pointer-events:none;}
+
+  footer{padding:2.5rem 0;text-align:center;background:#091420;color:rgba(247,241,234,.45);font-size:.8rem;}
   @media(max-width:680px){.secao{padding:4.5rem 0;}}
 </style>
 </head>
@@ -317,7 +398,7 @@
         <p class="etiqueta surgir">Reconhecer o que o corpo diz</p>
         <h2 class="titulo-secao surgir">Sintomas que merecem atenção</h2>
         <p class="texto-intro surgir">Marque os sintomas que você reconhece na sua experiência.</p>
-        <ul class="lista-sintomas surgir" id="listaSintomas" role="group" aria-label="Lista de possíveis sintomas">
+        <ul class="lista-sintomas surgir" id="listaSintomas" role="group">
           <li class="item-sintoma"><label><input type="checkbox"><span>Cólicas intensas</span></label></li>
           <li class="item-sintoma"><label><input type="checkbox"><span>Dor pélvica fora do período</span></label></li>
           <li class="item-sintoma"><label><input type="checkbox"><span>Dor ao urinar ou evacuar</span></label></li>
@@ -390,7 +471,7 @@
           </div>
           <div class="campo"><label for="textoRelato">Sua história</label><textarea id="textoRelato" placeholder="Conte-nos como tem sido sua jornada, seus desafios ou suas conquistas. Este é um espaço de escuta ativa e respeito."></textarea></div>
           <div class="form-rodape">
-            <p class="nota-form">Para sua segurança, todos os relatos são revisados por nossa equipe de acolhimento antes de serem publicados.</p>
+            <p class="nota-form">Para sua segurança, todos os relatos são revisados antes de serem publicados.</p>
             <button class="botao" id="botaoRelato">Enviar relato</button>
           </div>
         </div>
@@ -428,7 +509,6 @@
           <p class="entre-aviso surgir">O Entre, assistente virtual, não diagnostica nem substitui atendimento médico.</p>
         </div>
       </section>
-
       <section class="secao--recursos">
         <div class="container grade-recursos">
           <div class="recurso surgir"><div class="recurso__icone"><svg viewBox="0 0 24 24"><path d="M6 3v5.5a4 4 0 0 0 8 0V3"/><path d="M10 13.5v1.8a5.2 5.2 0 0 0 5.2 5.2 5.2 5.2 0 0 0 5.2-5.2v-1.3"/><circle cx="20.4" cy="12.5" r="2.1"/></svg></div><h4>Triagem prévia</h4><p>As perguntas certas para você não esquecer nenhum detalhe importante antes da consulta.</p></div>
@@ -441,51 +521,59 @@
 
   <!-- FORMULÁRIO MANUAL OVERLAY -->
   <div class="fm-overlay" id="formManual" aria-hidden="true" role="dialog">
+    <button class="fm-close" id="fmClose" aria-label="Fechar">✕</button>
+
     <div class="fm-layout">
-      <div id="fmContexto">
+      <!-- Coluna esquerda contextual -->
+      <div>
         <p class="fm-etiqueta" id="fmEtiqueta">Formulário manual</p>
         <h2 class="fm-titulo" id="fmTitulo">Você está no<br>controle.</h2>
-        <p class="fm-desc" id="fmDesc">Preencha 4 etapas simples no seu ritmo. O resultado será um resumo organizado para o seu médico ler antes da consulta.</p>
+        <p class="fm-desc" id="fmDesc">Preencha 4 etapas simples no seu ritmo. O resultado será um resumo organizado para levar na consulta.</p>
       </div>
 
+      <!-- Card direito -->
       <div class="fm-card">
+
         <!-- PASSO 0: INTRO -->
         <div id="fmStep0">
           <ul class="fm-intro-steps">
             <li class="fm-intro-step"><div class="fm-step-num">1</div><div><h4>Sintomas principais</h4><p>Selecione o que você está sentindo agora.</p></div></li>
             <li class="fm-intro-step"><div class="fm-step-num">2</div><div><h4>Histórico e frequência</h4><p>Duração, intensidade e padrões dos sintomas.</p></div></li>
             <li class="fm-intro-step"><div class="fm-step-num">3</div><div><h4>Medicamentos e exames</h4><p>Tratamentos atuais e diagnósticos prévios.</p></div></li>
-            <li class="fm-intro-step"><div class="fm-step-num">4</div><div><h4>Revisão do relato</h4><p>Confira tudo antes de enviar ao profissional.</p></div></li>
+            <li class="fm-intro-step"><div class="fm-step-num">4</div><div><h4>Revisão do relato</h4><p>Confira tudo antes de salvar o PDF.</p></div></li>
           </ul>
-          <div class="fm-intro-btns">
-            <button class="fm-btn-cancel" id="fmBtnCancelar">Cancelar</button>
-            <button class="botao" id="fmBtnComecar" style="justify-content:center;">Começar</button>
+          <div class="fm-btns">
+            <button class="fm-btn-sec" id="fmBtnCancelar">Cancelar</button>
+            <button class="fm-btn-pri" id="fmBtnComecar">Começar</button>
           </div>
-          <p class="fm-ia-link"><button id="fmVoltarIA">Voltar para o assistente IA →</button></p>
         </div>
 
         <!-- PASSO 1: SINTOMAS -->
         <div id="fmStep1" style="display:none;">
           <div class="fm-prog-row"><span class="fm-prog-label">Passo 1 de 4</span><span class="fm-prog-pct">25% concluído</span></div>
           <div class="fm-prog-bar"><div class="fm-prog-fill" style="width:25%"></div></div>
+          <p class="fm-card-title">O que você está sentindo?</p>
           <div class="fm-group">
-            <span class="fm-group-label">Sintomas principais</span>
             <div class="fm-pills" id="fmSintomas">
-              <span class="fm-pill" data-val="Cólicas intensas">Cólicas intensas</span>
-              <span class="fm-pill" data-val="Dor pélvica">Dor pélvica</span>
-              <span class="fm-pill" data-val="Dor ao urinar ou evacuar">Dor ao urinar ou evacuar</span>
-              <span class="fm-pill" data-val="Fadiga persistente">Fadiga persistente</span>
-              <span class="fm-pill" data-val="Dor durante relações sexuais">Dor durante relações sexuais</span>
-              <span class="fm-pill" data-val="Infertilidade sem causa aparente">Infertilidade sem causa aparente</span>
-              <span class="fm-pill" data-val="Sangramento irregular">Sangramento irregular</span>
-              <span class="fm-pill" data-val="Dor nas costas e pernas">Dor nas costas e pernas</span>
-              <span class="fm-pill" data-val="Problemas gastrointestinais">Problemas gastrointestinais</span>
-              <span class="fm-pill" data-val="Piora com o ciclo">Piora com o ciclo</span>
+              <span class="fm-pill" data-val="Cólicas intensas">Cólicas intensas<span class="fm-check"> ✓</span></span>
+              <span class="fm-pill" data-val="Dor pélvica fora do período">Dor pélvica fora do período<span class="fm-check"> ✓</span></span>
+              <span class="fm-pill" data-val="Dor ao urinar ou evacuar">Dor ao urinar ou evacuar<span class="fm-check"> ✓</span></span>
+              <span class="fm-pill" data-val="Fadiga persistente">Fadiga persistente<span class="fm-check"> ✓</span></span>
+              <span class="fm-pill" data-val="Dor durante relações sexuais">Dor durante relações sexuais<span class="fm-check"> ✓</span></span>
+              <span class="fm-pill" data-val="Infertilidade sem causa aparente">Infertilidade sem causa aparente<span class="fm-check"> ✓</span></span>
+              <span class="fm-pill" data-val="Sangramento irregular">Sangramento irregular<span class="fm-check"> ✓</span></span>
+              <span class="fm-pill" data-val="Dor nas costas e pernas">Dor nas costas e pernas<span class="fm-check"> ✓</span></span>
+              <span class="fm-pill" data-val="Problemas gastrointestinais">Problemas gastrointestinais<span class="fm-check"> ✓</span></span>
+              <span class="fm-pill" data-val="Sintomas que pioram com o ciclo">Piora com o ciclo<span class="fm-check"> ✓</span></span>
             </div>
           </div>
-          <div class="fm-rodape">
-            <button class="fm-btn-cancel" id="fmP1Back">Cancelar</button>
-            <button class="botao" id="fmP1Next">Próximo</button>
+          <div class="fm-group">
+            <span class="fm-group-label">Outros sintomas</span>
+            <textarea class="fm-textarea" id="fmOutrosSintomas" placeholder="Descreva aqui qualquer outro detalhe..."></textarea>
+          </div>
+          <div class="fm-btns">
+            <button class="fm-btn-sec" id="fmP1Back">Voltar</button>
+            <button class="fm-btn-pri" id="fmP1Next">Próximo</button>
           </div>
         </div>
 
@@ -495,20 +583,20 @@
           <div class="fm-prog-bar"><div class="fm-prog-fill" style="width:50%"></div></div>
           <div class="fm-group">
             <span class="fm-group-label">Há quanto tempo?</span>
-            <div class="fm-pills" id="fmTempo" data-single="true">
-              <span class="fm-pill" data-val="Menos de 6 meses">Menos de 6 meses</span>
-              <span class="fm-pill" data-val="6m a 2 anos">6m a 2 anos</span>
-              <span class="fm-pill" data-val="2 a 5 anos">2 a 5 anos</span>
-              <span class="fm-pill" data-val="Mais de 5 anos">Mais de 5 anos</span>
+            <div class="fm-pills fm-pills-wide" id="fmTempo" data-single="true">
+              <span class="fm-pill" data-val="Menos de 6 meses">Menos de 6 meses<span class="fm-check"> ✓</span></span>
+              <span class="fm-pill" data-val="6m a 2 anos">6m a 2 anos<span class="fm-check"> ✓</span></span>
+              <span class="fm-pill" data-val="2 a 5 anos">2 a 5 anos<span class="fm-check"> ✓</span></span>
+              <span class="fm-pill" data-val="Mais de 5 anos">Mais de 5 anos<span class="fm-check"> ✓</span></span>
             </div>
           </div>
           <div class="fm-group">
             <span class="fm-group-label">Com que frequência?</span>
-            <div class="fm-pills" id="fmFrequencia" data-single="true">
-              <span class="fm-pill" data-val="Diariamente">Diariamente</span>
-              <span class="fm-pill" data-val="Semanalmente">Semanalmente</span>
-              <span class="fm-pill" data-val="Só no ciclo">Só no ciclo</span>
-              <span class="fm-pill" data-val="Variável">Variável</span>
+            <div class="fm-pills fm-pills-wide" id="fmFrequencia" data-single="true">
+              <span class="fm-pill" data-val="Diariamente">Diariamente<span class="fm-check"> ✓</span></span>
+              <span class="fm-pill" data-val="Semanalmente">Semanalmente<span class="fm-check"> ✓</span></span>
+              <span class="fm-pill" data-val="Só no ciclo">Só no ciclo<span class="fm-check"> ✓</span></span>
+              <span class="fm-pill" data-val="Variável">Variável<span class="fm-check"> ✓</span></span>
             </div>
           </div>
           <div class="fm-group">
@@ -530,14 +618,17 @@
           <div class="fm-group">
             <span class="fm-group-label">O que piora os sintomas?</span>
             <div class="fm-pills" id="fmPiora">
-              <span class="fm-pill" data-val="Menstruação/ciclo">Menstruação/ciclo</span>
-              <span class="fm-pill" data-val="Relações sexuais">Relações sexuais</span>
-              <span class="fm-pill" data-val="Atividade física">Atividade física</span>
-              <span class="fm-pill" data-val="Estresse">Estresse</span>
-              <span class="fm-pill" data-val="Sem padrão definido">Sem padrão definido</span>
+              <span class="fm-pill" data-val="Menstruação/ciclo">Menstruação/ciclo<span class="fm-check"> ✓</span></span>
+              <span class="fm-pill" data-val="Relações sexuais">Relações sexuais<span class="fm-check"> ✓</span></span>
+              <span class="fm-pill" data-val="Atividade física">Atividade física<span class="fm-check"> ✓</span></span>
+              <span class="fm-pill" data-val="Estresse">Estresse<span class="fm-check"> ✓</span></span>
+              <span class="fm-pill" data-val="Sem padrão definido">Sem padrão definido<span class="fm-check"> ✓</span></span>
             </div>
           </div>
-          <div class="fm-rodape"><button class="fm-back" id="fmP2Back">Voltar</button><button class="botao" id="fmP2Next">Próximo</button></div>
+          <div class="fm-btns">
+            <button class="fm-btn-sec" id="fmP2Back">Voltar</button>
+            <button class="fm-btn-pri" id="fmP2Next">Próximo</button>
+          </div>
         </div>
 
         <!-- PASSO 3: MEDICAMENTOS -->
@@ -546,7 +637,12 @@
           <div class="fm-prog-bar"><div class="fm-prog-fill" style="width:75%"></div></div>
           <div class="fm-group">
             <span class="fm-group-label">Medicamentos em uso</span>
-            <div id="fmMedsList"><input class="fm-input" type="text" placeholder="Nome do medicamento..."></div>
+            <div id="fmMedsList">
+              <div class="fm-med-row">
+                <input class="fm-input" type="text" placeholder="Nome do medicamento...">
+                <button class="fm-med-x" title="Remover">✕</button>
+              </div>
+            </div>
             <button class="fm-add" id="fmAddMed">+ Adicionar medicamento</button>
           </div>
           <div class="fm-group">
@@ -556,34 +652,45 @@
           <div class="fm-group">
             <span class="fm-group-label">Exames realizados</span>
             <div class="fm-pills" id="fmExames">
-              <span class="fm-pill" data-val="Ultrassom pélvico">Ultrassom pélvico</span>
-              <span class="fm-pill" data-val="Laparoscopia">Laparoscopia</span>
-              <span class="fm-pill" data-val="Ressonância">Ressonância</span>
-              <span class="fm-pill" data-val="Exames de sangue">Exames de sangue</span>
-              <span class="fm-pill" data-val="Nenhum">Nenhum</span>
+              <span class="fm-pill" data-val="Ultrassom pélvico">Ultrassom pélvico<span class="fm-check"> ✓</span></span>
+              <span class="fm-pill" data-val="Laparoscopia">Laparoscopia<span class="fm-check"> ✓</span></span>
+              <span class="fm-pill" data-val="Ressonância">Ressonância<span class="fm-check"> ✓</span></span>
+              <span class="fm-pill" data-val="Exames de sangue">Exames de sangue<span class="fm-check"> ✓</span></span>
+              <span class="fm-pill" data-val="Nenhum">Nenhum<span class="fm-check"> ✓</span></span>
             </div>
           </div>
-          <div class="fm-rodape"><button class="fm-back" id="fmP3Back">Voltar</button><button class="botao" id="fmP3Next">Revisar relato</button></div>
+          <div class="fm-group">
+            <label class="fm-file-area" for="fmFileInput">
+              <svg viewBox="0 0 24 24"><path d="M21.4 11.05 12.25 20.2a6 6 0 0 1-8.49-8.49l9.2-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+              Anexar exames (opcional)
+            </label>
+            <input type="file" id="fmFileInput" style="display:none" accept=".pdf,.jpg,.png">
+          </div>
+          <div class="fm-btns">
+            <button class="fm-btn-sec" id="fmP3Back">Voltar</button>
+            <button class="fm-btn-pri" id="fmP3Next">Próximo</button>
+          </div>
         </div>
 
         <!-- PASSO 4: REVISÃO -->
         <div id="fmStep4" style="display:none;">
           <div class="fm-prog-row"><span class="fm-prog-label">Passo 4 de 4</span><span class="fm-prog-pct">100% concluído</span></div>
           <div class="fm-prog-bar"><div class="fm-prog-fill" style="width:100%"></div></div>
-          <h3 style="color:var(--branco-quente);margin-bottom:1rem;font-size:1.1rem;">Seu relato organizado</h3>
+          <p class="fm-card-title">Seu relato organizado</p>
           <div class="fm-resumo-item"><span class="fm-res-label">Sintomas</span><div class="fm-res-val" id="fmResSintomas"></div><button class="fm-res-edit" data-step="1">Editar</button></div>
           <div class="fm-resumo-item"><span class="fm-res-label">Histórico</span><div class="fm-res-val" id="fmResHistorico"></div><button class="fm-res-edit" data-step="2">Editar</button></div>
           <div class="fm-resumo-item"><span class="fm-res-label">Medicamentos</span><div class="fm-res-val" id="fmResMeds"></div><button class="fm-res-edit" data-step="3">Editar</button></div>
           <div class="fm-resumo-item"><span class="fm-res-label">Exames</span><div class="fm-res-val" id="fmResExames"></div><button class="fm-res-edit" data-step="3">Editar</button></div>
-          <div class="fm-submit-btns">
-            <button class="fm-btn-cancel" id="fmP4Back">Voltar</button>
-            <button class="botao" id="fmBtnEnviar" style="justify-content:center;">Salvar relato em PDF</button>
+          <div class="fm-btns">
+            <button class="fm-btn-sec" id="fmP4Back">Voltar</button>
+            <button class="fm-btn-pri" id="fmBtnEnviar">Salvar relato em PDF</button>
           </div>
           <p class="fm-cripto">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            <svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
             Dados protegidos por criptografia de ponta a ponta
           </p>
         </div>
+
       </div>
     </div>
     <p class="fm-aviso">O Entre, assistente virtual, não diagnostica nem substitui atendimento médico.</p>
@@ -595,142 +702,129 @@
 
   <script>
     // NAV
-    document.getElementById('voltarTopo').addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+    document.getElementById('voltarTopo').addEventListener('click', ()=>window.scrollTo({top:0,behavior:'smooth'}));
     const botaoMenu = document.getElementById('botaoMenu');
     const menuNav = document.getElementById('menuNav');
-    botaoMenu.addEventListener('click', () => {
-      const ab = menuNav.classList.toggle('aberto');
-      botaoMenu.setAttribute('aria-expanded', ab);
-    });
-    menuNav.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
-      menuNav.classList.remove('aberto');
-      botaoMenu.setAttribute('aria-expanded','false');
-    }));
-    window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('solido', window.scrollY > 60));
+    botaoMenu.addEventListener('click', ()=>{ const ab=menuNav.classList.toggle('aberto'); botaoMenu.setAttribute('aria-expanded',ab); });
+    menuNav.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{ menuNav.classList.remove('aberto'); botaoMenu.setAttribute('aria-expanded','false'); }));
+    window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('solido',window.scrollY>60));
 
     // SURGIR
     const reduzirMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!reduzirMovimento) {
-      const obs = new IntersectionObserver(es => {
-        es.forEach(e => { if(e.isIntersecting){e.target.classList.add('visivel');obs.unobserve(e.target);} });
-      },{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
-      document.querySelectorAll('.surgir').forEach(el => obs.observe(el));
-    } else {
-      document.querySelectorAll('.surgir').forEach(el => el.classList.add('visivel'));
-    }
+    if(!reduzirMovimento){
+      const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visivel');obs.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+      document.querySelectorAll('.surgir').forEach(el=>obs.observe(el));
+    }else{document.querySelectorAll('.surgir').forEach(el=>el.classList.add('visivel'));}
 
-    // SINTOMAS CHECKLIST
-    const feedback = document.getElementById('feedbackSintomas');
-    const feedbackTexto = document.getElementById('feedbackTexto');
-    const textosFeedback = ['','',
+    // CHECKLIST SINTOMAS
+    const feedback=document.getElementById('feedbackSintomas');
+    const feedbackTexto=document.getElementById('feedbackTexto');
+    const textosFeedback=['','',
       'Você marcou vários sinais que podem estar relacionados. Vale conversar com um profissional especializado em dor pélvica. Para isso, considere usar nosso Assistente de Pré-consulta Entre.',
       'Com esses sintomas, um ginecologista especializado em endometriose pode ser um bom ponto de partida. Para isso, considere usar nosso Assistente de Pré-consulta Entre.',
       'Esses sinais merecem atenção. Considere buscar um especialista em dor pélvica crônica ou endometriose. Para isso, considere usar nosso Assistente de Pré-consulta Entre.',
       'Vários sintomas marcados. Um ginecologista especializado pode fazer uma avaliação mais detalhada. Para isso, considere usar nosso Assistente de Pré-consulta Entre.',
       'Com tantos sintomas relatados, uma equipe multidisciplinar faz diferença. Para isso, considere usar nosso Assistente de Pré-consulta Entre.',
     ];
-    document.querySelectorAll('#listaSintomas input').forEach(cb => {
-      cb.addEventListener('change', () => {
-        cb.closest('.item-sintoma').classList.toggle('marcado', cb.checked);
-        const total = document.querySelectorAll('#listaSintomas input:checked').length;
-        const idx = Math.min(total, textosFeedback.length-1);
-        if(total >= 3){feedbackTexto.textContent=textosFeedback[idx];feedback.classList.add('ativo');}
+    document.querySelectorAll('#listaSintomas input').forEach(cb=>{
+      cb.addEventListener('change',()=>{
+        cb.closest('.item-sintoma').classList.toggle('marcado',cb.checked);
+        const total=document.querySelectorAll('#listaSintomas input:checked').length;
+        const idx=Math.min(total,textosFeedback.length-1);
+        if(total>=3){feedbackTexto.textContent=textosFeedback[idx];feedback.classList.add('ativo');}
         else{feedback.classList.remove('ativo');}
       });
     });
 
     // FLIP CARDS
-    document.querySelectorAll('.carta-mito').forEach(carta => {
-      const alt = () => { const a = carta.classList.toggle('aberta'); carta.setAttribute('aria-pressed',a); };
-      carta.addEventListener('click', alt);
-      carta.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' '){e.preventDefault();alt();} });
+    document.querySelectorAll('.carta-mito').forEach(carta=>{
+      const alt=()=>{const a=carta.classList.toggle('aberta');carta.setAttribute('aria-pressed',a);};
+      carta.addEventListener('click',alt);
+      carta.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();alt();}});
     });
 
     // FORM RELATOS
-    document.getElementById('botaoRelato').addEventListener('click', async () => {
-      const nome = document.getElementById('nomeRelato').value.trim();
-      const pronomes = document.getElementById('pronomesRelato').value.trim();
-      const txt = document.getElementById('textoRelato').value.trim();
-      const btn = document.getElementById('botaoRelato');
+    document.getElementById('botaoRelato').addEventListener('click',async()=>{
+      const nome=document.getElementById('nomeRelato').value.trim();
+      const pronomes=document.getElementById('pronomesRelato').value.trim();
+      const txt=document.getElementById('textoRelato').value.trim();
+      const btn=document.getElementById('botaoRelato');
       if(!txt){document.getElementById('textoRelato').focus();return;}
-      const formId = '1FAIpQLSe0EnT-Kn5kpNke6tJnqPXTYFO7oqosVRkD9K2Xq_vDux7GOA';
-      const body = new FormData();
-      body.append('entry.92831491', nome);
-      body.append('entry.1337417479', pronomes);
-      body.append('entry.1773196441', txt);
+      const formId='1FAIpQLSe0EnT-Kn5kpNke6tJnqPXTYFO7oqosVRkD9K2Xq_vDux7GOA';
+      const body=new FormData();
+      body.append('entry.92831491',nome);body.append('entry.1337417479',pronomes);body.append('entry.1773196441',txt);
       btn.textContent='Enviando...';btn.disabled=true;
       try{await fetch(`https://docs.google.com/forms/d/e/${formId}/formResponse`,{method:'POST',body,mode:'no-cors'});}catch(e){}
       btn.textContent='Relato recebido';btn.style.background='#3f8a5a';
-      document.getElementById('textoRelato').value='';
-      document.getElementById('nomeRelato').value='';
-      document.getElementById('pronomesRelato').value='';
+      document.getElementById('textoRelato').value='';document.getElementById('nomeRelato').value='';document.getElementById('pronomesRelato').value='';
       setTimeout(()=>{btn.textContent='Enviar relato';btn.style.background='';btn.disabled=false;},3500);
     });
 
     // CHAT IA
-    const historico = [];
-    const systemPrompt = `Você é o Entre, um assistente virtual de pré-consulta do projeto "Dor não deveria ser normal". Seu papel é ajudar a pessoa a organizar seus sintomas, dúvidas e histórico antes de uma consulta médica sobre endometriose ou dor pélvica crônica.
-Regras: Nunca faça diagnósticos. Use linguagem inclusiva e neutra em termos de gênero. Seja acolhedor e direto. Faça perguntas curtas, uma por vez. Após 6-8 trocas, ofereça um resumo organizado. Responda sempre em português brasileiro.`;
-    const chatMensagens = document.getElementById('chatMensagens');
-    const chatInput = document.getElementById('chatInput');
+    const historico=[];
+    const systemPrompt=`Você é o Entre, um assistente virtual de pré-consulta do projeto "Dor não deveria ser normal". Ajude a pessoa a organizar sintomas antes de uma consulta sobre endometriose ou dor pélvica. Nunca diagnostique. Use linguagem inclusiva e neutra em gênero. Faça perguntas curtas, uma por vez. Após 6-8 trocas, ofereça um resumo. Responda em português brasileiro.`;
+    const chatMensagens=document.getElementById('chatMensagens');
+    const chatInput=document.getElementById('chatInput');
     async function enviarChat(){
-      const val = chatInput.value.trim();
-      if(!val) return;
-      const u = document.createElement('div'); u.className='msg msg--user'; u.textContent=val;
-      chatMensagens.appendChild(u); chatInput.value='';
-      chatMensagens.scrollTop=chatMensagens.scrollHeight;
+      const val=chatInput.value.trim();if(!val)return;
+      const u=document.createElement('div');u.className='msg msg--user';u.textContent=val;
+      chatMensagens.appendChild(u);chatInput.value='';chatMensagens.scrollTop=chatMensagens.scrollHeight;
       historico.push({role:'user',content:val});
-      const typing = document.createElement('div'); typing.className='msg msg--bot'; typing.textContent='...';
-      chatMensagens.appendChild(typing); chatMensagens.scrollTop=chatMensagens.scrollHeight;
+      const typing=document.createElement('div');typing.className='msg msg--bot';typing.textContent='...';
+      chatMensagens.appendChild(typing);chatMensagens.scrollTop=chatMensagens.scrollHeight;
       try{
-        const res = await fetch('/.netlify/functions/entre',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:historico})});
-        const data = await res.json();
-        const resp = data.text || 'Desculpe, não consegui processar sua mensagem.';
-        historico.push({role:'assistant',content:resp});
-        typing.textContent=resp;
+        const res=await fetch('/.netlify/functions/entre',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:historico})});
+        const data=await res.json();
+        const resp=data.text||'Desculpe, não consegui processar sua mensagem.';
+        historico.push({role:'assistant',content:resp});typing.textContent=resp;
       }catch(e){typing.textContent='Não consegui me conectar agora. Tente novamente em instantes.';}
       chatMensagens.scrollTop=chatMensagens.scrollHeight;
     }
-    document.getElementById('chatEnviar').addEventListener('click', enviarChat);
-    chatInput.addEventListener('keydown', e => { if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();enviarChat();} });
+    document.getElementById('chatEnviar').addEventListener('click',enviarChat);
+    chatInput.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();enviarChat();}});
 
-    // ========================
+    // ======================
     // FORMULÁRIO MANUAL
-    // ========================
-    const fmContextos = {
-      0:{etiqueta:'Formulário manual',titulo:'Você está no<br>controle.',desc:'Preencha 4 etapas simples no seu ritmo. O resultado será um resumo organizado para o seu médico ler antes da consulta.'},
-      1:{etiqueta:'Passo 1',titulo:'Sintomas<br>principais.',desc:'Selecione tudo o que você está sentindo. Você pode marcar quantos quiser.'},
+    // ======================
+    const fmContextos={
+      0:{etiqueta:'Formulário manual',titulo:'Você está no<br>controle.',desc:'Preencha 4 etapas simples no seu ritmo. O resultado será um resumo organizado para levar na consulta.'},
+      1:{etiqueta:'Passo 1',titulo:'Sintomas e<br>queixas.',desc:'Identificar seus sintomas é o primeiro passo para uma consulta mais eficiente.'},
       2:{etiqueta:'Passo 2',titulo:'Histórico e<br>frequência.',desc:'Entender a jornada dos seus sintomas ajuda a mapear possíveis causas.'},
       3:{etiqueta:'Passo 3',titulo:'Medicamentos e<br>histórico.',desc:'Essas informações evitam interações medicamentosas e ajudam no diagnóstico.'},
       4:{etiqueta:'Etapa final',titulo:'Quase lá.',desc:'Salve o PDF e leve com você no dia da consulta. Assim você chega organizado e não esquece nenhum detalhe importante.'}
     };
 
     function fmIrStep(n){
-      const ctx = fmContextos[n];
-      document.getElementById('fmEtiqueta').textContent = ctx.etiqueta;
-      document.getElementById('fmTitulo').innerHTML = ctx.titulo;
-      document.getElementById('fmDesc').textContent = ctx.desc;
-      [0,1,2,3,4].forEach(i => document.getElementById(`fmStep${i}`).style.display = i===n?'block':'none');
-      if(n===4) fmBuildResumo();
+      const ctx=fmContextos[n];
+      document.getElementById('fmEtiqueta').textContent=ctx.etiqueta;
+      document.getElementById('fmTitulo').innerHTML=ctx.titulo;
+      document.getElementById('fmDesc').textContent=ctx.desc;
+      [0,1,2,3,4].forEach(i=>document.getElementById(`fmStep${i}`).style.display=i===n?'block':'none');
+      if(n===4)fmBuildResumo();
+      document.getElementById('formManual').scrollTop=0;
     }
 
     function fmGetPills(id){
-      return [...document.querySelectorAll(`#${id} .fm-pill.sel`)].map(p=>p.dataset.val);
+      return[...document.querySelectorAll(`#${id} .fm-pill.sel`)].map(p=>p.dataset.val);
     }
 
     function fmBuildResumo(){
-      const sints = fmGetPills('fmSintomas');
-      const rs = document.getElementById('fmResSintomas');
-      rs.innerHTML = sints.length ? sints.map(s=>`<span class="fm-res-tag">${s}</span>`).join('') : '<span style="opacity:.5">Nenhum selecionado</span>';
-      const tempo = document.querySelector('#fmTempo .fm-pill.sel')?.dataset.val||'—';
-      const freq = document.querySelector('#fmFrequencia .fm-pill.sel')?.dataset.val||'—';
-      const intens = document.querySelector('#fmEscala .fm-escala-n.sel')?.dataset.val||'—';
-      const piora = fmGetPills('fmPiora');
-      document.getElementById('fmResHistorico').textContent = `${tempo} · ${freq} · Dor ${intens}/10${piora.length?' · '+piora.join(', '):''}`;
-      const meds = [...document.querySelectorAll('#fmMedsList .fm-input')].map(i=>i.value.trim()).filter(Boolean);
-      document.getElementById('fmResMeds').textContent = meds.length?meds.join(', '):'—';
-      const exames = fmGetPills('fmExames');
-      document.getElementById('fmResExames').textContent = exames.length?exames.join(', '):'—';
+      const sints=fmGetPills('fmSintomas');
+      const outros=document.getElementById('fmOutrosSintomas').value.trim();
+      const rs=document.getElementById('fmResSintomas');
+      let sintsArr=[...sints];if(outros)sintsArr.push(outros);
+      rs.innerHTML=sintsArr.length?sintsArr.map(s=>`<span class="fm-res-tag">${s}</span>`).join(''):'<span style="opacity:.4">Nenhum selecionado</span>';
+      const tempo=document.querySelector('#fmTempo .fm-pill.sel')?.dataset.val||'—';
+      const freq=document.querySelector('#fmFrequencia .fm-pill.sel')?.dataset.val||'—';
+      const intens=document.querySelector('#fmEscala .fm-escala-n.sel')?.dataset.val||'—';
+      const piora=fmGetPills('fmPiora');
+      document.getElementById('fmResHistorico').textContent=`${tempo} · ${freq} · Dor ${intens}/10${piora.length?' · '+piora.join(', '):''}`;
+      const meds=[...document.querySelectorAll('#fmMedsList .fm-input')].map(i=>i.value.trim()).filter(Boolean);
+      const diag=document.getElementById('fmDiagnostico').value.trim();
+      let medsStr=meds.length?meds.join(', '):'—';if(diag)medsStr+=' | Diag: '+diag;
+      document.getElementById('fmResMeds').textContent=medsStr;
+      const exames=fmGetPills('fmExames');
+      document.getElementById('fmResExames').textContent=exames.length?exames.join(', '):'—';
     }
 
     function abrirFormManual(){
@@ -745,81 +839,70 @@ Regras: Nunca faça diagnósticos. Use linguagem inclusiva e neutra em termos de
       document.body.style.overflow='';
     }
 
-    document.getElementById('abrirFormManual').addEventListener('click', abrirFormManual);
-    document.getElementById('fmBtnCancelar').addEventListener('click', fecharFormManual);
-    document.getElementById('fmVoltarIA').addEventListener('click', fecharFormManual);
-    document.getElementById('fmBtnComecar').addEventListener('click', ()=>fmIrStep(1));
-    document.getElementById('fmP1Back').addEventListener('click', fecharFormManual);
-    document.getElementById('fmP1Next').addEventListener('click', ()=>fmIrStep(2));
-    document.getElementById('fmP2Back').addEventListener('click', ()=>fmIrStep(1));
-    document.getElementById('fmP2Next').addEventListener('click', ()=>fmIrStep(3));
-    document.getElementById('fmP3Back').addEventListener('click', ()=>fmIrStep(2));
-    document.getElementById('fmP3Next').addEventListener('click', ()=>fmIrStep(4));
+    document.getElementById('abrirFormManual').addEventListener('click',abrirFormManual);
+    document.getElementById('fmClose').addEventListener('click',fecharFormManual);
+    document.getElementById('fmBtnCancelar').addEventListener('click',fecharFormManual);
+    document.getElementById('fmBtnComecar').addEventListener('click',()=>fmIrStep(1));
+    document.getElementById('fmP1Back').addEventListener('click',()=>fmIrStep(0));
+    document.getElementById('fmP1Next').addEventListener('click',()=>fmIrStep(2));
+    document.getElementById('fmP2Back').addEventListener('click',()=>fmIrStep(1));
+    document.getElementById('fmP2Next').addEventListener('click',()=>fmIrStep(3));
+    document.getElementById('fmP3Back').addEventListener('click',()=>fmIrStep(2));
+    document.getElementById('fmP3Next').addEventListener('click',()=>fmIrStep(4));
+    document.getElementById('fmP4Back').addEventListener('click',()=>fmIrStep(3));
 
     // Pills toggle
-    document.querySelectorAll('.fm-pills').forEach(container => {
-      container.addEventListener('click', e => {
-        const pill = e.target.closest('.fm-pill');
-        if(!pill) return;
-        const single = container.dataset.single === 'true';
+    document.querySelectorAll('.fm-pills').forEach(container=>{
+      container.addEventListener('click',e=>{
+        const pill=e.target.closest('.fm-pill');if(!pill)return;
+        const single=container.dataset.single==='true';
         if(single){container.querySelectorAll('.fm-pill').forEach(p=>p.classList.remove('sel'));}
         pill.classList.toggle('sel');
       });
     });
 
     // Escala
-    document.getElementById('fmEscala').addEventListener('click', e => {
-      const btn = e.target.closest('.fm-escala-n');
-      if(!btn) return;
+    document.getElementById('fmEscala').addEventListener('click',e=>{
+      const btn=e.target.closest('.fm-escala-n');if(!btn)return;
       document.querySelectorAll('.fm-escala-n').forEach(b=>b.classList.remove('sel'));
       btn.classList.add('sel');
     });
 
-    // Adicionar medicamento
-    document.getElementById('fmAddMed').addEventListener('click', ()=>{
-      const inp = document.createElement('input');
-      inp.className='fm-input';inp.type='text';inp.placeholder='Nome do medicamento...';
-      document.getElementById('fmMedsList').appendChild(inp);
+    // Medicamentos
+    document.getElementById('fmAddMed').addEventListener('click',()=>{
+      const row=document.createElement('div');row.className='fm-med-row';
+      row.innerHTML=`<input class="fm-input" type="text" placeholder="Nome do medicamento..."><button class="fm-med-x" title="Remover">✕</button>`;
+      row.querySelector('.fm-med-x').addEventListener('click',()=>row.remove());
+      document.getElementById('fmMedsList').appendChild(row);
+    });
+    document.querySelector('#fmMedsList .fm-med-x').addEventListener('click',function(){
+      if(document.querySelectorAll('#fmMedsList .fm-med-row').length>1)this.closest('.fm-med-row').remove();
     });
 
     // Editar de volta
     document.querySelectorAll('.fm-res-edit').forEach(btn=>{
-      btn.addEventListener('click', ()=>fmIrStep(parseInt(btn.dataset.step)));
+      btn.addEventListener('click',()=>fmIrStep(parseInt(btn.dataset.step)));
     });
 
-    // Rascunho
-    document.getElementById('fmBtnRascunho').addEventListener('click', ()=>{
-      const btn = document.getElementById('fmBtnRascunho');
-      btn.textContent='Rascunho salvo!';
-      setTimeout(()=>btn.textContent='Salvar rascunho',2500);
-    });
+    // Salvar PDF
+    document.getElementById('fmBtnEnviar').addEventListener('click',()=>{
+      const sints=fmGetPills('fmSintomas');
+      const outros=document.getElementById('fmOutrosSintomas').value.trim();
+      const sintsStr=[...sints,outros].filter(Boolean).join(', ')||'—';
+      const tempo=document.querySelector('#fmTempo .fm-pill.sel')?.dataset.val||'—';
+      const freq=document.querySelector('#fmFrequencia .fm-pill.sel')?.dataset.val||'—';
+      const intens=document.querySelector('#fmEscala .fm-escala-n.sel')?.dataset.val||'—';
+      const piora=fmGetPills('fmPiora').join(', ')||'—';
+      const meds=[...document.querySelectorAll('#fmMedsList .fm-input')].map(i=>i.value.trim()).filter(Boolean).join(', ')||'—';
+      const diag=document.getElementById('fmDiagnostico').value.trim()||'—';
+      const exames=fmGetPills('fmExames').join(', ')||'—';
+      const data=new Date().toLocaleDateString('pt-BR');
 
-    document.getElementById('fmBtnEnviar').addEventListener('click', ()=>{
-      const sints = fmGetPills('fmSintomas').join(', ') || '—';
-      const tempo = document.querySelector('#fmTempo .fm-pill.sel')?.dataset.val || '—';
-      const freq = document.querySelector('#fmFrequencia .fm-pill.sel')?.dataset.val || '—';
-      const intens = document.querySelector('#fmEscala .fm-escala-n.sel')?.dataset.val || '—';
-      const piora = fmGetPills('fmPiora').join(', ') || '—';
-      const meds = [...document.querySelectorAll('#fmMedsList .fm-input')].map(i=>i.value.trim()).filter(Boolean).join(', ') || '—';
-      const diag = document.getElementById('fmDiagnostico').value.trim() || '—';
-      const exames = fmGetPills('fmExames').join(', ') || '—';
-      const data = new Date().toLocaleDateString('pt-BR');
-
-      const html = `<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8">
-      <title>Relato de Pré-Consulta — Entre</title>
-      <style>
-        body{font-family:Arial,sans-serif;color:#1d2733;padding:40px;max-width:680px;margin:0 auto;line-height:1.6;}
-        h1{font-size:1.5rem;color:#0d1b2a;margin-bottom:0.3rem;}
-        .sub{font-size:0.85rem;color:#5a6c7a;margin-bottom:2rem;}
-        .bloco{margin-bottom:1.4rem;border-bottom:1px solid #e5e7eb;padding-bottom:1.2rem;}
-        .bloco:last-of-type{border-bottom:none;}
-        .label{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.12em;color:#5a6c7a;font-weight:700;margin-bottom:0.3rem;}
-        .valor{font-size:0.95rem;color:#1d2733;}
-        .aviso{font-size:0.78rem;color:#9ca3af;margin-top:2rem;border-top:1px solid #e5e7eb;padding-top:1rem;}
-      </style></head><body>
-      <h1>Relato de Pré-Consulta</h1>
-      <p class="sub">Gerado pelo assistente Entre · ${data}</p>
-      <div class="bloco"><p class="label">Sintomas principais</p><p class="valor">${sints}</p></div>
+      const html=`<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><title>Relato de Pré-Consulta — Entre</title>
+      <style>body{font-family:Arial,sans-serif;color:#1d2733;padding:40px;max-width:680px;margin:0 auto;line-height:1.6;}h1{font-size:1.5rem;color:#0d1b2a;margin-bottom:.3rem;}.sub{font-size:.85rem;color:#5a6c7a;margin-bottom:2rem;}.bloco{margin-bottom:1.4rem;border-bottom:1px solid #e5e7eb;padding-bottom:1.2rem;}.bloco:last-of-type{border-bottom:none;}.label{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:#5a6c7a;font-weight:700;margin-bottom:.3rem;}.valor{font-size:.95rem;color:#1d2733;}.aviso{font-size:.78rem;color:#9ca3af;margin-top:2rem;border-top:1px solid #e5e7eb;padding-top:1rem;}</style>
+      </head><body>
+      <h1>Relato de Pré-Consulta</h1><p class="sub">Gerado pelo assistente Entre · ${data}</p>
+      <div class="bloco"><p class="label">Sintomas principais</p><p class="valor">${sintsStr}</p></div>
       <div class="bloco"><p class="label">Há quanto tempo</p><p class="valor">${tempo}</p></div>
       <div class="bloco"><p class="label">Frequência</p><p class="valor">${freq}</p></div>
       <div class="bloco"><p class="label">Intensidade média da dor</p><p class="valor">${intens}/10</p></div>
@@ -830,16 +913,11 @@ Regras: Nunca faça diagnósticos. Use linguagem inclusiva e neutra em termos de
       <p class="aviso">Este documento é um apoio à consulta médica e não constitui diagnóstico. Gerado pelo assistente Entre — Dor não deveria ser normal.</p>
       </body></html>`;
 
-      const blob = new Blob([html], {type:'text/html'});
-      const url = URL.createObjectURL(blob);
-      const win = window.open(url,'_blank');
-      if(win){
-        win.onload = ()=>{ win.print(); URL.revokeObjectURL(url); };
-      } else {
-        const a = document.createElement('a');
-        a.href = url; a.download = 'relato-pre-consulta.html';
-        a.click(); URL.revokeObjectURL(url);
-      }
+      const blob=new Blob([html],{type:'text/html'});
+      const url=URL.createObjectURL(blob);
+      const win=window.open(url,'_blank');
+      if(win){win.onload=()=>{win.print();URL.revokeObjectURL(url);};}
+      else{const a=document.createElement('a');a.href=url;a.download='relato-pre-consulta.html';a.click();URL.revokeObjectURL(url);}
     });
   </script>
 </body>
