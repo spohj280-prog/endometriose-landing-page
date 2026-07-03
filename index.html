@@ -201,9 +201,9 @@
   /* ========================
      FORMULÁRIO MANUAL OVERLAY
      ======================== */
-  .fm-overlay{position:fixed;inset:0;z-index:2000;background:linear-gradient(125deg,var(--azul-profundo) 0%,#142136 28%,#2b2a2e 55%,#5a3f24 78%,#8a5a1f 100%);color:var(--texto-claro);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;padding:2rem;opacity:0;pointer-events:none;transition:opacity 0.4s ease;overflow-y:auto;}
+  .fm-overlay{position:fixed;inset:0;z-index:2000;background:linear-gradient(125deg,var(--azul-profundo) 0%,#142136 28%,#2b2a2e 55%,#5a3f24 78%,#8a5a1f 100%);color:var(--texto-claro);display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:1.5rem;padding:2rem;opacity:0;pointer-events:none;transition:opacity 0.4s ease;overflow-y:auto;}
   .fm-overlay.ativo{opacity:1;pointer-events:auto;}
-  .fm-layout{display:grid;grid-template-columns:0.8fr 1.2fr;gap:3rem;align-items:flex-start;width:100%;max-width:1100px;}
+  .fm-layout{display:grid;grid-template-columns:0.8fr 1.2fr;gap:3rem;align-items:flex-start;width:100%;max-width:1100px;margin:auto;}
   @media(max-width:860px){.fm-layout{grid-template-columns:1fr;}}
   .fm-etiqueta{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.2em;color:var(--amarelo);margin-bottom:1rem;font-weight:700;}
   .fm-titulo{font-size:clamp(2rem,4vw,3rem);font-weight:800;color:var(--branco-quente);margin-bottom:1rem;line-height:1.1;}
@@ -220,8 +220,11 @@
   .fm-pill{padding:0.5rem 1rem;border-radius:50px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.04);color:rgba(247,241,234,0.75);font-size:0.85rem;cursor:pointer;transition:all 0.2s ease;user-select:none;}
   .fm-pill:hover{border-color:rgba(255,255,255,0.4);color:#fff;}
   .fm-pill.sel{background:rgba(245,158,11,0.15);border-color:var(--amarelo);color:var(--amarelo);}
-  .fm-escala{display:flex;gap:0.4rem;flex-wrap:wrap;margin-bottom:0.4rem;}
-  .fm-escala-n{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.04);color:rgba(247,241,234,0.75);font-size:0.85rem;font-weight:600;cursor:pointer;transition:all 0.2s ease;display:flex;align-items:center;justify-content:center;font-family:inherit;}
+  .fm-escala{display:flex;gap:0;justify-content:space-between;width:100%;margin-bottom:0.4rem;}
+  .fm-escala-n{flex:1;height:40px;border-radius:0;border:1px solid rgba(255,255,255,0.12);border-right:none;background:rgba(255,255,255,0.04);color:rgba(247,241,234,0.75);font-size:0.85rem;font-weight:600;cursor:pointer;transition:all 0.2s ease;display:flex;align-items:center;justify-content:center;font-family:inherit;}
+  .fm-escala-n:first-child{border-radius:8px 0 0 8px;}
+  .fm-escala-n:last-child{border-radius:0 8px 8px 0;border-right:1px solid rgba(255,255,255,0.12);}
+  .fm-escala-n:hover{background:rgba(255,255,255,0.1);color:#fff;}
   .fm-escala-n.sel{background:var(--amarelo);border-color:var(--amarelo);color:#fff;}
   .fm-escala-labels{display:flex;justify-content:space-between;}
   .fm-escala-labels span{font-size:0.72rem;color:rgba(247,241,234,0.4);}
@@ -480,7 +483,10 @@
               <span class="fm-pill" data-val="Piora com o ciclo">Piora com o ciclo</span>
             </div>
           </div>
-          <div class="fm-rodape"><span></span><button class="botao" id="fmP1Next">Próximo</button></div>
+          <div class="fm-rodape">
+            <button class="fm-btn-cancel" id="fmP1Back">Cancelar</button>
+            <button class="botao" id="fmP1Next">Próximo</button>
+          </div>
         </div>
 
         <!-- PASSO 2: HISTÓRICO -->
@@ -569,10 +575,9 @@
           <div class="fm-resumo-item"><span class="fm-res-label">Histórico</span><div class="fm-res-val" id="fmResHistorico"></div><button class="fm-res-edit" data-step="2">Editar</button></div>
           <div class="fm-resumo-item"><span class="fm-res-label">Medicamentos</span><div class="fm-res-val" id="fmResMeds"></div><button class="fm-res-edit" data-step="3">Editar</button></div>
           <div class="fm-resumo-item"><span class="fm-res-label">Exames</span><div class="fm-res-val" id="fmResExames"></div><button class="fm-res-edit" data-step="3">Editar</button></div>
-          <label class="fm-autorizo"><input type="checkbox" id="fmAutorizo"> Autorizo o compartilhamento com meu profissional de saúde</label>
           <div class="fm-submit-btns">
-            <button class="fm-btn-draft" id="fmBtnRascunho">Salvar rascunho</button>
-            <button class="botao" id="fmBtnEnviar" style="justify-content:center;">Enviar ao médico</button>
+            <button class="fm-btn-cancel" id="fmP4Back">Voltar</button>
+            <button class="botao" id="fmBtnEnviar" style="justify-content:center;">Salvar relato em PDF</button>
           </div>
           <p class="fm-cripto">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
@@ -697,7 +702,7 @@ Regras: Nunca faça diagnósticos. Use linguagem inclusiva e neutra em termos de
       1:{etiqueta:'Passo 1',titulo:'Sintomas<br>principais.',desc:'Selecione tudo o que você está sentindo. Você pode marcar quantos quiser.'},
       2:{etiqueta:'Passo 2',titulo:'Histórico e<br>frequência.',desc:'Entender a jornada dos seus sintomas ajuda a mapear possíveis causas.'},
       3:{etiqueta:'Passo 3',titulo:'Medicamentos e<br>histórico.',desc:'Essas informações evitam interações medicamentosas e ajudam no diagnóstico.'},
-      4:{etiqueta:'Etapa final',titulo:'Quase lá.',desc:'Revise e confirme. Seu médico receberá este resumo organizado antes da consulta.'}
+      4:{etiqueta:'Etapa final',titulo:'Quase lá.',desc:'Salve o PDF e leve com você no dia da consulta. Assim você chega organizado e não esquece nenhum detalhe importante.'}
     };
 
     function fmIrStep(n){
@@ -744,6 +749,7 @@ Regras: Nunca faça diagnósticos. Use linguagem inclusiva e neutra em termos de
     document.getElementById('fmBtnCancelar').addEventListener('click', fecharFormManual);
     document.getElementById('fmVoltarIA').addEventListener('click', fecharFormManual);
     document.getElementById('fmBtnComecar').addEventListener('click', ()=>fmIrStep(1));
+    document.getElementById('fmP1Back').addEventListener('click', fecharFormManual);
     document.getElementById('fmP1Next').addEventListener('click', ()=>fmIrStep(2));
     document.getElementById('fmP2Back').addEventListener('click', ()=>fmIrStep(1));
     document.getElementById('fmP2Next').addEventListener('click', ()=>fmIrStep(3));
@@ -788,15 +794,52 @@ Regras: Nunca faça diagnósticos. Use linguagem inclusiva e neutra em termos de
       setTimeout(()=>btn.textContent='Salvar rascunho',2500);
     });
 
-    // Enviar ao médico — placeholder até integrar o segundo Google Forms
-    document.getElementById('fmBtnEnviar').addEventListener('click', async ()=>{
-      if(!document.getElementById('fmAutorizo').checked){
-        alert('Por favor, autorize o compartilhamento antes de enviar.');return;
+    document.getElementById('fmBtnEnviar').addEventListener('click', ()=>{
+      const sints = fmGetPills('fmSintomas').join(', ') || '—';
+      const tempo = document.querySelector('#fmTempo .fm-pill.sel')?.dataset.val || '—';
+      const freq = document.querySelector('#fmFrequencia .fm-pill.sel')?.dataset.val || '—';
+      const intens = document.querySelector('#fmEscala .fm-escala-n.sel')?.dataset.val || '—';
+      const piora = fmGetPills('fmPiora').join(', ') || '—';
+      const meds = [...document.querySelectorAll('#fmMedsList .fm-input')].map(i=>i.value.trim()).filter(Boolean).join(', ') || '—';
+      const diag = document.getElementById('fmDiagnostico').value.trim() || '—';
+      const exames = fmGetPills('fmExames').join(', ') || '—';
+      const data = new Date().toLocaleDateString('pt-BR');
+
+      const html = `<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8">
+      <title>Relato de Pré-Consulta — Entre</title>
+      <style>
+        body{font-family:Arial,sans-serif;color:#1d2733;padding:40px;max-width:680px;margin:0 auto;line-height:1.6;}
+        h1{font-size:1.5rem;color:#0d1b2a;margin-bottom:0.3rem;}
+        .sub{font-size:0.85rem;color:#5a6c7a;margin-bottom:2rem;}
+        .bloco{margin-bottom:1.4rem;border-bottom:1px solid #e5e7eb;padding-bottom:1.2rem;}
+        .bloco:last-of-type{border-bottom:none;}
+        .label{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.12em;color:#5a6c7a;font-weight:700;margin-bottom:0.3rem;}
+        .valor{font-size:0.95rem;color:#1d2733;}
+        .aviso{font-size:0.78rem;color:#9ca3af;margin-top:2rem;border-top:1px solid #e5e7eb;padding-top:1rem;}
+      </style></head><body>
+      <h1>Relato de Pré-Consulta</h1>
+      <p class="sub">Gerado pelo assistente Entre · ${data}</p>
+      <div class="bloco"><p class="label">Sintomas principais</p><p class="valor">${sints}</p></div>
+      <div class="bloco"><p class="label">Há quanto tempo</p><p class="valor">${tempo}</p></div>
+      <div class="bloco"><p class="label">Frequência</p><p class="valor">${freq}</p></div>
+      <div class="bloco"><p class="label">Intensidade média da dor</p><p class="valor">${intens}/10</p></div>
+      <div class="bloco"><p class="label">O que piora os sintomas</p><p class="valor">${piora}</p></div>
+      <div class="bloco"><p class="label">Medicamentos em uso</p><p class="valor">${meds}</p></div>
+      <div class="bloco"><p class="label">Diagnósticos anteriores</p><p class="valor">${diag}</p></div>
+      <div class="bloco"><p class="label">Exames realizados</p><p class="valor">${exames}</p></div>
+      <p class="aviso">Este documento é um apoio à consulta médica e não constitui diagnóstico. Gerado pelo assistente Entre — Dor não deveria ser normal.</p>
+      </body></html>`;
+
+      const blob = new Blob([html], {type:'text/html'});
+      const url = URL.createObjectURL(blob);
+      const win = window.open(url,'_blank');
+      if(win){
+        win.onload = ()=>{ win.print(); URL.revokeObjectURL(url); };
+      } else {
+        const a = document.createElement('a');
+        a.href = url; a.download = 'relato-pre-consulta.html';
+        a.click(); URL.revokeObjectURL(url);
       }
-      const btn = document.getElementById('fmBtnEnviar');
-      btn.textContent='Enviando...';btn.disabled=true;
-      // TODO: integrar entry IDs do segundo Google Forms aqui
-      setTimeout(()=>{btn.textContent='Enviado!';btn.style.background='#3f8a5a';},800);
     });
   </script>
 </body>
