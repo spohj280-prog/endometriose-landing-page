@@ -2,6 +2,27 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
+  <meta name="description" content="Endometriose afeta pessoas de qualquer identidade de gênero. Informação, sintomas e um assistente de pré-consulta.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAEPUlEQVRYhe2Xz29UVRTHP+e+N9OZvum0HTpFCrSSBksbiT9oYSELxA0RJFGxISYaoyQm7F1T4so/wEUXVlkoIZKgQRZKBEEhFChiiFSMBRxq27QMbaedmTIz714Xj4GBTh+lNKz47t6558f33HfOybnCHZhuAmnb6RSRd8C0AzEgzOIgC9wCOS+YA+FE+lvpogAgAJl94eXGVd8B7YsU0B/CWbR50/koMySmm0Am4JxerOBS2YCKrYVAFRgXfesSJvVPOdXeykR6o522nU55jOASWoK18nWsxq2o+g1IKD5LRyd/J39+D+7QsVLxhmxTZIekeyLfg9lelNprdmE37yTX14Ue+a180EgjVuNWrMY3sJ55BcR6OFOjyfV+QqG/u9TTIUn3ODeAFUVRaOvPqPoNoAu41w/hDp/A5CaR8FJU3UuoupdRNa2znOvRXtzBn9DJC+jkRcxMEgIO1rJNBNo/RVU/hx7tZebIa6WWCUn3OFkgVJSo2FoqNn+DVK3yz8i9jTtyEvffw7iJHzDZ0TlVJRDBWv0+eug4eqK/9Cgr6R7HzDIIRrFbPsRa9baXrRXC5KcwyT/QyYu4Y2fRg0cx+Sl/kvNAWQJPEsr31Haw23ZjrdwC1qPNJBXvwG7bDbbjH8L3sOUDgus/8z6Mi5m6jk7fgNsTmHwK8tMYdwaxwhCMIsEoEqxFatuQiphnJ0Lhz88XRkD/dww9fhlV2wZiIdFmrGizb0b32U/8hR467qszrxqQaDNW3TqkthUJxZFgNQSrkUAVqCC4M15B5lKY3Dhm6hru2Dn0yGnA373vDRRhUgMUUgPzUX1k+BfhE8BTAk8JzKsLVPVqVLwDqVnjtWGg6l4bWhUlbTiJyU16A2vsHO7Ir2D0wgmomlaCm/Z5g2gB0BNXyP3yHnr88gIJLN98L7guoKeuYqZvQD6FyU16o1jnEFXhjeJAFEIx1J2bUjUtqIZXF06gcOUrMAaTGsAdPgHuzMPTLpKPt6Pi6yn8vc9X7+GjWAVA5+cd+FFR9gYkWI29ZhfWqh2omhZv3ufT6PFL6ORF9OhZ3MEfvd/wmJB0j5MpfYB4K9l+pOpZf0udxx0+iZs4jJs4gskMzx1k7pUsI+keJwGsLEpKl9LCtYPo4ROY/DQSqkMtedFbSmPPF980HoxG3+zDHTzqLaU3L2Cyo0gwilq2icC6vajq1WWXUhsjfYi5S6AwsB8bQ65vD3rkVPmMKhuwmrZhNW3HWroRlI2Kd6DiHXPfmHEpXD3wgCNzTqa/dN4Vw9dzW/pDKmqxVmzBatyGqu9AKhtm6eix8+Qv7MV9YDkRZKeYLuxMk3MKw/qFkrjPabgeFXsBAhFwb6Mn+jFT18ppnqmMTG8UgPQXlQ0oObRYJOZB8wx5/ZbzcWb4biWZLuxsU2SHMXTeeZ7XLfLzfAykT+BAODJ9UDpxAf4H2TKy7Z3w7TcAAAAASUVORK5CYII=">
+  <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAABmJLR0QA/wD/AP+gvaeTAAAKFklEQVR4nO3daWwU5x3H8d//2V3vcjhgY3OJhkuhxAQCEVdCoFwykMNQ9SJVm7xImxdpqqqXotAmb9oAqWiqKlGjRk2ktlEFTasACiSxuI80TaNgbkJSCIe4sSE2sOvdmacvbFzA184zMzv44fd5ObvP8eIrazSzMxa0Q2utADwH4FkAqr3v3VS0i+zOpcjWLAW023JYuveHKpsA1XcSYv0mQ5WNB1Q80q2SsRcB/FxE3LY+lLYOaq2LAawAMC/07YXAObkZuuEopHgIVO8KSKpP1FuiYL0J4FERSd/4Qaugtdb9AawFMK5g2yPybiuABSJSe+3B64LWWn8JwCYAwwq+PSLvDgCoFJFjVw+0BK217tsc852RbY/Iu88AfEVETuBq0M3nzNsBjI56d0QGdgOYIiL1qvlqxhuMmbqw0QBWaK1jorX+FYBfRr0jogD8WrTWOQCxqHdCFABHtNY66l0QBaVr3AEkyhODJqswaLIKgyarMGiyCoMmqzBosgqDJqswaLIKgyarMGiyCoMmqzBosgqDJqswaLIKgyarMGiyCoMmqzBosgqDJqswaLIKgyarMGiyCoMmqzBosgqDJqswaLIKgyarMGiyCoMmqzBosgqDJqswaLIKgyarMGiyCoMmqzBosgqDJqswaLIKgyarMGiyioJ2ot4DUTC0A5XdtSzqbRAFIrtrGVR2x/Nwjq6Jei9EvjjHq5HdsRgK2kXjlsfh1u2Nek9ERty6vWjc9GjTKQcA6GwDMu8+BPfCJ1HvjcgT/cUhZKoXQGcbgGuvcuj0WWSq58O9eDDK/RHlTdcfRvrdB6Avn2w5dt1lO33pODJrZsE9/X4U+yPKm3t+J9JrZkNfOn7d8VbXoXWmDun3quB8/lYh90eUN+d4NTLvzIG+crrVZ23fWHHSyGx6DLm9LxVge0R50i6yNYuRWff1lnPmG8U7Gtz44TNwG46iaOILgPCmIkVHNxxB47YfwDm5qcPvdVppbt8ryGz8DuBcCXJ/RPnRLnL7X8WVlRM7jRn5/pbDObIa6dVToS9+GsQWifLW+MGP0fjBT4Dspby+n/d5hHvhADJbHvezNyLP3DP/8fR9TyfGuuGI1/0Q+XLjZbnOeAs6XZv3n34i37KXoDN1noZ4vHSh4V7gbz6oMNy6PQC0pzGer8W553d5HUJkxK3d7XmM96DPfeR5ESITJq15Dto50fm1QKIgOCe3eB7jOWh96ThcXo+mkLkXP4VuOOp5nNH9bOfIKpNhRHlzjqw0GmcW9OF/Gi1GlC/nkFljRkG7tbvh1u4xWpCoM27tnuZLdt4Z/4Qud+BV06FEHcrt/6PxWPOg/7vc810cos7oTB1yh1YYjzf/kXPuMnJ7XzYeTtSW3N6XgNxl4/G+frWf3fcydPqsnymIWuj0eeT2/cHXHP4eQ8leQrZmia8piK7K1jzf7qNV+fL9XFXuwJ/gnuXtcPLHPb8DuQOv+Z7H/4OC2m16osDN+Z6KblFuDo3v/whBvDg0kCdf3XMf89SDjGVrFsM993EgcwX2KHd21zK4p7YFNR3dItxT25Dd9dvA5gvu3QTaQWbDt6HrDwc2JdlNNxxFZuN3AznVuCrQl23oTC0y6xdCZ+uDnJYspLP1yKz7RuCXfQN/e4xbtxeZ6gV89pDal7uMxnXfDOUVzqG8Dsk9829kNiz0dceHLJW7jMz6b8E5tTWU6UN7v5dzYmPTq07T58JagroY3XgB6er5cE5sDG2NUF9Y5579CJm1ldBfHApzGeoC3IsHkXl7JtzT/wp1ndDfwOhePIj06ilwPjd7AoG6Oo3cJ68jvXpqQV6mz1eKUsgEiHcr2GqhB616jUCqajtiQxaEvRTdpOLDH0GqaitUrxGhrxVq0Kp8ApIPVENuGxbmMtQFqF4jkHxoA1S/e8NdJ6yJYwNnIDV3DSRVFtYS1MVIUW+kKlchNnBGaGuEErTqOwnJmcuBePcwpqeuLN4dyVkrEOs/NZTpAw9alYxCsnIlkOgR9NRki3h3FM3+O1TJqMCnDjRoSZYiOWs5JFEc5LRkIUkUIzn7TUiqPNB5gwtaYkjO/BukeGhgU5LdpOftSM74KyCxwOYMLOjEmJ9B9b8/qOnoFqH634/EmJ8GN18gk5Tdg8TYZ4KYim5BibGLoMruCWQu/0GLQtHkFwHV/r88JOqQiqPovt8HcurhO+j4yO9BlY/3vRG6tak+4xAf6f+/rPkLOtGDpxoUmMTYX0ASPX3N4SvoRMVTgV92oVuXpPogXvGkrznMg453R3zUU74WJ7pRfNQPfd1hNg46PvwRSLLEeGGitkiyBPHhC43Hmwc98vvGixJ1JD7yCeOxRkGr0jFQpXcZL0rUEVV6F1TpaLOxJoNiQ79mtBhRvkwbMwt6cJXRYkT5ig2ebzTOc9DSYxBUrzuMFiPKl+p1B6Tn7d7HeR0QGzjd8yJEJmIDpnke4zloVT7B8yJEJlSZ959UeA+6dIznRYhMqD7eW/MYtED1rvC8CJEJ1XtU03s9vIzx8mVJ9eGzglQ4iR6QVKmnId6CLh7sdUtEvkiPQZ6+n3fQqqQCyWmvm+yJyJjX39rnFXRscBVSD2+G3DbcdF9ERoom/67piag8T3U7DTpe8SSSM94AYoV74R5RC1GI3/kEui34ELEBnd8DaT9oUSiauARFk34DCF9SStGSnoORnLMaiXGLOuyx7U9iKSSn/7npx9ZENwtRSIxdhOTsf7T7qFaroCVZgtSc1YgN+WohtkjkWWxQJZLz3oN069fqs+uClh6DkHxwPVS/+wq5PyLPVJ+7kXpwXavLei1BS6ocycpVBXkpNVEQpHgoUnPXQroPaDmmAEASPZGc+zZU7y9HuT8iz+S2YUhWrmw5p1YQhaJpr4XyalOiQlAlo1A0/S+AxCCNNUt14u6no94TkW/ZnS9AtJvTQb7OlCgy2oForXXU+yAKCm8BklUYNFmFQZNVGDRZhUGTVRg0WYVBk1UYNFmFQZNVGDRZhUGTVRg0WYVBk1UYNFmFQZNVGDRZhUGTVRg0WYVBk1UYNFmFQZNVGDRZhUGTVRg0WYVBk1UYNFmFQZNVGDRZhUGTVRg0WYVBk1UYNFmFQZNVGDRZhUGTVRg0WYVBk1UYNFmFQZNVGDRZhUGTVRQAJ+pNEAXEUQCWRL0LooAsEa21AvAWgKqod0PkwzsAHhYA0FoXA9gOYHTUuyIysBvAFBGpVwAgIvUAZgPYH/XOiDz6DMDc5ob/f5VDRM4AmAPgUKTbI8rfAQAzReTE1QPXXbYTkWMApgDYEcn2iPK3pfk049i1B6WtbzafU68AMK9g2wuQc3IzdMNRSM/BUCUVkFRZ1FuiYK0A8JiIZG78oM2g0RS1AvAcgGe7zA0Y7SK7cymyNUsB7bYclm79oMrHQ/WdhFjfe6HKxwMqEelWydgyAE+LiNvWh/8DEzF6UyB1nssAAAAASUVORK5CYII=">
+  <meta name="theme-color" content="#F59E0B">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dor não deveria ser normal — Endometriose">
+  <meta property="og:description" content="Endometriose afeta pessoas de qualquer identidade de gênero. Informação, sintomas e um assistente de pré-consulta.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/spohj280-prog/endometriose-landing-page/main/Header.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:alt" content="Dor não deveria ser normal">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dor não deveria ser normal — Endometriose">
+  <meta name="twitter:description" content="Endometriose afeta pessoas de qualquer identidade de gênero. Informação, sintomas e um assistente de pré-consulta.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/spohj280-prog/endometriose-landing-page/main/Header.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dor não deveria ser normal — Endometriose</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,13 +65,42 @@
   .nav::before{content:"";position:absolute;left:0;right:0;top:0;height:56px;background:#000;opacity:.35;z-index:-1;}
   .nav.solido{background:rgba(13,27,42,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);}
   .nav.solido::before{display:none;}
-  .nav__logo{font-size:.85rem;text-transform:uppercase;letter-spacing:.12em;color:var(--texto-claro);font-weight:700;background:none;border:none;cursor:pointer;font-family:inherit;padding:0;}
+  .nav__logo{font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;color:var(--texto-claro);font-weight:700;background:none;border:none;cursor:pointer;font-family:inherit;padding:0;white-space:nowrap;text-align:left;flex-shrink:0;}
   .nav__links{display:flex;gap:1.8rem;list-style:none;align-items:center;}
   .nav__links a{text-decoration:none;font-size:.85rem;text-transform:uppercase;color:var(--texto-claro);opacity:.82;font-weight:400;transition:opacity .3s ease;}
   .nav__links a:hover{opacity:1;}
-  .nav__links a.destaque{color:#fff;opacity:1;font-weight:700;text-transform:none;font-size:.96rem;letter-spacing:.01em;}
+  /* Destaque especial para o Assistente Entre */
+  .nav__links a.destaque{
+    color:#fff;
+    opacity:1;
+    font-weight:700;
+    text-transform:none;
+    font-size:.8rem;
+    letter-spacing:.01em;
+    background:var(--amarelo);
+    padding:.3rem .75rem;
+    border-radius:6px;
+    white-space:nowrap;
+    transition:background .3s ease,transform .3s ease;
+  }
+  .nav__links a.destaque:hover{background:#D6850A;transform:translateY(-1px);}
   .nav__toggle{display:none;background:none;border:none;color:var(--texto-claro);font-size:1.4rem;cursor:pointer;}
-  @media(max-width:820px){.nav__links{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:1rem;padding:1.4rem 2rem;background:rgba(13,27,42,.94);backdrop-filter:blur(14px);display:none;align-items:flex-start;}.nav__links.aberto{display:flex;}.nav__toggle{display:block;}}
+  /* Tablet: reduz tamanho dos itens mas mantém tudo numa linha */
+  @media(max-width:1100px) and (min-width:861px){
+    .nav{padding:0 1.4rem;}
+    .nav__logo{font-size:.72rem;white-space:nowrap;}
+    .nav__links{gap:.9rem;}
+    .nav__links a{font-size:.72rem;}
+    .nav__links a.destaque{font-size:.72rem;padding:.28rem .6rem;}
+  }
+  /* Abaixo de 860px: hambúrguer */
+  @media(max-width:860px){
+    .nav{padding:0 2rem;}
+    .nav__logo{font-size:.8rem;}
+    .nav__links{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:1rem;padding:1.4rem 2rem;background:rgba(13,27,42,.94);backdrop-filter:blur(14px);display:none;align-items:flex-start;}
+    .nav__links.aberto{display:flex;}
+    .nav__toggle{display:block;}
+  }
 
   /* HERO */
   .hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--azul-profundo);}
@@ -152,7 +202,8 @@
   .form-relato h3{font-size:1.3rem;color:var(--azul-profundo);margin-bottom:.5rem;}
   .form-relato__intro{font-size:.9rem;color:var(--texto-suave);margin-bottom:1.6rem;}
   .form-linha{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;}
-  @media(max-width:560px){.form-linha{grid-template-columns:1fr;}}
+  @media(max-width:680px){.form-linha{grid-template-columns:1fr 1fr!important;}}
+  @media(max-width:420px){.form-linha{grid-template-columns:1fr!important;}}
   .campo label{display:block;font-size:.78rem;color:var(--petroleo);margin-bottom:.4rem;font-weight:600;}
   .campo input,.campo textarea{width:100%;padding:.8rem 1rem;border-radius:10px;border:1px solid var(--card-borda);background:#fff;font-family:inherit;font-size:.92rem;color:var(--texto-escuro);resize:vertical;}
   .campo textarea{min-height:110px;}
@@ -167,7 +218,7 @@
   .entre-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:center;}
   @media(max-width:860px){.entre-grid{grid-template-columns:1fr;gap:2rem;}}
   .entre-info h2{font-size:clamp(2.2rem,5vw,3.2rem);color:var(--branco-quente);margin-bottom:1.1rem;}
-  .entre-info p{font-size:1rem;color:rgba(247,241,234,.78);margin-bottom:1.2rem;max-width:420px;}
+  .entre-info p{font-size:1rem;color:rgba(247,241,234,.78);margin-bottom:1.2rem;max-width:420px;line-height:1.65;}
   .entre-link-cta{display:inline-flex;align-items:center;gap:.5rem;font-size:.85rem;font-weight:600;color:#fff;background:var(--amarelo);border-radius:8px;padding:.6rem 1.1rem;text-decoration:none;cursor:pointer;border:none;font-family:inherit;transition:background .3s ease,transform .3s ease;}
   .entre-link-cta:hover{background:#D6850A;transform:translateY(-2px);}
   .entre-link-cta svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
@@ -195,9 +246,7 @@
   .recurso h4{font-size:1.05rem;color:var(--branco-quente);margin-bottom:.5rem;}
   .recurso p{font-size:.87rem;color:rgba(247,241,234,.65);line-height:1.55;}
 
-  /* ===========================
-     FORMULÁRIO MANUAL OVERLAY
-     =========================== */
+  /* FORMULÁRIO MANUAL OVERLAY */
   .fm-overlay{
     position:fixed;inset:0;z-index:2000;
     background:linear-gradient(125deg,var(--azul-profundo) 0%,#142136 28%,#2b2a2e 55%,#5a3f24 78%,#8a5a1f 100%);
@@ -230,7 +279,6 @@
   }
   @media(max-width:860px){.fm-layout{grid-template-columns:1fr;gap:1.5rem;min-height:auto;}}
 
-  /* coluna esquerda — 259px de altura, conteúdo alinhado ao topo */
   .fm-layout > div:first-child{
     height:259px;
     align-self:center;
@@ -239,29 +287,23 @@
     overflow:hidden;
   }
 
-  /* coluna esquerda */
   .fm-etiqueta{font-size:.72rem;text-transform:uppercase;letter-spacing:.2em;color:var(--amarelo);margin-bottom:.9rem;font-weight:700;}
   .fm-titulo{font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:var(--branco-quente);margin-bottom:.9rem;line-height:1.1;}
   .fm-desc{font-size:.92rem;color:rgba(247,241,234,.65);line-height:1.6;}
 
-  /* card direito */
   .fm-card{background:rgba(15,18,24,.88);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:1.8rem 2rem;}
 
-  /* progress */
   .fm-prog-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:.55rem;}
   .fm-prog-label{font-size:.72rem;font-weight:700;color:var(--amarelo);text-transform:uppercase;letter-spacing:.1em;}
   .fm-prog-pct{font-size:.72rem;color:rgba(247,241,234,.45);}
   .fm-prog-bar{height:3px;background:rgba(255,255,255,.1);border-radius:2px;margin-bottom:1.6rem;}
   .fm-prog-fill{height:100%;background:var(--amarelo);border-radius:2px;transition:width .4s ease;}
 
-  /* card title */
   .fm-card-title{font-size:1.1rem;font-weight:700;color:var(--branco-quente);margin-bottom:1.2rem;}
 
-  /* grupos */
   .fm-group{margin-bottom:1.3rem;}
   .fm-group-label{display:block;font-size:.9rem;font-weight:600;color:var(--branco-quente);margin-bottom:.7rem;}
 
-  /* pills */
   .fm-pills{display:flex;flex-wrap:wrap;gap:.5rem;}
   .fm-pill{
     display:inline-flex;align-items:center;gap:.35rem;
@@ -276,10 +318,8 @@
   .fm-pill.sel .fm-check{display:inline;}
   .fm-check{display:none;font-size:.8rem;}
 
-  /* pills wide (single select options) */
   .fm-pills-wide .fm-pill{flex:1;min-width:120px;justify-content:center;border-radius:10px;}
 
-  /* escala */
   .fm-escala{display:flex;justify-content:space-between;width:100%;margin-bottom:.4rem;gap:.3rem;}
   .fm-escala-n{
     flex:1;height:38px;border-radius:50%;
@@ -294,13 +334,11 @@
   .fm-escala-labels{display:flex;justify-content:space-between;}
   .fm-escala-labels span{font-size:.7rem;color:rgba(247,241,234,.35);}
 
-  /* inputs */
   .fm-input{width:100%;padding:.85rem 1rem;border-radius:10px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);color:var(--texto-claro);font-family:inherit;font-size:.88rem;}
   .fm-input::placeholder{color:rgba(247,241,234,.3);}
   .fm-textarea{width:100%;padding:.85rem 1rem;border-radius:10px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);color:var(--texto-claro);font-family:inherit;font-size:.88rem;resize:vertical;min-height:80px;}
   .fm-textarea::placeholder{color:rgba(247,241,234,.3);}
 
-  /* med row */
   .fm-med-row{display:flex;align-items:center;gap:.5rem;margin-bottom:.5rem;}
   .fm-med-row .fm-input{margin-bottom:0;}
   .fm-med-x{background:none;border:1px solid rgba(255,255,255,.15);border-radius:50%;width:30px;height:30px;min-width:30px;color:rgba(247,241,234,.5);cursor:pointer;font-size:.9rem;display:flex;align-items:center;justify-content:center;transition:all .2s;}
@@ -308,34 +346,42 @@
 
   .fm-add{display:flex;align-items:center;gap:.4rem;background:none;border:none;color:var(--amarelo);font-size:.83rem;font-weight:600;cursor:pointer;font-family:inherit;margin-top:.2rem;margin-bottom:1rem;}
 
-  /* file area */
   .fm-file-area{display:flex;align-items:center;gap:.6rem;padding:.85rem 1rem;border-radius:10px;border:1px dashed rgba(255,255,255,.15);background:rgba(255,255,255,.03);cursor:pointer;color:rgba(247,241,234,.45);font-size:.83rem;transition:border-color .2s;}
   .fm-file-area:hover{border-color:rgba(255,255,255,.3);color:rgba(247,241,234,.7);}
   .fm-file-area svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}
 
-  /* botões de navegação */
   .fm-btns{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1.6rem;}
   .fm-btn-sec{padding:.85rem;border-radius:8px;border:1px solid rgba(255,255,255,.2);background:none;color:var(--texto-claro);font-size:.9rem;font-weight:600;cursor:pointer;font-family:inherit;transition:background .2s;width:100%;}
   .fm-btn-sec:hover{background:rgba(255,255,255,.06);}
   .fm-btn-pri{padding:.85rem;border-radius:8px;border:none;background:var(--amarelo);color:#fff;font-size:.9rem;font-weight:700;cursor:pointer;font-family:inherit;transition:background .2s;width:100%;}
   .fm-btn-pri:hover{background:#D6850A;}
 
-  /* intro steps */
   .fm-intro-steps{list-style:none;margin-bottom:1.6rem;display:flex;flex-direction:column;gap:1rem;}
   .fm-intro-step{display:flex;align-items:flex-start;gap:.9rem;}
   .fm-step-num{width:32px;height:32px;border-radius:50%;border:2px solid var(--amarelo);color:var(--amarelo);font-size:.82rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
   .fm-intro-step h4{font-size:.93rem;color:var(--branco-quente);margin-bottom:.15rem;font-weight:600;}
   .fm-intro-step p{font-size:.8rem;color:rgba(247,241,234,.5);line-height:1.4;}
 
-  /* resumo */
+  /* aviso de dados no formulário */
+  .fm-dados-aviso{
+    display:flex;align-items:flex-start;gap:.6rem;
+    padding:.85rem 1rem;
+    border-radius:10px;
+    background:rgba(245,158,11,.07);
+    border:1px solid rgba(245,158,11,.18);
+    margin-bottom:1.3rem;
+    font-size:.78rem;
+    color:rgba(247,241,234,.55);
+    line-height:1.5;
+  }
+  .fm-dados-aviso svg{width:14px;height:14px;stroke:var(--amarelo);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:1px;}
+
   .fm-resumo-item{display:flex;align-items:flex-start;justify-content:space-between;padding:.9rem 1rem;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);margin-bottom:.5rem;gap:.8rem;}
   .fm-res-label{font-size:.65rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(247,241,234,.4);flex-shrink:0;min-width:90px;padding-top:2px;}
   .fm-res-val{font-size:.86rem;color:rgba(247,241,234,.82);flex:1;display:flex;flex-wrap:wrap;gap:.35rem;align-items:center;}
   .fm-res-tag{background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:var(--amarelo);padding:.15rem .55rem;border-radius:20px;font-size:.75rem;}
   .fm-res-edit{font-size:.75rem;color:var(--amarelo);background:none;border:none;cursor:pointer;font-family:inherit;flex-shrink:0;font-weight:600;}
 
-  .fm-cripto{display:flex;align-items:center;justify-content:center;gap:.4rem;margin-top:.9rem;font-size:.72rem;color:rgba(247,241,234,.3);}
-  .fm-cripto svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2;}
   .fm-aviso{font-size:.78rem;color:rgba(247,241,234,.3);text-align:left;max-width:1100px;width:100%;position:fixed;bottom:1.4rem;left:2rem;right:2rem;pointer-events:none;}
 
   footer{padding:2.5rem 0;text-align:center;background:#091420;color:rgba(247,241,234,.45);font-size:.8rem;}
@@ -350,11 +396,11 @@
     <button class="nav__logo" id="voltarTopo" aria-label="Voltar ao topo">Dor não deveria ser normal</button>
     <button class="nav__toggle" id="botaoMenu" aria-expanded="false" aria-controls="menuNav" aria-label="Abrir menu">☰</button>
     <ul class="nav__links" id="menuNav">
-      <li><a href="#entre" class="destaque">Entre</a></li>
       <li><a href="#informacao">Informação</a></li>
       <li><a href="#sintomas">Sintomas</a></li>
       <li><a href="#mitos">Mitos e verdades</a></li>
       <li><a href="#relatos">Quem já passou por isso</a></li>
+      <li><a href="#entre" class="destaque">Assistente Entre</a></li>
     </ul>
   </nav>
 
@@ -465,9 +511,10 @@
         <div class="form-relato surgir">
           <h3>Deixe seu relato</h3>
           <p class="form-relato__intro">Sua história é poderosa. Ao compartilhá-la, você ajuda a construir uma rede de apoio e acolhimento para toda a nossa comunidade.</p>
-          <div class="form-linha">
+          <div class="form-linha" style="grid-template-columns:1fr 1fr 100px;">
             <div class="campo"><label for="nomeRelato">Seu nome (ou apelido)</label><input type="text" id="nomeRelato" placeholder="Nome (opcional)"></div>
             <div class="campo"><label for="pronomesRelato">Pronomes</label><input type="text" id="pronomesRelato" placeholder="Ex: ele/dele (opcional)"></div>
+            <div class="campo"><label for="idadeRelato">Idade</label><input type="number" id="idadeRelato" placeholder="(opcional)" min="1" max="120"></div>
           </div>
           <div class="campo"><label for="textoRelato">Sua história</label><textarea id="textoRelato" placeholder="Conte-nos como tem sido sua jornada, seus desafios ou suas conquistas. Este é um espaço de escuta ativa e respeito."></textarea></div>
           <div class="form-rodape">
@@ -484,8 +531,9 @@
           <div class="entre-info surgir">
             <p class="etiqueta">Assistente de pré-consulta</p>
             <h2>Entre</h2>
-            <p>Um assistente para organizar seus sintomas, dúvidas e histórico antes de entrar no consultório. Chegue preparado, saia com respostas.</p>
-            <button class="entre-link-cta" id="abrirFormManual">
+            <p>Chegar a uma consulta sobre endometriose muitas vezes significa anos de dor normalizada, consultas sem resposta e, para pessoas trans, barreiras extras. O Entre existe para que você não precise lembrar de tudo sozinho naquele momento.</p>
+            <p>Responda algumas perguntas, imprima ou salve no celular, e leve com você. Assim você não esquece nada e a consulta rende mais.</p>
+            <button class="entre-link-cta" id="abrirFormManual" style="margin-top:.4rem">
               Prefiro preencher sem IA.
               <svg viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
             </button>
@@ -511,9 +559,21 @@
       </section>
       <section class="secao--recursos">
         <div class="container grade-recursos">
-          <div class="recurso surgir"><div class="recurso__icone"><svg viewBox="0 0 24 24"><path d="M6 3v5.5a4 4 0 0 0 8 0V3"/><path d="M10 13.5v1.8a5.2 5.2 0 0 0 5.2 5.2 5.2 5.2 0 0 0 5.2-5.2v-1.3"/><circle cx="20.4" cy="12.5" r="2.1"/></svg></div><h4>Triagem prévia</h4><p>As perguntas certas para você não esquecer nenhum detalhe importante antes da consulta.</p></div>
-          <div class="recurso surgir"><div class="recurso__icone"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div><h4>Privacidade médica</h4><p>Seus dados são protegidos. Você decide o que compartilhar com o profissional.</p></div>
-          <div class="recurso surgir"><div class="recurso__icone"><svg viewBox="0 0 24 24"><path d="M7.5 3h6.5l4 4v13.2a.8.8 0 0 1-.8.8H7.5a.8.8 0 0 1-.8-.8V3.8a.8.8 0 0 1 .8-.8z"/><path d="M14 3v4h4M8.3 12.5h7.4M8.3 16h5.5"/></svg></div><h4>Relatórios claros</h4><p>Transformamos seus relatos em um resumo estruturado para o médico ler de forma mais rápida.</p></div>
+          <div class="recurso surgir">
+            <div class="recurso__icone"><svg viewBox="0 0 24 24"><path d="M6 3v5.5a4 4 0 0 0 8 0V3"/><path d="M10 13.5v1.8a5.2 5.2 0 0 0 5.2 5.2 5.2 5.2 0 0 0 5.2-5.2v-1.3"/><circle cx="20.4" cy="12.5" r="2.1"/></svg></div>
+            <h4>Triagem de sintomas</h4>
+            <p>O Entre sugere sintomas que costumam passar despercebidos e ajuda você a descrevê-los com clareza.</p>
+          </div>
+          <div class="recurso surgir">
+            <div class="recurso__icone"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
+            <h4>Sem cadastro, sem dados guardados</h4>
+            <p>O que você preenche fica só no seu dispositivo durante o uso. Se não salvar, some. Nada é enviado a nenhum servidor.</p>
+          </div>
+          <div class="recurso surgir">
+            <div class="recurso__icone"><svg viewBox="0 0 24 24"><path d="M7.5 3h6.5l4 4v13.2a.8.8 0 0 1-.8.8H7.5a.8.8 0 0 1-.8-.8V3.8a.8.8 0 0 1 .8-.8z"/><path d="M14 3v4h4M8.3 12.5h7.4M8.3 16h5.5"/></svg></div>
+            <h4>Um documento para levar</h4>
+            <p>O resultado é um resumo que você imprime ou abre no celular. Direto ao ponto, feito para o profissional ler rápido.</p>
+          </div>
         </div>
       </section>
     </div>
@@ -524,18 +584,20 @@
     <button class="fm-close" id="fmClose" aria-label="Fechar">✕</button>
 
     <div class="fm-layout">
-      <!-- Coluna esquerda contextual -->
       <div>
         <p class="fm-etiqueta" id="fmEtiqueta">Formulário manual</p>
         <h2 class="fm-titulo" id="fmTitulo">Você está no<br>controle.</h2>
         <p class="fm-desc" id="fmDesc">Preencha 4 etapas simples no seu ritmo. O resultado será um resumo organizado para levar na consulta.</p>
       </div>
 
-      <!-- Card direito -->
       <div class="fm-card">
 
         <!-- PASSO 0: INTRO -->
         <div id="fmStep0">
+          <div class="fm-dados-aviso">
+            <svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+            <span>Nada do que você preencher aqui é enviado a nenhum servidor. Se fechar sem salvar, os dados somem. Só você decide o que guardar.</span>
+          </div>
           <ul class="fm-intro-steps">
             <li class="fm-intro-step"><div class="fm-step-num">1</div><div><h4>Sintomas principais</h4><p>Selecione o que você está sentindo agora.</p></div></li>
             <li class="fm-intro-step"><div class="fm-step-num">2</div><div><h4>Histórico e frequência</h4><p>Duração, intensidade e padrões dos sintomas.</p></div></li>
@@ -685,10 +747,6 @@
             <button class="fm-btn-sec" id="fmP4Back">Voltar</button>
             <button class="fm-btn-pri" id="fmBtnEnviar">Salvar relato em PDF</button>
           </div>
-          <p class="fm-cripto">
-            <svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
-            Dados protegidos por criptografia de ponta a ponta
-          </p>
         </div>
 
       </div>
@@ -701,7 +759,6 @@
   </footer>
 
   <script>
-    // NAV
     document.getElementById('voltarTopo').addEventListener('click', ()=>window.scrollTo({top:0,behavior:'smooth'}));
     const botaoMenu = document.getElementById('botaoMenu');
     const menuNav = document.getElementById('menuNav');
@@ -709,14 +766,12 @@
     menuNav.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{ menuNav.classList.remove('aberto'); botaoMenu.setAttribute('aria-expanded','false'); }));
     window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('solido',window.scrollY>60));
 
-    // SURGIR
     const reduzirMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if(!reduzirMovimento){
       const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visivel');obs.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
       document.querySelectorAll('.surgir').forEach(el=>obs.observe(el));
     }else{document.querySelectorAll('.surgir').forEach(el=>el.classList.add('visivel'));}
 
-    // CHECKLIST SINTOMAS
     const feedback=document.getElementById('feedbackSintomas');
     const feedbackTexto=document.getElementById('feedbackTexto');
     const textosFeedback=['','',
@@ -736,31 +791,30 @@
       });
     });
 
-    // FLIP CARDS
     document.querySelectorAll('.carta-mito').forEach(carta=>{
       const alt=()=>{const a=carta.classList.toggle('aberta');carta.setAttribute('aria-pressed',a);};
       carta.addEventListener('click',alt);
       carta.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();alt();}});
     });
 
-    // FORM RELATOS
     document.getElementById('botaoRelato').addEventListener('click',async()=>{
       const nome=document.getElementById('nomeRelato').value.trim();
       const pronomes=document.getElementById('pronomesRelato').value.trim();
+      const idade=document.getElementById('idadeRelato').value.trim();
       const txt=document.getElementById('textoRelato').value.trim();
       const btn=document.getElementById('botaoRelato');
       if(!txt){document.getElementById('textoRelato').focus();return;}
       const formId='1FAIpQLSe0EnT-Kn5kpNke6tJnqPXTYFO7oqosVRkD9K2Xq_vDux7GOA';
       const body=new FormData();
       body.append('entry.92831491',nome);body.append('entry.1337417479',pronomes);body.append('entry.1773196441',txt);
+      if(idade)body.append('entry.idade',idade);
       btn.textContent='Enviando...';btn.disabled=true;
       try{await fetch(`https://docs.google.com/forms/d/e/${formId}/formResponse`,{method:'POST',body,mode:'no-cors'});}catch(e){}
       btn.textContent='Relato recebido';btn.style.background='#3f8a5a';
-      document.getElementById('textoRelato').value='';document.getElementById('nomeRelato').value='';document.getElementById('pronomesRelato').value='';
+      document.getElementById('textoRelato').value='';document.getElementById('nomeRelato').value='';document.getElementById('pronomesRelato').value='';document.getElementById('idadeRelato').value='';
       setTimeout(()=>{btn.textContent='Enviar relato';btn.style.background='';btn.disabled=false;},3500);
     });
 
-    // CHAT IA
     const historico=[];
     const systemPrompt=`Você é o Entre, um assistente virtual de pré-consulta do projeto "Dor não deveria ser normal". Ajude a pessoa a organizar sintomas antes de uma consulta sobre endometriose ou dor pélvica. Nunca diagnostique. Use linguagem inclusiva e neutra em gênero. Faça perguntas curtas, uma por vez. Após 6-8 trocas, ofereça um resumo. Responda em português brasileiro.`;
     const chatMensagens=document.getElementById('chatMensagens');
@@ -783,9 +837,6 @@
     document.getElementById('chatEnviar').addEventListener('click',enviarChat);
     chatInput.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();enviarChat();}});
 
-    // ======================
-    // FORMULÁRIO MANUAL
-    // ======================
     const fmContextos={
       0:{etiqueta:'Formulário manual',titulo:'Você está no<br>controle.',desc:'Preencha 4 etapas simples no seu ritmo. O resultado será um resumo organizado para levar na consulta.'},
       1:{etiqueta:'Passo 1',titulo:'Sintomas e<br>queixas.',desc:'Identificar seus sintomas é o primeiro passo para uma consulta mais eficiente.'},
@@ -851,7 +902,6 @@
     document.getElementById('fmP3Next').addEventListener('click',()=>fmIrStep(4));
     document.getElementById('fmP4Back').addEventListener('click',()=>fmIrStep(3));
 
-    // Pills toggle
     document.querySelectorAll('.fm-pills').forEach(container=>{
       container.addEventListener('click',e=>{
         const pill=e.target.closest('.fm-pill');if(!pill)return;
@@ -861,14 +911,12 @@
       });
     });
 
-    // Escala
     document.getElementById('fmEscala').addEventListener('click',e=>{
       const btn=e.target.closest('.fm-escala-n');if(!btn)return;
       document.querySelectorAll('.fm-escala-n').forEach(b=>b.classList.remove('sel'));
       btn.classList.add('sel');
     });
 
-    // Medicamentos
     document.getElementById('fmAddMed').addEventListener('click',()=>{
       const row=document.createElement('div');row.className='fm-med-row';
       row.innerHTML=`<input class="fm-input" type="text" placeholder="Nome do medicamento..."><button class="fm-med-x" title="Remover">✕</button>`;
@@ -879,12 +927,10 @@
       if(document.querySelectorAll('#fmMedsList .fm-med-row').length>1)this.closest('.fm-med-row').remove();
     });
 
-    // Editar de volta
     document.querySelectorAll('.fm-res-edit').forEach(btn=>{
       btn.addEventListener('click',()=>fmIrStep(parseInt(btn.dataset.step)));
     });
 
-    // Salvar PDF
     document.getElementById('fmBtnEnviar').addEventListener('click',()=>{
       const sints=fmGetPills('fmSintomas');
       const outros=document.getElementById('fmOutrosSintomas').value.trim();
@@ -898,7 +944,28 @@
       const exames=fmGetPills('fmExames').join(', ')||'—';
       const data=new Date().toLocaleDateString('pt-BR');
 
-      const html=`<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><title>Relato de Pré-Consulta — Entre</title>
+      const html=`<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8">
+  <meta name="description" content="Endometriose afeta pessoas de qualquer identidade de gênero. Informação, sintomas e um assistente de pré-consulta.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAEPUlEQVRYhe2Xz29UVRTHP+e+N9OZvum0HTpFCrSSBksbiT9oYSELxA0RJFGxISYaoyQm7F1T4so/wEUXVlkoIZKgQRZKBEEhFChiiFSMBRxq27QMbaedmTIz714Xj4GBTh+lNKz47t6558f33HfOybnCHZhuAmnb6RSRd8C0AzEgzOIgC9wCOS+YA+FE+lvpogAgAJl94eXGVd8B7YsU0B/CWbR50/koMySmm0Am4JxerOBS2YCKrYVAFRgXfesSJvVPOdXeykR6o522nU55jOASWoK18nWsxq2o+g1IKD5LRyd/J39+D+7QsVLxhmxTZIekeyLfg9lelNprdmE37yTX14Ue+a180EgjVuNWrMY3sJ55BcR6OFOjyfV+QqG/u9TTIUn3ODeAFUVRaOvPqPoNoAu41w/hDp/A5CaR8FJU3UuoupdRNa2znOvRXtzBn9DJC+jkRcxMEgIO1rJNBNo/RVU/hx7tZebIa6WWCUn3OFkgVJSo2FoqNn+DVK3yz8i9jTtyEvffw7iJHzDZ0TlVJRDBWv0+eug4eqK/9Cgr6R7HzDIIRrFbPsRa9baXrRXC5KcwyT/QyYu4Y2fRg0cx+Sl/kvNAWQJPEsr31Haw23ZjrdwC1qPNJBXvwG7bDbbjH8L3sOUDgus/8z6Mi5m6jk7fgNsTmHwK8tMYdwaxwhCMIsEoEqxFatuQiphnJ0Lhz88XRkD/dww9fhlV2wZiIdFmrGizb0b32U/8hR467qszrxqQaDNW3TqkthUJxZFgNQSrkUAVqCC4M15B5lKY3Dhm6hru2Dn0yGnA373vDRRhUgMUUgPzUX1k+BfhE8BTAk8JzKsLVPVqVLwDqVnjtWGg6l4bWhUlbTiJyU16A2vsHO7Ir2D0wgmomlaCm/Z5g2gB0BNXyP3yHnr88gIJLN98L7guoKeuYqZvQD6FyU16o1jnEFXhjeJAFEIx1J2bUjUtqIZXF06gcOUrMAaTGsAdPgHuzMPTLpKPt6Pi6yn8vc9X7+GjWAVA5+cd+FFR9gYkWI29ZhfWqh2omhZv3ufT6PFL6ORF9OhZ3MEfvd/wmJB0j5MpfYB4K9l+pOpZf0udxx0+iZs4jJs4gskMzx1k7pUsI+keJwGsLEpKl9LCtYPo4ROY/DQSqkMtedFbSmPPF980HoxG3+zDHTzqLaU3L2Cyo0gwilq2icC6vajq1WWXUhsjfYi5S6AwsB8bQ65vD3rkVPmMKhuwmrZhNW3HWroRlI2Kd6DiHXPfmHEpXD3wgCNzTqa/dN4Vw9dzW/pDKmqxVmzBatyGqu9AKhtm6eix8+Qv7MV9YDkRZKeYLuxMk3MKw/qFkrjPabgeFXsBAhFwb6Mn+jFT18ppnqmMTG8UgPQXlQ0oObRYJOZB8wx5/ZbzcWb4biWZLuxsU2SHMXTeeZ7XLfLzfAykT+BAODJ9UDpxAf4H2TKy7Z3w7TcAAAAASUVORK5CYII=">
+  <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
+  <meta name="theme-color" content="#F59E0B">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dor não deveria ser normal — Endometriose">
+  <meta property="og:description" content="Endometriose afeta pessoas de qualquer identidade de gênero. Informação, sintomas e um assistente de pré-consulta.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/spohj280-prog/endometriose-landing-page/main/Header.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:alt" content="Dor não deveria ser normal">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dor não deveria ser normal — Endometriose">
+  <meta name="twitter:description" content="Endometriose afeta pessoas de qualquer identidade de gênero. Informação, sintomas e um assistente de pré-consulta.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/spohj280-prog/endometriose-landing-page/main/Header.png"><title>Relato de Pré-Consulta — Entre</title>
       <style>body{font-family:Arial,sans-serif;color:#1d2733;padding:40px;max-width:680px;margin:0 auto;line-height:1.6;}h1{font-size:1.5rem;color:#0d1b2a;margin-bottom:.3rem;}.sub{font-size:.85rem;color:#5a6c7a;margin-bottom:2rem;}.bloco{margin-bottom:1.4rem;border-bottom:1px solid #e5e7eb;padding-bottom:1.2rem;}.bloco:last-of-type{border-bottom:none;}.label{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:#5a6c7a;font-weight:700;margin-bottom:.3rem;}.valor{font-size:.95rem;color:#1d2733;}.aviso{font-size:.78rem;color:#9ca3af;margin-top:2rem;border-top:1px solid #e5e7eb;padding-top:1rem;}</style>
       </head><body>
       <h1>Relato de Pré-Consulta</h1><p class="sub">Gerado pelo assistente Entre · ${data}</p>
