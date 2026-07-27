@@ -807,7 +807,7 @@
       const formId='1FAIpQLSe0EnT-Kn5kpNke6tJnqPXTYFO7oqosVRkD9K2Xq_vDux7GOA';
       const body=new FormData();
       body.append('entry.92831491',nome);body.append('entry.1337417479',pronomes);body.append('entry.1773196441',txt);
-      if(idade)body.append('entry.idade',idade);
+      if(idade)body.append('entry.818533540',idade);
       btn.textContent='Enviando...';btn.disabled=true;
       try{await fetch(`https://docs.google.com/forms/d/e/${formId}/formResponse`,{method:'POST',body,mode:'no-cors'});}catch(e){}
       btn.textContent='Relato recebido';btn.style.background='#3f8a5a';
